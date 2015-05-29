@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script>
+function Member(id){
+	location.href='{:U('Project/member')}/id/'+id;
+}
+function Search(){
+	var name = document.getElementById('UserName').value;
+	location.href="{:U('Project/index')}/title/"+name;
+}
+</script>
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	<include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+            
+
+        	
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+        	<table class="bomdiv" border="0">
+<tr>
+<td nowrap="nowrap"><p>&nbsp;标题：</p></td>
+<td nowrap="nowrap"><input name="UserName" type="text" class="Input_W80 bomdivinp" id="UserName" value="{$keyword}" size="10"></td>
+<td nowrap="nowrap"><input class="bomdivcha" type="button" name="Submit2" value="查询" onClick="Search()"></td>
+</tr>
+</table>
+        	<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>标题</td>
+    <td nowrap='nowrap'>停留时间</td>
+	
+  </tr>
+  <volist name="list" id="user">
+<tr>
+<td nowrap='nowrap'>{$user.sid|pxsonitem=###,title}</td>
+<td nowrap='nowrap'><php>echo jstaytime($user['posttime'],$user['endtime']);</php>分钟</td>
+</tr>
+</volist>
+</table>
+</div>
+            
+<div style="width: 95%; height: 30px; overflow: hidden; text-align: center; font-weight: bold; margin-bottom:10px; margin-top:10px; font-size:14px;">
+                                            {$page}
+                                            </div>
+
+            </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+        
+  
+  </div>
+    
+</div>
+<include file="Public:Footer" />

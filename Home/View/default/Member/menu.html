@@ -1,0 +1,95 @@
+<a href="{:U('Member/info')}"><li>基本资料</li></a>
+<a onClick='showHide("items3_1")'><li>站内消息<php>echo getnewMessagecount();</php></li></a>
+<dl id="items3_1" <php>if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'message' || ACTION_NAME == 'inputbox')){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/message')}">发件箱</a></dd>
+<dd><a href="{:U('Member/inputbox')}">收件箱</a></dd>
+</dl>
+<!-- <a href="{:U('Member/collect')}"><li>我的收藏</li></a> -->
+<php>if(session('groupid') == 1){</php>
+<a onClick='showHide("items2_1")'><li>分会账号管理</li></a>
+<dl id='items2_1' <php>if($_GET['type'] == 2){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/users',array('type'=>'2'))}">·管理</a></dd>
+<dd><a href="{:U('Member/adduser',array('type'=>'2'))}">·新增账号</a></dd>
+<dd><a href="{:U('Member/fadduser')}">·批量新增账号</a></dd>
+</dl>
+
+<a onClick='showHide("items2_2")'><li>团体账号管理</li></a>
+<dl id="items2_2" <php>if($_GET['type'] == 3){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/users',array('type'=>'3'))}">·管理</a></dd>
+<dd><a href="{:U('Member/adduser',array('type'=>'3'))}">·新增</li></a></dd>
+<dd><a href="{:U('Member/fadduser')}">·批量新增</a></dd>
+</dl>
+<a onClick='showHide("items2_3")'><li>个人账号管理</li></a>
+<dl id="items2_3" <php>if($_GET['type'] == 4){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/users',array('type'=>'4'))}">·管理</a></dd>
+<dd><a href="{:U('Member/adduser',array('type'=>'4'))}">·新增</a></dd>
+<dd><a href="{:U('Member/fadduser')}">·批量新增</a></dd>
+</dl>
+<a onClick='showHide("items2_4")'><li>培训管理</li></a>
+<dl id="items2_4" <php>if(CONTROLLER_NAME == 'Project'){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Project/index')}">·培训项目</a></dd>
+<dd><a href="{:U('Project/add')}">·发布培训</a></dd>
+</dl>
+<a href="{:U('Member/sendmessage')}"><li>发布站内信</li></a>
+<a href="{:U('Member/tongji')}"><li>统计</li></a>
+<a href="{:U('Index/exam')}"><li>考试管理</li></a>
+<a onClick='showHide("items2_5")'><li>网站信息管理</li></a>
+<dl id="items2_5" <php>if(CONTROLLER_NAME == 'News'){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('News/index')}">·信息列表</a></dd>
+<dd><a href="{:U('News/newsadd')}">·新增信息</a></dd>
+</dl>
+<a onClick='showHide("items2_7")'><li>公告管理</li></a>
+<dl id="items2_7" <php>if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'article' || ACTION_NAME == 'articleadd')){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/article')}">·管理</a></dd>
+<dd><a href="{:U('Member/articleadd')}">·新增公告</a></dd>
+<dd><a href="{:U('Member/articlestatus')}">·公告审核</a></dd>
+</dl>
+<php>}else if(session('groupid') == 2){</php>
+<a onClick='showHide("items2_3")'><li>账号管理</li></a>
+<dl id="items2_3" <php>if($_GET['type'] == 4){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/users',array('type'=>'4'))}">·管理</a></dd>
+<dd><a href="{:U('Member/adduser',array('type'=>'4'))}">·新增</a></dd>
+<dd><a href="{:U('Member/fadduser')}">·批量新增</a></dd>
+</dl>
+<a href="{:U('Project/index')}"><li>培训管理</li></a>
+<a href="{:U('Member/sendmessage')}"><li>发布站内信</li></a>
+<a href="{:U('Member/tongji')}"><li>统计</li></a>
+<a href="{:U('Index/exam')}"><li>考试管理</li></a>
+<a onClick='showHide("items2_7")'><li>公告管理</li></a>
+<dl id="items2_7" <php>if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'article' || ACTION_NAME == 'articleadd')){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/article')}">·管理</a></dd>
+<dd><a href="{:U('Member/articleadd')}">·新增公告</a></dd>
+</dl>
+<php>}else if(session('groupid') == 3){</php>
+<a onClick='showHide("items2_3")'><li>个人账号管理</li></a>
+<dl id="items2_3" <php>if($_GET['type'] == 4){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/users',array('type'=>'4'))}">·管理</a></dd>
+<dd><a href="{:U('Member/adduser',array('type'=>'4'))}">·新增</a></dd>
+<dd><a href="{:U('Member/fadduser')}">·批量新增</a></dd>
+</dl>
+<a href="{:U('Member/tongji')}"><li>统计</li></a>
+<a href="{:U('Index/exam')}"><li>考试管理</li></a>
+<a onClick='showHide("items2_7")'><li>公告管理</li></a>
+<dl id="items2_7" <php>if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'article' || ACTION_NAME == 'articleadd')){</php><php>}else{</php>style="display:none;"<php>}</php>>
+<dd><a href="{:U('Member/article')}">·管理</a></dd>
+<dd><a href="{:U('Member/articleadd')}">·新增公告</a></dd>
+</dl>
+<php>}</php>
+
+<php>if(session('groupid') != 1){</php>
+<a href="{:U('Project/my')}"><li>培训项目</li></a>
+<php>}</php>
+<php>if(session('groupid') != 1){</php>
+<a href="{:U('Project/myproject')}"><li>我的培训</li></a>
+<php>}</php>
+<a href="{:U('Public/logout')}"><li>退出</li></a>
+<script>
+function showHide(id){
+	var name = document.getElementById(id).style.display;
+	if(name == 'none'){
+		document.getElementById(id).style.display = '';
+	}else{
+		document.getElementById(id).style.display = 'none';
+	}
+}
+</script>

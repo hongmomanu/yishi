@@ -1,0 +1,37 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add2"><p>当前页:阅读通知</p></div>
+<div class="all_table3">
+<table width="100%">
+<tr>
+<td width="86%" valign="bottom" height="60" align="center" class="ydtitle">{$data.title}</td>
+</tr>
+<tr>
+<td class="ydsource" align="center"><span>发布人：{$data.uid|getServiceName}</span><span>发布时间：{$data.posttime|date="Y-m-d H:i:s",###}</span></td>
+</tr>
+<tr>
+<td class="ydtextarea" align="center"><div><p><span><textarea readonly="">{$data.content}</textarea></span></p></div></td>
+</tr>
+<tr>
+<td class="ydinput" height="46" align="center"><input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();"></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>
+<!-- final_13.10.08 -->

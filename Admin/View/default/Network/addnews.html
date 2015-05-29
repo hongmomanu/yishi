@@ -1,0 +1,109 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function checkForm(obj)
+{
+	if(obj.ConfigId.value=="")
+	{
+		alert("请选择媒体！");
+		obj.ConfigId.focus();
+		return false;
+	}
+	if(obj.DiaNo.value=="")
+	{
+		alert("请输入对话量！");
+		obj.DiaNo.focus();
+		return false;
+	}
+	if(obj.Booking.value=="")
+	{
+		alert("请输入预约量！");
+		obj.Booking.focus();
+		return false;
+	}
+	obj.submit();
+}
+</script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<script src="/Public/Js/cc_date.js"></script>
+<div id="man_zone">
+
+
+
+<div class="right_add2"><p>当前页：营销登记</p></div>
+<div class="all_table2">
+
+<form name="form1" method="post" action="{:U('Network/addnews')}">
+<input type="hidden" name="action" value="add" />
+<table width="100%">
+
+<tr>
+<td width="9%" height="24" align="right">竞价媒体：</td>
+<td align="left"><select name="pid" id="ConfigId">
+<option value="">请选择</option>
+<volist name="result" id="rts">
+<option value="{$rts.id}">{$rts.title}</option>
+</volist>
+</select>
+
+日期：<input name="ptime" id="InputTime" class="Input_W70" type="text" value="<php>echo date('Y-m-d',time())</php>" size="14" readonly onclick="showcalendar(event,this);" onfocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''">
+
+</td>
+</tr>
+
+<tr>
+  <td width="9%" height="24" align="right">对话量：</td>
+  <td align="left"><input name="dh" type="text" class="Input_W530" id="DiaNo"></td>
+</tr>
+
+<tr>
+  <td width="9%" height="24" align="right">极佳对话：</td>
+  <td align="left"><input name="jjdh" type="text" class="Input_W530" id="vDialogue"></td>
+</tr>
+
+<tr>
+  <td width="9%" height="24" align="right">预约量：</td>
+  <td align="left"><input name="yy" type="text" class="Input_W530" id="Booking"></td>
+</tr>
+
+<tr>
+  <td width="9%" height="24" align="right">到诊量：</td>
+  <td align="left"><input name="dz" type="text" class="Input_W530" id="IsCome"></td>
+</tr>
+
+<tr>
+  <td height="24" align="right">留电量：</td>
+  <td align="left"><input name="ld" type="text" class="Input_W530" id="TelNo"></td>
+</tr>
+
+<tr>
+  <td height="24" align="right">流量：</td>
+  <td align="left"><input name="ll" type="text" class="Input_W530" id="Flux"></td>
+</tr>
+
+<tr>
+  <td height="24" align="right">日均费用：</td>
+  <td align="left"><input name="money" type="text" class="Input_W530" id="Average"></td>
+</tr>
+
+<tr>
+<td height="25" align="right"></td>
+<td colspan="5"><input class="Submit" type="button" onClick="checkForm(document.forms['form1'])" value="" name="Submit22"><input class="resetsubmit" value="" name="" type="reset"><input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();"></td>
+</tr>
+
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>

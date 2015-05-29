@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script defer="defer">	
+function checkForm(obj)
+{
+	if(obj.Title.value == "")
+	{
+		alert("请输入通知主题!");
+		obj.Title.focus();
+		return false;
+	}
+	if(obj.Content.value == "")
+	{
+		alert("请输入通知内容!");
+		obj.Content.focus();
+		return false;
+	}
+	obj.submit();
+}
+</script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+
+
+<div class="right_add2"><p>当前页：写通知</p></div>
+<div class="all_table2">
+
+<form name="form1" method="post" action="{:U('System/noticeedit')}">
+<table width="100%">
+
+<tr>
+<td width="9%" height="24" align="right">通知主题:</td>
+<td><input name="title" type="text" class="Input_W675" id="Title" size="50" value="{$data.title}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+
+<tr>
+<td width="9%" align="right">通知内容:</td>
+<td colspan="5"><textarea id="Content" class="Input_W680" rows="10" cols="100" name="content" style="height:250px;">{$data.content}</textarea></td>
+</tr>
+
+<tr>
+<td width="9%" height="25" align="right"><input name="action" type="hidden" id="CompanyID" value="edit"><input type="hidden" name="id" value="{$data.id}" /></td>
+<td colspan="5"><input class="Submit" type="button" onClick="checkForm(document.forms['form1'])" value="" name="Submit22"><input class="resetsubmit" value="" name="" type="reset"><input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();"></td>
+</tr>
+
+</table>
+</form>
+</div>
+
+
+</div>
+</body>
+</html>
+<!-- final_13.10.08 -->

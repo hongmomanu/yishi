@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function Edit(id)
+{
+	location.href='bidding_mdy.php?Work=Edit&id='+ id +'&CompanyID='+ 44;
+}
+function Del(id)
+{
+	if (confirm("确定删除该记录？请慎重操作！"))
+	{
+		location.href='bidding_mdy.php?Work=Del&id='+ id +'&CompanyID='+ 44;
+	}
+}
+</script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：竞价分析</p></div>
+<script src="/Public/Js/cc_date.js"></script>
+
+<table class="bomdiv" border="0">
+<tr>
+
+<td nowrap="nowrap"><input class="bomdivSub" type="button" name="Submit" value="今" onClick="location.href='bidding_search.php?Work=Search&CompanyID=44&ConfigId=-1&AddTime=2014-01-03&AddTime2=2014-01-03'"></td>
+<td nowrap="nowrap"><input class="bomdivSub" type="button" name="Submit" value="昨" onClick="location.href='bidding_search.php?Work=Search&CompanyID=44&ConfigId=-1&AddTime=2014-01-02&AddTime2=2014-01-02'"></td>
+<td nowrap="nowrap"><input class="bomdivSub" type="button" name="Submit" value="周" onClick="location.href='bidding_search.php?Work=Search&CompanyID=44&ConfigId=-1&AddTime=2013-12-27&AddTime2=2014-01-03'"></td>
+<td nowrap="nowrap"><input class="bomdivSub" type="button" name="Submit" value="月" onClick="location.href='bidding_search.php?Work=Search&CompanyID=44&ConfigId=-1&AddTime=2013-12-03&AddTime2=2014-01-03'"></td>
+
+<td nowrap="nowrap"><p>日期：从</p></td>
+<td nowrap="nowrap"><input name="AddTime" id="AddTime" class="Input_W70" type="text" value="<php>echo date('Y-m-d',time())</php>" size="14" readonly onclick="showcalendar(event,this);" onfocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''"></td>
+<td nowrap="nowrap"><p>到</p></td>
+<td nowrap="nowrap"><input name="AddTime2" id="AddTime2" class="Input_W70" type="text" value="<php>echo date('Y-m-d',time())</php>" size="14" readonly onclick="showcalendar(event,this);" onfocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''"></td>
+
+<td nowrap="nowrap"><span class="bkystow"><select name='ConfigId' id='ConfigId' class='Input_W80'>
+<option value='-1'>不限</option>
+<volist name="result" id="rlist">
+<option value="{$rlist.id}" >{$rlist.title}</option>
+</volist>
+</select></span></td>
+
+<td nowrap="nowrap"><input class="bomdivcha" type="button" name="Submit2" value="查询" onClick="Search()"></td>
+
+<td nowrap="nowrap"><input class="bomdivSub" type="button" name="Submit" value="添加登记" onClick="location.href='{:U('Network/addbaidu')}'"></td></tr>
+</table>
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+	<td nowrap='nowrap'>日期</td>
+	<td nowrap='nowrap'>媒体</td>
+	<td nowrap='nowrap'>消费</td>
+	<td nowrap='nowrap'>预约</td>
+	<td nowrap='nowrap'>到诊</td>
+	<td nowrap='nowrap'>展现</td>
+	<td nowrap='nowrap'>点击</td>
+	<td nowrap='nowrap'>点击率</td>
+	<td nowrap='nowrap'>点击均价</td>
+	<td nowrap='nowrap'>有效对话</td>
+	<td nowrap='nowrap'>极佳对话</td>
+	<td nowrap='nowrap'>对话成本</td>
+	<td nowrap='nowrap'>预约成本</td>
+	<td nowrap='nowrap'>留电量</td>
+	<td nowrap='nowrap'>操作</td>  </tr>
+<volist name="list" id="baidu">
+<tr>
+<td nowrap='nowrap'>{$baidu.ptime|date="Y-m-d",###}</td>
+<td nowrap='nowrap'>{$baidu.pid}</td>
+<td nowrap='nowrap'>25</td>
+<td nowrap='nowrap'>{$baidu.yy}</td>
+<td nowrap='nowrap'>{$baidu.dz}</td>
+<td nowrap='nowrap'>{$baidu.zx}</td>
+<td nowrap='nowrap'>{$baidu.dj}</td>
+<td nowrap='nowrap'>{$baidu.djl}</td>
+<td nowrap='nowrap'>{$baidu.djjj}</td>
+<td nowrap='nowrap'>{$baidu.yxdh}</td>
+<td nowrap='nowrap'>{$baidu.jjdh}</td>
+<td nowrap='nowrap'></td>
+<td nowrap='nowrap'></td>
+<td nowrap='nowrap'>{$baidu.ldl}</td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="编辑" onclick="Edit({$baidu.id})">[编]</span></td>
+</tr>
+</volist>
+</table>
+</div>
+<div class="page">
+<div class="page"><input type="button" class="dtPageButton" name="dtBtnIndex" value="首页" disabled><input type="button" class="dtPageButton" name="dtBtnIndex" value="上一页" disabled><input type="button" class="dtPageButton" name="dtBtnIndex" value="下一页" disabled><input type="button" class="dtPageButton" name="dtBtnIndex" value="尾页" disabled><input type="text" class="dtPageInput" name="jump" id="jump"><input type="button" class="dtPageButton" name="dtBtnIndex" value="跳转" style="cursor:pointer;" onclick="window.location.href='/network/bidding_search.php?page='+document.getElementById('jump').value+'&Work=Search&CompanyID=44&AddTime=2014-01-02&AddTime2=2014-01-02&&ConfigId=-1'">&nbsp;&nbsp;&nbsp;&nbsp;<span>共有 0 条纪录  共 0 页  本页第 1 页</span></div></div>
+</div>
+</body>
+</html>
+<script language="javascript">
+function Search(flag)
+{
+	var CompanyID = '44';
+	var AddTime = document.getElementById("AddTime").value;
+	var AddTime2 = document.getElementById("AddTime2").value;
+	ConfigId = document.getElementById("ConfigId").value;
+
+	if (flag==1)
+	{
+		ConfigId = '-1';
+	}
+	
+	if (AddTime.toDate() > AddTime2.toDate())
+	{
+		alert("开始日期不能大于结束日期,请重新选择日期！");
+		return false;
+	}
+
+	var T_Url;
+	T_Url = "bidding_search.php?Work=Search&CompanyID="+ CompanyID +"&AddTime="+ AddTime +"&AddTime2="+ AddTime2 +"&ConfigId="+ ConfigId;
+	
+	location.href = T_Url;	
+}
+String.prototype.toDate = function(){
+	var result =  null;
+	try{
+		var arr = this.split(/\D/);
+		arr[1] = arr[1] - 1;
+		result = eval("new Date(" + arr.join(",") + ")");
+		}
+	catch(e){}
+	return result;
+};
+</script>

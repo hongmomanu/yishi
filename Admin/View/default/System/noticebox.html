@@ -1,0 +1,54 @@
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function View(id)
+{
+	location.href='{:U('System/noticeview')}/id/'+ id;
+}
+</script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：通知浏览</p></div>
+
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>标题</td>
+    <td nowrap='nowrap'>发布人</td>
+    <td nowrap='nowrap'>发布时间</td>
+    <td nowrap='nowrap'>操作</td>
+  </tr>
+
+<volist name="list" id="notice">
+<tr>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="查看" onclick="View({$notice.id})">{$notice.title}</span></td>
+<td nowrap='nowrap'>{$notice.uid|getServiceName}</td>
+<td nowrap='nowrap'><span >{$notice.posttime|date="Y-m-d H:i:s",###}</span></td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="查看" onclick="View({$notice.id})">[查看]</span></td>
+</tr>
+</volist>
+
+
+</table>
+</div>
+<div class="page">
+<div class="page">
+{$page}
+
+</div></div>
+</div>
+</body>
+</html>
+<!-- final_13.10.08 -->

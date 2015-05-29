@@ -1,0 +1,1 @@
+ALTER TABLE `ys_member` ADD `group1` INT(2) NOT NULL DEFAULT '0' COMMENT '总会' , ADD `group2` INT(2) NOT NULL DEFAULT '0' COMMENT '分会' , ADD `group3` INT(2) NOT NULL DEFAULT '0' COMMENT '团体' ;

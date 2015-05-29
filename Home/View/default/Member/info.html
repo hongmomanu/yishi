@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script language="javascript">
+//--->
+function checksubmit()
+{
+
+  if (document.form1.truename.value=="")
+        {
+           alert("真实姓名不能为空");
+           document.form1.truename.focus();
+           return false;
+        } 
+  if(document.form1.email.value==""){
+	  alert("邮箱不能为空");
+	  document.form1.email.focus();
+	  return false;
+  }
+  if(document.form1.zgzsbh.value==""){
+	  alert("资格证不能为空");
+	  document.form1.zgzsbh.focus();
+	  return false;
+  }
+  if(document.form1.zyzsbh.value==""){
+	  alert("执业证书不能为空");
+	  document.form1.zyzsbh.focus();
+	  return false;
+  }
+          return true;  
+}
+//--->
+</script>
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	<include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+            
+
+        	
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+        	<a href="{:U('Member/password')}">修改密码</a>
+            	 <div class="reg" style="padding: 35px 0 35px 70px;">
+<form name="form1" action="" method="post" enctype="multipart/form-data" onsubmit="return checksubmit()">
+<ul>
+<li class="text"><span>头像</span><img height="127px" width="100px" src="{$info.avatar}" /></li>
+<li class="text"><input type="file" name="photo" /></li>
+<li class="text"><span>用户名</span><input name="uname" type="text" value="{$info.uname}" disabled/></li>
+<li class="text"><span>姓名</span><input id=" " name="truename" type="text" value="{$info.truename}" /><b style="color:#F00">*</b></li>
+<li class="radio"><span>性别</span><input type="radio" name="sex" value="1" {$info.sex|retrunCheck=###,1}/>&emsp;男&emsp;&emsp;&emsp;<input type="radio"  name="sex" value="2" {$info.sex|retrunCheck=###,2}/>&emsp;女</li>
+<li class="text"><span>手机</span><input id=" " name="phone" type="text" value="{$info.phone}" disabled/></li>
+<li class="text"><span>邮箱</span><input name="email" type="text" value="{$info.email}"/><b style="color:#F00">*</b></li>
+<li class="text"><span>通信地址</span><input name="address" type="text" value="{$info.address}"/></li>
+<li class="text"><span>单位名称</span><input name="company" type="text" value="{$info.company}"/></li>
+<li class="text"><span>岗位</span><input name="zhiwu" type="text" value="{$info.zhiwu}"/></li>
+<li class="text"><span>出生年月</span><input id=" " name="both" type="text" value="{$info.both|date='Y-m-d',###}" /></li>
+<li class="text"><span>学历</span>
+<select name="xueli">
+<option value="0" {$info.xueli|retrunSelect=###,0}>请选择</option>
+<option value="1" {$info.xueli|retrunSelect=###,1}>专科</option>
+<option value="2" {$info.xueli|retrunSelect=###,2}>本科</option>
+<option value="3" {$info.xueli|retrunSelect=###,3}>研究生</option>
+<option value="4" {$info.xueli|retrunSelect=###,4}>其他</option>
+</select>
+<b style="color:#F00">*</b></li>
+<li class="text"><span>学位</span><input id=" " name="xuewei" type="text" value="{$info.xuewei}" /></li>
+<li class="text"><span>身份证号</span><input id=" " name="card" type="text" value="{$info.card}" /></li>
+<li class="text"><span>科室</span><input id=" " name="room" type="text" value="{$info.room}" /></li>
+<li class="text"><span>执业年限</span><input id=" " name="zynx" type="text" value="{$info.zynx}" /></li>
+<li class="text"><span>执业范围</span>
+<select name="zyfw">
+<option value="0" {$info.zyfw|retrunSelect=###,0}>请选择</option>
+<option value="1" {$info.zyfw|retrunSelect=###,1}>临床</option>
+<option value="2" {$info.zyfw|retrunSelect=###,2}>口腔</option>
+<option value="3" {$info.zyfw|retrunSelect=###,3}>公共卫生</option>
+<option value="4" {$info.zyfw|retrunSelect=###,4}>中医</option>
+</select>
+<b style="color:#F00">*</b></li>
+<li class="text"><span>医师级别</span>
+<select name="ysjb">
+<option value="0" {$info.ysjb|retrunSelect=###,0}>请选择</option>
+<option value="1" {$info.ysjb|retrunSelect=###,1}>执业医师</option>
+<option value="2" {$info.ysjb|retrunSelect=###,2}>执业助理医师</option>
+</select>
+<b style="color:#F00">*</b></li>
+<li class="text"><span>资格证书编号</span><input id=" " name="zgzsbh" type="text" value="{$info.zgzsbh}" /><b style="color:#F00">*</b></li>
+<li class="text"><span>执业证书编号</span><input id=" " name="zyzsbh" type="text" value="{$info.zyzsbh}" /><b style="color:#F00">*</b></li>
+<li><span>备注</span><textarea name="content">{$info.content}</textarea></li>
+<input type="hidden" name="id" value="{$info.id}" />
+<li><input type="submit" value="提交" class="submit"><input type="reset" value="重写" class="reset"><div class="clear"></div></li>
+</ul>
+</form>
+</div>
+            </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+        
+  
+  </div>
+    
+</div>
+<include file="Public:Footer" />

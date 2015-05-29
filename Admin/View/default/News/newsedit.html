@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript" src="/Public/Js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+
+
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<!-- 加载编辑器的容器 -->
+   
+        这里写你的初始化内容
+    </script>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="/Public/baidu/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="/Public/baidu/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+        ue.ready(function() {
+            //设置编辑器的内容
+            ue.setContent('{$data.content}');
+        });
+    </script>
+<div id="man_zone">
+
+
+<div class="right_add2"><p>当前页：编辑资讯</p></div>
+<div class="all_table2">
+
+<form name="form1" method="post" action="">
+<table width="100%">
+<tr>
+<td width="9%" height="34" align="right">标题:</td>
+<td align="left"><input name="title" type="text" class="Input_W675" id="Title" size="20" value="{$data.title}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">分类:</td>
+<td align="left">
+<select name="sort">
+<option value="">请选择分类</option>
+<volist name="sort" id="slist">
+<option value="{$slist.id}" {$data.sort|retrunSelect=###,$slist['id']}>{$slist.name}</option>
+</volist>
+</select>
+</td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">内容:</td>
+<td align="left"> <script id="container" name="content" type="text/plain"></script></td>
+</tr>
+<tr>
+<td height="25" align="right"></td>
+<td colspan="5"><input class="Submit" type="submit" value="" name="Submit22"><input class="resetsubmit" value="" name="" type="reset"><input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();"></td>
+</tr>
+<input type="hidden" name="id" value="{$data.id}" />
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>

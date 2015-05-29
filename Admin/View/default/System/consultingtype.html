@@ -1,0 +1,91 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function Edit(id)
+{
+	location.href='consultingtype_mdy.php?Work=Edit&id='+ id;
+}
+function Del(id)
+{
+	if (confirm("确定删除该记录？请慎重操作！"))
+	{
+		location.href='consultingtype_mdy.php?Work=Del&id='+ id;
+	}
+}
+</script>
+</head>
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：预约方式</p></div>
+
+<table class="bomdiv" border="0">
+<tr>
+
+<td nowrap="nowrap"><input class="bomdivcha" type="button" name="Submit" value="增加" onClick="location.href='consultingtype_mdy.php?Work=Add'"></td>
+</tr>
+</table>
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>更新时间</td>
+	<td nowrap='nowrap'>项目</td>
+    <td nowrap='nowrap'>预约方式</td>
+    <td nowrap='nowrap'>排序</td>
+	<td nowrap='nowrap'>操作</td>
+  </tr>
+
+
+<tr>
+<td nowrap='nowrap'>2013-12-24 10:35:00</td>
+<td nowrap='nowrap'>陕西皮肤性病防治所 </td>
+<td nowrap='nowrap'>电话</td>
+<td nowrap='nowrap'>0</td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="编辑" onclick="Edit(45)">[编]</span></td>
+</tr>
+
+
+<tr>
+<td nowrap='nowrap'>2013-12-24 10:35:09</td>
+<td nowrap='nowrap'>陕西皮肤性病防治所 </td>
+<td nowrap='nowrap'>网络</td>
+<td nowrap='nowrap'>0</td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="编辑" onclick="Edit(46)">[编]</span></td>
+</tr>
+
+
+<tr>
+<td nowrap='nowrap'>2013-12-24 10:35:15</td>
+<td nowrap='nowrap'>陕西皮肤性病防治所 </td>
+<td nowrap='nowrap'>电视</td>
+<td nowrap='nowrap'>0</td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="编辑" onclick="Edit(47)">[编]</span></td>
+</tr>
+
+
+<tr>
+<td nowrap='nowrap'>2013-12-24 10:35:25</td>
+<td nowrap='nowrap'>陕西皮肤性病防治所 </td>
+<td nowrap='nowrap'>报纸</td>
+<td nowrap='nowrap'>0</td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="编辑" onclick="Edit(48)">[编]</span></td>
+</tr>
+
+
+</table>
+</div>
+<div class="page">
+<div class="page"><input type="button" class="dtPageButton" name="dtBtnIndex" value="首页" disabled><input type="button" class="dtPageButton" name="dtBtnIndex" value="上一页" disabled><input type="button" class="dtPageButton" name="dtBtnIndex" value="下一页" disabled><input type="button" class="dtPageButton" name="dtBtnIndex" value="尾页" disabled><input type="text" class="dtPageInput" name="jump" id="jump"><input type="button" class="dtPageButton" name="dtBtnIndex" value="跳转" style="cursor:pointer;" onclick="window.location.href='/system/consultingtype_list.php?page='+document.getElementById('jump').value+'&CompanyID=44'">&nbsp;&nbsp;&nbsp;&nbsp;<span>共有 4 条纪录  共 1 页  本页第 1 页</span></div></div>
+</div>
+</body>
+</html>

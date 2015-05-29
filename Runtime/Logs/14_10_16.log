@@ -1,0 +1,659 @@
+[ 2014-10-16T01:59:57+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.071004s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.009000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.060003s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 14 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 5 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_project` [ RunTime:0.028001s ]
+SQL: SELECT * FROM `ys_project` LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 3 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.038002s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `ys_link`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(F:/wamp/www/robin/Runtime/Temp/fdd79a9d3cf079401c5a836c63aefe42.php): No such file or directory F:\wamp\www\robin\Core\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `ys_alonepage` [ RunTime:0.132008s ]
+SQL: SELECT * FROM `ys_alonepage` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.006000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 102 行.
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 102 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.164010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.164010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:02:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001001s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 14 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 5 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_project` [ RunTime:0.013000s ]
+SQL: SELECT * FROM `ys_project` LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 3 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_link`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(F:/wamp/www/robin/Runtime/Temp/fdd79a9d3cf079401c5a836c63aefe42.php): No such file or directory F:\wamp\www\robin\Core\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `ys_alonepage` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `ys_alonepage` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 102 行.
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 102 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.084005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-16T02:04:12+08:00 ] 127.0.0.1 /index.php/Public/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_member` [ RunTime:0.076004s ]
+SQL: SHOW COLUMNS FROM `ys_member` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`uname`,`expeirtime`,`status` FROM `ys_member` WHERE ( `uname` = 'wanggong' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.033002s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.017001s ]
+ERR: 1146:La table 'robin.auth_group_access' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth_group_access`
+SQL: SHOW COLUMNS FROM `ys_auth_group_access` [ RunTime:0.024001s ]
+SQL: SELECT * FROM `ys_auth_group_access` WHERE ( `uid` = 31 ) LIMIT 1   [ RunTime:0.040003s ]
+SQL: SHOW COLUMNS FROM `ys_loginlog` [ RunTime:0.028002s ]
+SQL: SHOW COLUMNS FROM `ys_loginlog` [ RunTime:0.003000s ]
+SQL: INSERT INTO `ys_loginlog` (`content`,`time`,`user`,`ip`) VALUES ('登录系统成功-Firefox-Windows 7',1413396252,'wanggong','127.0.0.1(本机地址)') [ RunTime:0.066004s ]
+SQL: SHOW COLUMNS FROM `ys_user` [ RunTime:0.052003s ]
+SQL: SELECT * FROM `ys_user` WHERE ( `username` = 'wanggong' ) LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:04:16+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 14 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 5 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_project` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `ys_project` LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 3 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_link`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(F:/wamp/www/robin/Runtime/Temp/fdd79a9d3cf079401c5a836c63aefe42.php): No such file or directory F:\wamp\www\robin\Core\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `ys_alonepage` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_alonepage` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 101 行.
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 101 行.
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.005001s ]
+ERR: 1146:La table 'robin.auth_group' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth_group`
+SQL: SHOW COLUMNS FROM `ys_auth_group` [ RunTime:0.158010s ]
+SQL: SELECT * FROM `ys_auth_group` WHERE ( `status` = 1 )  [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.287016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.287016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-16T02:05:07+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 14 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 5 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_project` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_project` LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 3 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_link`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(F:/wamp/www/robin/Runtime/Temp/fdd79a9d3cf079401c5a836c63aefe42.php): No such file or directory F:\wamp\www\robin\Core\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `ys_alonepage` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_alonepage` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 101 行.
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 101 行.
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.003000s ]
+ERR: 1146:La table 'robin.auth_group' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth_group`
+INFO: Run Behavior\ParseTemplate [ RunTime:0.094006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:05:17+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 14 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 5 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_project` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_project` LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title`,`posttime`,`istop` FROM `ys_article` WHERE ( `sort` = 3 ) AND ( `status` = 1 ) ORDER BY istop DESC,id DESC LIMIT 9   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `ys_link` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_link`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(F:/wamp/www/robin/Runtime/Temp/fdd79a9d3cf079401c5a836c63aefe42.php): No such file or directory F:\wamp\www\robin\Core\Library\Think\Cache\Driver\File.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `ys_alonepage` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `ys_alonepage` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 101 行.
+NOTIC: [8] Undefined variable: hydtlist F:\wamp\www\robin\Runtime\Cache\Home\2c908eee8c195006d0f4f287d3f60506.php 第 101 行.
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.003000s ]
+ERR: 1146:La table 'robin.auth_group' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth_group`
+INFO: Run Behavior\ParseTemplate [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:05:33+08:00 ] 127.0.0.1 /index.php/Member/index
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.003000s ]
+ERR: 1146:La table 'robin.auth_group' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth_group`
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.038002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.024002s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\a5f1901487fe59e39a4ba2b526375b60.php 第 84 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\a5f1901487fe59e39a4ba2b526375b60.php 第 91 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\a5f1901487fe59e39a4ba2b526375b60.php 第 97 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.129007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:05:40+08:00 ] 127.0.0.1 /index.php/Member/info
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_member` [ RunTime:0.005000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\MemberModel::getUserInfobyid(), called in F:\wamp\www\robin\Home\Controller\MemberController.class.php on line 49 and defined F:\wamp\www\robin\Home\Model\MemberModel.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `ys_member` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_member` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: value F:\wamp\www\robin\Home\Model\MemberModel.class.php 第 25 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\b0cff38192e587c7334bc8d70490bb8d.php 第 84 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\b0cff38192e587c7334bc8d70490bb8d.php 第 91 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\b0cff38192e587c7334bc8d70490bb8d.php 第 97 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.068004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:06:19+08:00 ] 127.0.0.1 /index.php/Member/info
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_member` [ RunTime:0.004000s ]
+NOTIC: [2] Missing argument 2 for Home\Model\MemberModel::getUserInfobyid(), called in F:\wamp\www\robin\Home\Controller\MemberController.class.php on line 49 and defined F:\wamp\www\robin\Home\Model\MemberModel.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `ys_member` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `ys_member` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value F:\wamp\www\robin\Home\Model\MemberModel.class.php 第 25 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\b0cff38192e587c7334bc8d70490bb8d.php 第 84 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\b0cff38192e587c7334bc8d70490bb8d.php 第 91 行.
+NOTIC: [8] Undefined index: type F:\wamp\www\robin\Runtime\Cache\Home\b0cff38192e587c7334bc8d70490bb8d.php 第 97 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:06:27+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-16T02:07:13+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.067004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:07:28+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:07:50+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.063004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-16T02:08:55+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+NOTIC: [8] Undefined variable: select F:\wamp\www\robin\Runtime\Cache\Home\54adf2b0c7e0cdca51adf1cb088c937c.php 第 179 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-10-16T02:11:25+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.063003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-16T02:11:28+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/3
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-10-16T02:11:38+08:00 ] 127.0.0.1 /index.php/Member/adduser/type/2
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wamp\www\robin\Core\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ys_article` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `ys_article` WHERE ( `sort` = 7 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ys_message_receiver` [ RunTime:0.002001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ys_message_receiver` WHERE ( `to_uid` = 31 ) AND ( `is_readed` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: msg F:\wamp\www\robin\Home\Common\function.php 第 862 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.063004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

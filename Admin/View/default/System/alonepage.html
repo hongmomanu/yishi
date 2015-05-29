@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function Edit(id)
+{
+	location.href='{:U('Admin/System/aloneedit')}/id/'+ id;
+}
+
+</script>
+</head>
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：单页面管理</p></div>
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>名称</td>
+    <td nowrap='nowrap'>操作</td>
+  </tr>
+
+<volist name="list" id="login">
+<tr>
+<td nowrap='nowrap'>{$login.title}</td>
+<td nowrap='nowrap'>
+<span style="cursor:pointer;" title="编辑" onclick="Edit({$login.id})">[编辑]</span>
+</td>
+</tr>
+</volist>
+
+</table>
+</div>
+<div class="page">
+<div class="page">
+{$page}
+
+</div></div>
+</div>
+</body>
+</html>

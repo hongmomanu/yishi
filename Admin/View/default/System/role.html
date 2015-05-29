@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+
+
+<div class="right_add2"><p>当前页：授权</p></div>
+<div class="all_table2">
+
+<form name="form1" method="post" action="{:U('System/role')}">
+
+<table width="100%" bgcolor="#f2f2f2">
+
+<tr>
+<td height="10" align="right"></td>
+<td colspan="5"></td>
+</tr>
+
+<tr>
+<td width="15%" height="24" align="right">[用户组]：</td>
+<td width="85%">&nbsp;&nbsp;<b>{$data.title}</b></td>
+</tr>
+
+
+<tr>
+<td height="24" align="right"><input id="checkbox" type="checkbox" value="19" name="checkbox[]" onClick="childParent(this)" <php>echo retrunChecks($data['rules'],1);</php>> 预约管理：</td>
+<td>&nbsp;
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="1" onClick="clickChild(this)" class="c-700">&nbsp;预约到今日
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="2" onClick="clickChild(this)" class="c-700">&nbsp;咨询登记
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="3" onClick="clickChild(this)" class="c-700">&nbsp;我的患者信息
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="4" onClick="clickChild(this)" class="c-700">&nbsp;回访提醒
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="5" onClick="clickChild(this)" class="c-700">&nbsp;综合查询
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="6" onClick="clickChild(this)" class="c-700">&nbsp;客服考核
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="7" onClick="clickChild(this)" class="c-700">&nbsp;地区分析
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="8" onClick="clickChild(this)" class="c-700">&nbsp;病种分析
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="220" onClick="clickChild(this)" class="c-700">&nbsp;病种分析导出
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="217" onClick="clickChild(this)" class="c-700">&nbsp;查看回访
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="218" onClick="clickChild(this)" class="c-700">&nbsp;添加回访
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="222" onClick="clickChild(this)" class="c-700">&nbsp;改签
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="223" onClick="clickChild(this)" class="c-700">&nbsp;查看聊天记录
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="224" onClick="clickChild(this)" class="c-700">&nbsp;删除信息
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="228" onClick="clickChild(this)" class="c-700">&nbsp;导出今日预约
+</td>
+</tr>
+
+<tr>
+<td height="24" align="right"><input id="checkbox" type="checkbox" value="20" name="checkbox[]" onClick="childParent(this)"> 门诊管理：</td>
+<td>&nbsp;
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="221" onClick="clickChild(this)" class="c-400">&nbsp;预约到今日
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="12" onClick="clickChild(this)" class="c-400">&nbsp;就诊患者
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="5" onClick="clickChild(this)" class="c-400">&nbsp;综合查询
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="13" onClick="clickChild(this)" class="c-400">&nbsp;专家报表
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="225" onClick="clickChild(this)" class="c-400">&nbsp;网签处理
+</td>
+</tr>
+
+<tr>
+<td height="24" align="right"><input id="checkbox" type="checkbox" value="21" name="checkbox[]" onClick="childParent(this)"> 网络管理：</td>
+<td>&nbsp;
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="9" onClick="clickChild(this)" class="c-800">&nbsp;网络报表
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="5" onClick="clickChild(this)" class="c-800">&nbsp;综合查询
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="10" onClick="clickChild(this)" class="c-800">&nbsp;竞价分析
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="11" onClick="clickChild(this)" class="c-800">&nbsp;整合营销
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="226" onClick="clickChild(this)" class="c-800">&nbsp;添加竞价分析
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="227" onClick="clickChild(this)" class="c-800">&nbsp;添加营销分析
+</td>
+</tr>
+
+
+<tr>
+<td height="24" align="right"><input id="checkbox" type="checkbox" value="22" name="checkbox[]" onClick="childParent(this)"> 通知管理：</td>
+<td>&nbsp;
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="14" onClick="clickChild(this)" class="c-300">&nbsp;通知列表
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="219" onClick="clickChild(this)" class="c-300">&nbsp;通知浏览
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="15" onClick="clickChild(this)" class="c-300">&nbsp;我的通知
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="16" onClick="clickChild(this)" class="c-300">&nbsp;添加通知
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="17" onClick="clickChild(this)" class="c-300">&nbsp;编辑通知
+&nbsp;<input name="checkbox[]" type="checkbox" id="checkbox" value="18" onClick="clickChild(this)" class="c-300">&nbsp;删除通知
+</td>
+</tr>
+
+<tr>
+<td height="24" align="right"><input id="checkbox" type="checkbox" value="400" name="checkbox[]" onClick="childParent(this)"> 功能开关：</td>
+<td>&nbsp;
+<input name="checkbox[]" type="checkbox" id="checkbox" value="200" onClick="clickChild(this)" class="c-500">&nbsp;移动终端
+<input name="checkbox[]" type="checkbox" id="checkbox" value="300" onClick="clickChild(this)" class="c-500">&nbsp;短消息提醒
+</td>
+</tr>
+
+<tr>
+<td height="24" align="right"></td>
+<td>&nbsp;&nbsp;<a href="javascript:SelectIterm(form1,0);">全选</a>&nbsp;<a href="javascript:SelectIterm(form1,1);">反选</a>&nbsp;<a href="javascript:SelectIterm(form1,2);">全取消</a></td>
+</tr>
+
+<tr>
+<td height="25" align="right">
+</td>
+<td colspan="5">
+<input class="Submit" type="submit" onClick="getvalue();" value="" name="Submit22"><input class="resetsubmit" value="" name="" type="reset">
+<input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();">
+<input type="hidden" name="action" value="edit" />
+<input type="hidden" name="id" value="{$data.id}" />
+</td>
+</tr>
+
+<tr>
+<td height="10" align="right"></td>
+<td colspan="5"></td>
+</tr>
+
+</table>
+
+</form>
+</div>
+
+
+<p>&nbsp;</p>
+
+</div>
+</body>
+</html>
+
+<script language="javascript">
+var txt;
+var myArray;
+var chks = document.form1.checkbox;
+txt= "{$data.rules}";
+myArray = txt.split(",");
+
+for(var b=0; b<chks.length; b++)
+{
+	chks[b].checked = false;
+}
+
+for(var i=0;i<chks.length;i++)
+{
+	var j = chks[i].value;
+	for(var h=0;h<myArray.length;h++)
+	{
+		if(myArray[h]==j)
+		{
+			chks[i].checked = true;
+		}
+	}
+}
+
+function SelectIterm(form,sign)
+{
+	for (var i=0; i<form.elements.length;i++ )
+	{
+		if (form.elements[i].type == "checkbox")
+		{
+			var e=form.elements[i];
+			if (sign==0) e.checked= true;
+			if (sign==1) e.checked= !e.checked;
+			if (sign==2) e.checked= false;
+		}
+	}
+}
+
+function childParent(obj)
+{
+	var arr = document.getElementsByName('checkbox');
+	if(!arr) return false;
+	for(var i = 0; i < arr.length; i++)
+	{
+		if(arr[i].className == 'c' + obj.value)
+		{
+			arr[i].checked = obj.checked;
+		}
+	}
+}
+
+function clickChild(obj)
+{
+	var arr = document.getElementsByName('checkbox');
+	if(!arr) return false;
+	var className = obj.className;
+	var pId = className.replace('c','');
+	//alert(pId);
+	if(obj.checked)
+	{
+		for(var i = 0; i < arr.length; i++)
+		{
+			if(arr[i].value == pId)
+			{
+				arr[i].checked = true;
+				return true;
+			}
+		}
+	}
+	else
+	{
+		var flag = false;
+		var pObj = null;
+		for(var i = 0; i < arr.length; i++)
+		{
+			if(arr[i].value == pId) pObj = arr[i];
+			if(arr[i].className == className && arr[i].checked)
+			{
+				flag = true;
+				break;
+			}
+		}
+		if(!flag)
+		{
+			pObj.checked = false;
+		}
+	}
+}
+</script>

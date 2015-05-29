@@ -1,0 +1,19 @@
+﻿html{overflow:hidden;}
+body{text-align:center;font-family:"\5B8B\4F53",serif;font-size:12px;background:url(../Images/loginbody.jpg);}
+div{text-align:left;margin:0;}
+img{vertical-align:top;border:0;}
+.loginall{height:0px;width:0px;top:50%;left:50%;position:absolute;}
+.loginpn{width:650px;height:236px;position:absolute;margin:-158px 0 0 -325px;z-index:1000;background:url(../Images/logincen.jpg) center center no-repeat;}
+.loginlogo{float:left;width:325px;height:236px;overflow:hidden;}
+.loginlogo img{float:left;display:inline;margin-top:7px;}
+.logindl{float:right;display:inline;width:325px;height:206px;margin-top:30px;}
+.logindls,.logindlx{height:27px;margin-top:15px;}
+.logindls span,.logindlx span{float:left;display:inline;width:83px;text-align:right;font-size:15px;color:#ffc526;font-weight:bold;font-family:"微软雅黑";height:25px;line-height:25px;}
+.logindls span b{ padding:0 0 0 15.5px;}
+.logindls input{float:left;width:212px;height:23px;border:#9CA2D4 1px solid;background:#949BCF;line-height:23px;padding-left:10px;font-weight:bold;color:#FFF;}
+.logindlx input{float:left;width:102px;height:23px;border:#9CA2D4 1px solid;background:#949BCF;line-height:23px;padding-left:10px;font-weight:bold;color:#FFF;}
+.logindlx img{float:left;display:inline;margin-left:5px;margin-top:3px;}
+.logindlc{margin-top:75px;padding-left:83px;}
+.logindlc input{float:left;width:60px;height:22px;background:url(../Images/dl.jpg) no-repeat;border:none;cursor:pointer;}
+.logindlc button{float:left;width:60px;height:22px;background:url(../Images/cz.jpg) no-repeat;border:none;cursor:pointer;margin-left:10px;}
+.logindlp{color:#acb3e5;width:295px;padding:17px 0 0 24px;float:left;}

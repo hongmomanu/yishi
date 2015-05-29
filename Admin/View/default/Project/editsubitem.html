@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+
+
+<div class="right_add2"><p>当前页：编辑回报</p></div>
+<div class="all_table2">
+
+<form name="form1" method="post" action="{:U('Project/editsubitem')}">
+<table width="100%">
+<tr>
+<td width="9%" height="34" align="right">价格:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">简介:</td>
+<td align="left"><textarea name="content" style="height:150px;width:300px">{$data.content}</textarea>&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">是否需要配送:</td>
+<td align="left"><select name="is_delivery"><option value="1" {$user.isdelivery|retrunSelect=###,1}>是</option><option value="0">否</option></select></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">运费:</td>
+<td align="left"><input name="delivery_fee" type="text" class="Input_W675" id="Title" size="20" value="{$data.delivery_fee}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">是否限购:</td>
+<td align="left"><select name="is_limit_user"><option value="1">是</option><option value="0">否</option></select></span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">限购人数:</td>
+<td align="left"><input name="limit_user" type="text" class="Input_W675" id="Title" size="20" value="{$data.limit_user}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">成功后回报天数:</td>
+<td align="left"><input name="times" type="text" class="Input_W675" id="Title" size="20" value="{$data.times}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td height="25" align="right"><input type="hidden" name="id" value="{$data.id}" /><input type="hidden" name="action" value="update" /></td>
+<td colspan="5"><input class="Submit" type="submit" value="" name="Submit22"><input class="resetsubmit" value="" name="" type="reset"><input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();"></td>
+</tr>
+
+</table>
+</form>
+</div>
+
+
+
+</div>
+</body>
+</html>

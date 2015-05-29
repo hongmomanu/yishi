@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script type='text/javascript' src='/Public/default/js/ajaxfileupload.js'></script>
+<script type='text/javascript' src='/Public/kindeditor/kindeditor.js'></script>
+<script charset="utf-8" src="/Public/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+
+
+<div class="right_add2"><p>当前页：编辑项目</p></div>
+<div class="all_table2">
+
+<form name="form1" method="post" action="{:U('Project/editsubitem')}">
+<table width="100%">
+<tr>
+<td width="9%" height="34" align="right">名称:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">发起人id:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">图片:</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">视频地址:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">参考上线天数:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">开始时间:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">结束时间:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">上架:</td>
+<td align="left">有效<input type="radio" name="status" value="1" {$data.status|retrunCheck=###,1}/>无效<input type="radio" name="status" value="0" {$data.status|retrunCheck=###,0}/></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">目标金额:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">简介:</td>
+<td align="left"><textarea name="description"></textarea></td>
+</tr>
+<tr>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#descript');
+        });
+</script>
+<td width="9%" height="34" align="right">详情:</td>
+<td align="left"><textarea id='descript' name='content' style='width:470px; height:300px;' >{$data.content}</textarea>&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#descripts');
+        });
+</script>
+<td width="9%" height="34" align="right">付款与退款说明:</td>
+<td align="left"><textarea id='descripts' name='content' style='width:470px; height:300px;' >{$data.content}</textarea>&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">标签:</td>
+<td align="left"><input name="tag" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span id="chk">用空格分开</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">分类:</td>
+<td align="left"><select name="sort">
+<option value="">请选择</option>
+<volist name="sort" id="slist">
+<option value="{$slist.id}" {$data.sort|retrunSelect=###,$slist['id']}>{$slist.name}</option>
+</volist>
+</select></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">所属地区:</td>
+<td align="left"><select name="provice" id="prov" onchange="selectCity()">
+<option value="">请选择</option>
+<volist name="city" id="ctlist">
+<option value="{$ctlist.area_id}" {$data.provice|retrunSelect=###,$ctlist['area_id']}>{$ctlist.title}</option>
+</volist>
+</select>
+<select name="city" id="country">
+<option value="0">请选择</option>
+<if condition="$data['city'] neq 0">
+<volist name="country" id="counlist">
+<option value="{$counlist.id}" {$data.city|retrunSelect=###,$counlist['id']}>{$counlist.title}</option>
+</volist>
+</if>
+</span>
+</td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">排序:</td>
+<td align="left"><input name="isorder" type="text" class="Input_W675" id="Title" size="20" value="{$data.price}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">SEO标题:</td>
+<td align="left"><textarea name="seotitle"></textarea></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">SEO关键词:</td>
+<td align="left"><textarea name="seokeywords"></textarea></td>
+</tr>
+<tr>
+<td width="9%" height="34" align="right">SEO描述:</td>
+<td align="left"><textarea name="seodescription"></textarea></td>
+</tr>
+<tr>
+<td height="25" align="right"><input type="hidden" name="id" value="{$data.id}" /><input type="hidden" name="action" value="update" /></td>
+<td colspan="5"><input class="Submit" type="submit" value="" name="Submit22"><input class="resetsubmit" value="" name="" type="reset"><input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();"></td>
+</tr>
+
+</table>
+</form>
+</div>
+</div>
+<script>
+function selectCity(){
+	var id = document.getElementById("prov").value;
+	if(id != '' || id != 0){
+		$.post("{:U('Home/Public/cityajax')}",{ids:id},function(e){
+			$("#country").empty().html(e);
+		},'json');
+	}
+}
+</script>
+</body>
+</html>

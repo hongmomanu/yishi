@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script>
+function Edit(id)
+{
+	location.href='{:U('Member/edit')}/id/'+ id;
+}
+function View(uid,type)
+{
+	location.href='{:U('Member/users')}/uid/'+ uid +'/type/'+ type;
+}
+function Change(id,type)
+{
+	if(type == 1){
+		if (confirm("确定启用账户？请慎重操作！"))
+		{
+			location.href='{:U('Member/changestatus')}/id/'+ id +'/status/1';
+		}
+	}else{
+		if (confirm("确定禁用账户？请慎重操作！"))
+		{
+			location.href='{:U('Member/changestatus')}/id/'+ id +'/status/0';
+		}
+	}
+}
+function Search(){
+	var name = document.getElementById('UserName').value;
+	location.href="{:U('Member/users',array('type'=>I('get.type')))}/uname/"+name;
+}
+</script>
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	<include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+            
+
+        	
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+        	<table class="bomdiv" border="0">
+<tr>
+<td nowrap="nowrap"><p>&nbsp;<php>echo getGroupName(I('get.type'));</php>会员用户名：</p></td>
+<td nowrap="nowrap"><input name="UserName" type="text" class="Input_W80 bomdivinp" id="UserName" value="{$keyword}" size="10"></td>
+<td nowrap="nowrap"><input class="bomdivcha" type="button" name="Submit2" value="查询" onClick="Search()"></td>
+</tr>
+</table>
+        	<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>id</td>
+    <td nowrap='nowrap'>用户名</td>
+    <php>if(I('get.type') == 4){</php>
+    <td nowrap='nowrap'>真实姓名</td>
+    <td nowrap='nowrap'>到期日期</td>
+    <php>}</php>
+    <td nowrap='nowrap'>单位名称</td>
+	
+	<td nowrap='nowrap'>注册日期</td>
+	
+	<td nowrap='nowrap'>状态</td>
+	<td nowrap='nowrap'>联系电话</td>
+	<td nowrap='nowrap'>操作</td>
+  </tr>
+  <volist name="list" id="user">
+<tr>
+<td nowrap='nowrap'>{$user.id}</td>
+<td nowrap='nowrap'>{$user.uname}</td>
+ <php>if(I('get.type') == 4){</php>
+<td nowrap='nowrap'>{$user.truename}</td>
+<td nowrap='nowrap'>{$user.expeirtime|date='Y-m-d H:i:s',###}</td>
+<php>}</php>
+<td nowrap='nowrap'>{$user.company}</td>
+<td nowrap='nowrap'>{$user.posttime|date='Y-m-d H:i:s',###}</td>
+
+<td nowrap='nowrap'><if condition="$user['status'] eq 1">正常<else />锁定</if></td>
+
+<td nowrap='nowrap'>{$user.phone} </td>
+<td nowrap='nowrap'>
+<if condition="$user['status'] eq 1">
+<span style="cursor:pointer;" title="编辑" onclick="Change({$user.id},0)">[冻结]</span>
+<else />
+<span style="cursor:pointer;" title="编辑" onclick="Change({$user.id},1)">[恢复]</span>
+</if>
+<php>if(I('get.type') == 2){</php>
+<span style="cursor:pointer;" title="删除" onclick="View({$user.id},4)">[分会信息]</span>
+<php>}else if(I('get.type') == 3){</php>
+<span style="cursor:pointer;" title="删除" onclick="View({$user.id},4)">[团体信息]</span>
+<php>}</php>
+<span style="cursor:pointer;" title="删除" onclick="Edit({$user.id})">[修改]</span>
+</td>
+</tr>
+</volist>
+</table>
+</div>
+            
+<div style="width: 95%; height: 30px; overflow: hidden; text-align: center; font-weight: bold; margin-bottom:10px; margin-top:10px; font-size:14px;">
+                                            {$page}
+                                            </div>
+
+            </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+        
+  
+  </div>
+    
+</div>
+<include file="Public:Footer" />

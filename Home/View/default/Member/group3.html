@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script src="/Public/media/jquery.js"></script>	
+<script src="/js/highcharts.js"></script>
+<script src="/js/highcharts-3d.js"></script>
+<script src="/js/modules/exporting.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column',
+            margin: 75,
+            options3d: {
+				enabled: true,
+                alpha: 10,
+                beta: 25,
+                depth: 70
+            }
+        },
+        title: {
+            text: '人员统计'
+        },
+        subtitle: {
+            text: ''
+        },
+        plotOptions: {
+            column: {
+                depth: 25
+            }
+        },
+        xAxis: {
+        	categories: ['个人','男','女','专科','本科','研究生','其他','临床','口腔','公共卫生','中医','执业医师','执业助理医生']
+        },
+        yAxis: {
+            opposite: true
+        },
+        series: [{
+            name: '人数',
+            data: [{$newchar}]
+        }]
+    });
+});
+		</script>
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	<include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+            
+
+        	
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+            	 <div class="reg" style="padding: 35px 0 35px 70px;">
+<form action="" method="post">
+        	性别
+<select name="sex">
+<option value="0">请选择</option>
+<option value="1">男</option>
+<option value="2">女</option>
+</select>
+年龄<input size="5" type="text" name="start" value="" />-<input type="text" size="5" name="end" value="" />
+医师级别<select name="ysjb">
+<option value="0">请选择</option>
+<option value="1">执业医师</option>
+<option value="2">执业助理医师</option>
+</select>
+学历<select name="xueli">
+<option value="0">请选择</option>
+<option value="1">专科</option>
+<option value="2">本科</option>
+<option value="3">研究生</option>
+<option value="4">其他</option>
+</select>
+执业范围
+<select name="zyfw">
+<option value="0">请选择</option>
+<option value="1">临床</option>
+<option value="2">口腔</option>
+<option value="3">公共卫生</option>
+<option value="4">中医</option>
+</select>
+培训项目<select name="project">
+<option value="0">请选择</option>
+<volist name="pxxm" id="pxxmlist">
+<option value="{$pxxmlist.id}">{$pxxmlist.title}</option>
+</volist>
+</select>
+<input type="submit" value="筛选" />
+</form>
+<php>if(IS_POST){</php>
+
+<php>}else{</php>
+<ul>
+<li class="text">当前在线：{$countper}个</li>
+<li class="text">个人：{$data.person}个</li>
+<li class="text">男：{$data.man}个</li>
+<li class="text">女：{$data.woman}个</li>
+<li class="text">专科：{$data.zhuanke}个</li>
+<li class="text">本科：{$data.benke}个</li>
+<li class="text">研究生：{$data.yanjiusheng}个</li>
+<li class="text">其他学历：{$data.qita}个</li>
+<li class="text">临床：{$data.linchuang}个</li>
+<li class="text">口腔：{$data.kouqiang}个</li>
+<li class="text">公共卫生：{$data.gonggongweisheng}个</li>
+<li class="text">中医：{$data.zhongyi}个</li>
+<li class="text">执业医师：{$data.zyys}个</li>
+<li class="text">执业助理医生：{$data.zyzlys}个</li>
+<li class="text">培训项目：{$data.pxxm}个</li>
+<li class="text">培训参与人数:{$data.pxperson}</li>
+<li class="text">培训学分:{$data.totalscore}</li>
+</ul>
+<php>}</php>
+<div id="container" style="height: 400px"></div>
+</div>
+            </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+        
+  
+  </div>
+    
+</div>
+<include file="Public:Footer" />

@@ -1,0 +1,3 @@
+<?php
+//000000086400a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:6:"module";s:4:"home";s:4:"type";s:1:"1";s:5:"title";s:6:"总会";s:11:"description";s:0:"";s:6:"status";s:1:"1";s:5:"rules";s:0:"";}i:1;a:7:{s:2:"id";s:1:"2";s:6:"module";s:4:"home";s:4:"type";s:1:"1";s:5:"title";s:6:"分会";s:11:"description";s:0:"";s:6:"status";s:1:"1";s:5:"rules";s:0:"";}i:2;a:7:{s:2:"id";s:1:"3";s:6:"module";s:4:"home";s:4:"type";s:1:"1";s:5:"title";s:6:"医院";s:11:"description";s:0:"";s:6:"status";s:1:"1";s:5:"rules";s:0:"";}i:3;a:7:{s:2:"id";s:1:"4";s:6:"module";s:5:"admin";s:4:"type";s:1:"1";s:5:"title";s:12:"分组名称";s:11:"description";s:0:"";s:6:"status";s:1:"1";s:5:"rules";s:0:"";}}
+?>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/Public/Js/jquery.Xslider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	
+	// 焦点图片淡隐淡现
+	$("#slider3").Xslider({
+		affect:'fade',
+		ctag: 'div'
+	});
+});
+</script>
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	<include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+<div class="con_row_2 w_1000">
+  	  <div class="con_hd left">
+       	  <div id="slider3" class="slider">
+			<div class="conbox">
+				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070717182621191.jpg"></a></div>
+				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070717142355292.jpg"></a></div>
+				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070716292198261.jpg"></a></div>
+				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070716213331177.jpg"></a></div>
+				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20146/2014062512224568135.jpg"></a></div>
+			</div>
+			<div class="switcher">
+				<a href="#" class="cur">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+			</div>
+		</div><!--slider end-->
+      </div>
+      <div class="con_row1_R left">
+       	  <h2><div class="left">行业动态 <span>Dynamic</span></div><div class="right"><a href="{:U('Index/category',array('sortid'=>'7'))}"><img src="/Public/Home/images/more.png"/></a></div><div class="clear"></div></h2>
+          <volist name="hydt" id="hydtlists" offset="1" length='1'>
+          <h5><a href="{:U('Index/article',array('id'=>$hydtlist['id']))}">{$hydtlist.title}</a></h5>
+          </volist>
+    <ul>
+                	 <volist name="hydt" id="hydtlist">
+                        <li><a href="{:U('Index/article',array('id'=>$hydtlist['id']))}"><span class="left"><if condition="$hydtlist['istop'] eq 1"><span style="color:red">{$hydtlist.title}</span><else />{$hydtlist.title}</if></span><span class="right">{$hydtlist.posttime|date='Y-m-d',###}</span></a></li>
+                    </volist>
+                </ul>
+      </div>
+      <div class="box huiyuantd right" style="overflow:hidde">
+        	<h3><img src="/Public/Home/images/ico_06.jpg" class="abs left" />会员通道</h3>
+<dl class="denglu">
+<php>if(!is_login()){</php>
+<form action="{:U('Public/login')}" method="post">
+            	<dd><label>用户名：</label><input type="text" class="input" name="uname" /></dd>
+                <dd><label>密&nbsp;&nbsp;码：</label><input type="password" class="input" name="pwd" /></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input name="提交" type="submit" class="submit" value="提交" /><input name="" type="reset" value="重置" class="submit" /><input type="hidden" name="action" value="logindo" />
+                </dd>
+                <!--
+              <dd style="text-align:center"><a href="">立即注册</a>&nbsp;&iacute;&nbsp;<a href="#">忘记密码</a></dd>
+              -->
+            </form>
+            <php>}else{</php>
+     <dd><label>欢迎您{$Think.session.groupid|getGroupName=###}会员{$Think.session.user.uname}</label></dd>
+     <dd><label><a href="{:U('Member/index')}">进入<span style="color:red;font-size:18px">会员中心</span></a></label></dd>
+     <dd><label><a href="{:U('Public/logout')}">退出登录</a></label></dd>
+     <php>}</php>
+            </dl>
+        
+        </div>
+         <div style="margin-top:10px;margin-right:2px" class="right"><img src="/Public/Home/ban_img.png" width="267" /></div>
+      <div class="blank"></div>
+      <div class="mb10"><img src="/Public/Home/images/ban_1.jpg" width="1000" height="143" /></div>
+      <div class="w_1000">
+      <!--1-->
+   	  <div class="box w_490 left">
+        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />政策法规<a href="{:U('Index/category',array('sortid'=>'14'))}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+            <ul class="list">
+            	<volist name="zcfg" id="zcfglist">
+            	<li><a href="{:U('Index/article',array('id'=>$zcfglist['id']))}"><span class="left">{$zcfglist.title}...</span><span class="right">[{$zcfglist.posttime|date='Y-m-d',###}]</span></a></li>
+				</volist>
+            </ul>
+        </div>
+     <!--1 end-->
+     
+     <!--2-->
+   	  <div class="box w_490 right">
+        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />工作动态<a href="{:U('Index/category',array('sortid'=>'5'))}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+            <ul  class="list">
+            <volist name="gzdt" id="gzdtlist">
+            	<li><a href="{:U('Index/article',array('id'=>$gzdtlist['id']))}"><span class="left">{$gzdtlist.title}...</span><span class="right">[{$gzdtlist.posttime|date='Y-m-d',###}]</span></a></li>
+				</volist>
+            </ul>
+        </div>
+     <!--2 end-->
+    <div class="blank"></div>
+      <div class="mb10"><img src="/Public/Home/images/ban_2.jpg" width="1000" height="60" /></div>
+     <!--1-->
+   	  <div class="box w_490 left">
+        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />最新培训<a href="{:U('Project/my')}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+            <ul  class="list">
+            <volist name="project" id="projectlist">
+            	<li><a href="{:U('Project/my')}"><span class="left">{$projectlist.title}...</span><span class="right">[{$projectlist.posttime|date='Y-m-d',###}]</span></a></li>
+				</volist>
+            </ul>
+        </div>
+     <!--1 end-->
+     
+     <!--2-->
+   	  <div class="box w_490 right">
+        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />医疗评审<a href="{:U('Index/category',array('sortid'=>'3'))}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+            <ul  class="list">
+            <volist name="ylps" id="ylpslist">
+            	<li><a href="{:U('Index/article',array('id'=>$ylpslist['id']))}"><span class="left">{$ylpslist.title}...</span><span class="right">[{$ylpslist.posttime|date='Y-m-d',###}]</span></a></li>
+				</volist>
+            </ul>
+        </div>
+     <!--2 end-->
+    
+      </div>
+     
+      
+      <div class="blank"></div>
+      
+      <!--1-->
+   	  
+     <!--1 end-->
+     
+     <!--2--><!--2 end-->
+     <!--3-->
+   	  
+     <!--3 end-->
+     
+     
+     <!--1-->
+   	  
+     <!--1 end-->
+     
+     <!--2--><!--2 end-->
+  
+    
+     <div class="blank"></div>
+     <div class="yqlj">
+     	<h2>友情链接</h2>
+        <ul>
+        <volist name="link" id="linklist">
+        <li><a href="{$linklist.link}" target="_blank">{$linklist.title}</a></li>
+        </volist>
+        </ul>
+     </div>
+  </div>
+</div>
+<!--底部开始-->
+<div class="dibu">
+	<div align="center"><a>关于我们</a>   <a>网站版权</a>   <a>网站地图</a>     <a>合作联系</a>     <a>意见反馈</a>   <a>联系我们</a></div>
+   <p>主办：宁夏医师协会<br />
+
+</p>
+</div>
+</body>
+</html>

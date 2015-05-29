@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script src="/Public/media/jquery.js"></script>	
+	<script src="/Public/media/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="/Public/media/mediaelementplayer.min.css" />
+        
+        <link rel="stylesheet" href="/Public/media/mejs-skins.css" />
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	<include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+            
+
+        	
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+        	<php>if($data['type'] == 'zip' || $data['type'] == 'pdf'){</php>
+        	<iframe src="{$data.filepath}{$data.filename}" width="689px" height="474px"></iframe>
+        	<php>}else{</php>
+        	<video width="640" height="460" src="{$data.filepath}{$data.filename}" type="video/mp4" 
+	id="player1" poster="/Public/media/echo-hereweare.jpg" 
+	controls="controls" preload="none"></video>
+	<php>}</php>
+            </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+        
+  
+  </div>
+    
+</div>
+<script>
+$('audio,video').mediaelementplayer({
+	success: function(player, node) {
+		$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+	}
+});
+function close_msg() {
+	var taskid = {$data.id};
+$.post("{:U('Project/times')}",{id:taskid},function(e){});
+   return 'sdfds';
+}
+window.onbeforeunload = close_msg;
+</script>
+<include file="Public:Footer" />

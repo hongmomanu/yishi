@@ -1,0 +1,103 @@
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：网络报表</p></div>
+<script src="/Public/Js/cc_date.js"></script>
+
+<table class="bomdiv" border="0">
+<tr>
+
+<td nowrap="nowrap"><p>日期：从</p></td>
+<td nowrap="nowrap"><input name="AddTime" id="AddTime" class="Input_W70" type="text" value="{$url['0']}" size="14" readonly onclick="showcalendar(event,this);" onfocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''"></td>
+<td nowrap="nowrap"><p>到</p></td>
+<td nowrap="nowrap"><input name="AddTime2" id="AddTime2" class="Input_W70" type="text" value="{$url['1']}" size="14" readonly onclick="showcalendar(event,this);" onfocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''"></td>
+
+<td nowrap="nowrap"><input class="bomdivcha" type="button" name="Submit2" value="查询" onClick="Search()"></td>
+</tr>
+</table>
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+	<td nowrap='nowrap'>媒体</td>
+	<td nowrap='nowrap'>预约量</td>
+	<td nowrap='nowrap'>留电量</td>
+	<td nowrap='nowrap'>有效对话</td>
+	<td nowrap='nowrap'>极佳对话</td>
+	<td nowrap='nowrap'>对话成本</td>
+	<td nowrap='nowrap'>预约成本</td>
+	<td nowrap='nowrap'>到诊量</td>
+  </tr>
+
+
+<!-- No.1 -->
+<volist name="data" id="datalist">
+<tr>
+<td nowrap='nowrap'>{$datalist.title}</td>
+<td nowrap='nowrap'>{$datalist.yyl}</td>
+<td nowrap='nowrap'>{$datalist.ldl}</td>
+<td nowrap='nowrap'>{$datalist.yxdh}</td>
+<td nowrap='nowrap'>{$datalist.jjdh}</td>
+<td nowrap='nowrap'>0.0</td>
+<td nowrap='nowrap'>0.0</td>
+<td nowrap='nowrap'>{$datalist.dzl}</td>
+</tr>
+</volist>
+</table>
+</div>
+<div class="page">
+</div>
+</div>
+</body>
+</html>
+<script language="javascript">
+function Excel()
+{
+	location.href='../excel/network.php?Work=Search&CompanyID=44&AddTime=2014-01-03&AddTime2=2014-01-03';
+}
+</script>
+<script language="javascript">
+function Search()
+{	
+
+	var AddTime = document.getElementById("AddTime").value;
+	var AddTime2 = document.getElementById("AddTime2").value;
+	
+	if (AddTime.toDate() > AddTime2.toDate())
+	{
+		alert("开始日期不能大于结束日期,请重新选择日期！");
+		return false;
+	}
+
+	T_Url = "{:U('Network/netcount')}";
+	if(AddTime != '' && AddTime2 != ''){
+		t3 = "/time1/" + AddTime + "/time2/" + AddTime2;
+	}
+	T_Url = T_Url+t3;
+	location.href = T_Url;	
+}
+String.prototype.toDate = function(){
+	var result =  null;
+	try{
+		var arr = this.split(/\D/);
+		arr[1] = arr[1] - 1;
+		result = eval("new Date(" + arr.join(",") + ")");
+		}
+	catch(e){}
+	return result;
+};
+</script>

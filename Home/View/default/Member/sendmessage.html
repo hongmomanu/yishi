@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script src="/Public/media/jquery.js"></script>	
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+         <include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+            	 <div class="reg" style="padding: 35px 0 35px 70px;">
+<form action="" method="post" enctype="multipart/form-data">
+<input type="hidden" name="action" value="send" />
+<input type="hidden" id="uids" name="uids" value="" />
+<ul>
+<li class='text'><span>标题</span><input type="text" name="title" value="" /></li>
+<li class="text"><span>发放用户</span>
+<span id="s1">
+<select name="type" onchange="fchange(this.value)">
+<option value="0">请选择</option>
+<option value="4">单个用户</option>
+{$list}
+</select></span><span id="s2" style="margin-left:45px;width:260px;display:none"><input style="width:120px" type="button" value="选择用户" onclick="showmodal();"/><input style="width:120px;margin-left:10px" type="button" onclick="showusers();" value="查看已选用户列表" /></span></li>
+<li><span>内容</span><textarea name="content"></textarea></li>
+<li><span>附件</span><input type="file" name="fujian"/></li>
+
+<li><input type="submit" value="提交" class="submit"><input type="reset" value="重写" class="reset"><div class="clear"></div></li>
+
+</ul>
+</form>
+</div>
+    </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+  </div>
+    
+</div>
+<script>
+function fchange(id){
+	if(id == 4){
+		document.getElementById('s2').style.display = '';
+	}else{
+		var u = document.getElementById("uids");
+		u.value = '';
+		document.getElementById('s2').style.display = 'none';
+	}
+}
+function showmodal(){
+	 var ret = window.showModalDialog("{:U('Member/selectuser')}",null,"dialogWidth:800px;dialogHeight:500px;help:no;status:no");
+	// if(ret == ''){
+	//	 alert('未选择用户');
+	// }else{
+	//	 var u = document.getElementById("uids");
+	//	 u.value = ret;
+	//	 var unum = new Array();
+	//	 unum = ret.split(",");
+	//	 alert("共选择了"+unum.length+"位用户");
+	// }
+	}
+function showusers(){
+	//var user = document.getElementById('uids').value;
+	//if(user == ''){
+		//alert("发送用户为空");
+	//}else{
+		var ret = window.showModalDialog("{:U('Member/showusers')}",null,"dialogWidth:800px;dialogHeight:500px;help:no;status:no");
+	//}
+}
+</script>
+<include file="Public:Footer" />

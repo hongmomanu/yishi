@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            
+            </ul>
+            <div class="hearderSearch">
+            	<form>
+                    <input type="text" name=" " id="q" title="检索输入框"/><input type="submit" class="btn-info" title="检索" value="  "/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	 <li><a href="{:U('Index/index')}">首页</a></li>
+        	<li><a href="#">协会介绍</a></li>
+        	<li><a href="{:U('Index/category',array('sortid'=>'4'))}">规章制度</a></li>
+        	<li><a href="{:U('Index/category',array('sortid'=>'5'))}">工作动态</a></li>
+        	<li><a href="{:U('Index/category',array('sortid'=>'1'))}">行业动态</a></li>
+        	<li><a href="{:U('Member/index')}">会员管理</a></li>
+        	<li><a href="/exam/">医学考试</a></li>
+        	<li><a href="{:U('Index/category',array('sortid'=>'7'))}">公告管理</a></li>
+        	<li><a href="{:U('Index/category',array('sortid'=>'6'))}">下载专区</a></li>
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" />上海市卫生计生委、机关事务管理局召开2014年机关控烟工作推进会</div>
+        <div class="zhuce_t">
+        	<span class="left">首页 &gt; 会员注册 </span><span class="right">您已经是会员，请<a href="{:U('Public/login')}">登陆</a></span>
+        </div>
+        
+       <div class="reg">
+<form action="{:U('Public/reg')}" method="post">
+<ul>
+<li class="text"><span>用户名</span><input name="uname" type="text"><b style="color:#F00">*</b></li>
+<li class="text"><span>输入密码</span><input id="" name="pwd" type="password"><b style="color:#F00">*</b></li>
+<li class="text"><span>重复密码</span><input id="" name="repwd" type="password"><b style="color:#F00">*</b></li>
+<li class="text"><span>姓名</span><input id=" " name="truename" type="text"><b style="color:#F00">*</b></li>
+<li class="radio"><span>性别</span><input type="radio" name="sex" checked="checked" value="1">&emsp;男&emsp;&emsp;&emsp;<input type="radio"  name="sex" value="2">&emsp;女</li>
+<li class="text"><span>手机</span><input id=" " name="phone" type="text"><b style="color:#F00">*</b></li>
+<li class="text"><span>邮箱</span><input name="email" type="text"></li>
+<li class="text"><span>通信地址</span><input name="address" type="text"></li>
+<li class="text"><span>单位名称</span><input name="company" type="text"></li>
+<li class="text"><span>岗位</span><input name="zhiwu" type="text"></li>
+<li><span>备注</span><textarea name="content"></textarea></li>
+<input type="hidden" name="action" value="regdo" />
+<li><input type="submit" value="提交" class="submit"><input type="reset" value="重写" class="reset"><div class="clear"></div></li>
+</ul>
+</form>
+</div>
+    </div>
+</div>
+<!--底部开始-->
+<div class="dibu">
+	<div align="center"><a>关于我们</a>   <a>网站版权</a>   <a>网站地图</a>     <a>合作联系</a>     <a>意见反馈</a>   <a>联系我们</a></div>
+    <p>主办：上海医师协会 上海市北京西路1477号<br />
+技术支持：中国医师协会信息网络中心 上海市浦东新区峨山路91弄58号2楼B区<br />
+沪ICP备13019324号-1</p>
+</div>
+</body>
+</html>

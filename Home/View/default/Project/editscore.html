@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+         <include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+            	 <div class="reg" style="padding: 35px 0 35px 70px;">
+<form action="" method="post">
+<input type="hidden" name="action" value="save" />
+<input type="hidden" name="id" value="{$info.id}" />
+<input type="hidden" name="pid" value="{$info.pid}" />
+<input type="hidden" name="uid" value="{$info.uid}" />
+<ul>
+<li class="text"><span>培训名称</span>{$info.pid|project=###,title}</li>
+<li class="text"><span>用户</span>{$info.uid|getUserInfo=###,uname}</li>
+<li class="text"><span>获得证书</span><select name="isveri">{$user.pid|getcodename=###}<option value="0" {$info.isveri|retrunselect=###,0}>否</option><option value="1" {$info.isveri|retrunselect=###,1}>是</option></select></li>
+<li class="text"><span>授予学分</span><input name="score" type="text" value="{$info.score}"/><b style="color:#F00">*</b></li>
+<li class="text"><span>授予说明</span><textarea name="description"></textarea></li>
+<li><input type="submit" value="提交" class="submit"><input type="reset" value="重写" class="reset"><div class="clear"></div></li>
+</ul>
+</form>
+</div>
+            </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+        
+  
+  </div>
+    
+</div>
+<include file="Public:Footer" />

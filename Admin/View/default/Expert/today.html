@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script>document.onkeydown = function(event){e = event ? event : (window.event ? window.event : null);if(e.keyCode==13){Search();}}</script>
+<script language="javascript">
+function Edit(id)
+{
+	location.href='{:U('Expert/view')}/id/'+ id;
+}
+</script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：预约到今日</p></div>
+<script src="/Public/Js/cc_date.js"></script>
+
+
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+	<td nowrap='nowrap'>档案号</td>
+	<td nowrap='nowrap'>预约日期</td>
+	<td nowrap='nowrap'>姓名</td>
+	<td nowrap='nowrap'>性别</td>
+	<td nowrap='nowrap'>年龄</td>
+	<td nowrap='nowrap'>地区</td>
+	<td nowrap='nowrap'>疾病</td>
+	<td nowrap='nowrap'>预约科室</td>
+	<td nowrap='nowrap'>详情</td>
+	<td nowrap='nowrap'>操作</td>  </tr>
+
+<volist name="list" id="datalist">
+<tr>
+<td nowrap='nowrap'>{$datalist.id}</td>
+<td nowrap='nowrap'>{$datalist.zitime|date="Y-m-d",###}</td>
+<td nowrap='nowrap'><a href="#" title="查看详情">{$datalist.name}[<if condition="$datalist['fromtype'] eq 1">电<else />网</if>]</a></td>
+<td nowrap='nowrap'>{$datalist.sex|gender}</td>
+<td nowrap='nowrap'>{$datalist.age}</td>
+<td nowrap='nowrap'>{$datalist.addressid|getAreaName}</td>
+<td nowrap='nowrap'>{$datalist.zixun|returnDis}</td>
+<td nowrap='nowrap'><span title="{$datalist.roomid}">{$datalist.roomid|getRoom}</span></td>
+<td nowrap='nowrap'><span title="{$datalist.content}">{$datalist.description}</span></td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="编辑" onclick="Edit({$datalist.id})">[编]</span></td>
+</tr>
+</volist>
+
+</table>
+</div>
+<div id="page">
+<div class="page">
+{$page}
+</div>
+</div>
+</div>
+</body>
+</html>
+<script language="javascript"><!--
+function Search()
+{
+	var AddTime = document.getElementById("AddTime").value;
+	var AddTime2 = document.getElementById("AddTime2").value;
+	
+	if (AddTime.toDate() > AddTime2.toDate())
+	{
+		alert("开始日期不能大于结束日期,请重新选择日期！");
+		return false;
+	}
+
+	//var cName = document.getElementById("cName").value;
+	//var Mobile = document.getElementById("Mobile").value;
+	var T_Url,t1='',t2='',t3='';
+	T_Url = "{:U('Book/today')}";
+	//if(cName != ''){
+	//	t1 = "/name/" + cName;
+	//}
+	//if(Mobile != ''){
+	//	t2 = "/phone/" + Mobile;
+	//}
+	if(AddTime != '' && AddTime2 != ''){
+		t3 = "/time1/" + AddTime + "/time2/" + AddTime2;
+	}
+	T_Url = T_Url+t1+t2+t3;
+	
+	location.href = T_Url;	
+}
+String.prototype.toDate = function(){
+	var result =  null;
+	try{
+		var arr = this.split(/\D/);
+		arr[1] = arr[1] - 1;
+		result = eval("new Date(" + arr.join(",") + ")");
+		}
+	catch(e){}
+	return result;
+};
+--></script>

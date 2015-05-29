@@ -1,0 +1,58 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function View(id)
+{
+	location.href='{:U('System/noticeview')}/id/'+ id;
+}
+function Edit(id)
+{
+	location.href='{:U('System/noticeedit')}/id/'+ id;
+}
+function Del(id)
+{
+	if (confirm("确定删除该记录？请慎重操作！"))
+	{
+		location.href='{:U('System/noticedel')}/id/'+ id;
+	}
+}
+</script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：我的通知</p> <input type="button" name="Submit" value="写通知" onClick="location.href='{:U('System/noticeadd')}'"></div>
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>标题</td>
+    <td nowrap='nowrap'>发布人</td>
+    <td nowrap='nowrap'>发布时间</td>
+    <td nowrap='nowrap'>操作</td>
+  </tr>
+ <volist name="list" id="notice">
+<tr>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="查看" onclick="View({$notice.id})">{$notice.title}</span></td>
+<td nowrap='nowrap'>{$notice.uid|getServiceName}</td>
+<td nowrap='nowrap'><span >{$notice.posttime|date="Y-m-d H:i:s",###}</span></td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="查看" onclick="View({$notice.id})">[查看]</span>&nbsp;<span style="cursor:pointer;" title="编辑" onclick="Edit({$notice.id})">[编辑]</span>&nbsp;<span style="cursor:pointer;" title="删除" onclick="Del({$notice.id})">[删除]</span></td>
+</tr>
+</volist>
+</table>
+</div>
+<div class="page">
+<div class="page">
+{$page}
+</div></div>
+</div>
+</body>
+</html>
+<!-- final_13.10.08 -->

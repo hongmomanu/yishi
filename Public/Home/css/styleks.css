@@ -1,0 +1,44 @@
+/****公共部分**************/
+body,td,th {font-size: 12px; color:#333333  }
+* { margin:0px auto; padding:0px; list-style-type:none; }
+body { margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px; background:#f2f2f2;   }
+ul,li,ol,dl,h1,h2,h3,dt,dd,form,p,script{margin: 0px;padding: 0px;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;list-style-type: none;}
+img{ border:0;}
+a {font-size: 12px;color:#333333;text-decoration: none;}
+a:hover {text-decoration: none;}
+.clear {CLEAR: both; }
+.right{float: right;}
+.left{float:left;}
+.blank{ clear:both; height:10px !important; height:6px;/*ie6*/}
+.red{ color:#F00;}
+.red a{ color:#F00;}
+.mt10{ margin-top:10px;} .mb10{ margin-bottom:10px;} .mr10{ margin-right:10px;} .ml10{ margin-left:10px;}
+
+#topks{ height:93px; background:#0f5da9;}
+.topks{ width:1000px; padding-top:8px; }
+.jiansuo{ width:320px;}
+.jiansuo ul{ width:320px; height:30px;}
+.jiansuo ul li{ float:left; margin:5px;}
+.jiansuo ul li a{ color:#a8e1fe}
+
+.hearderSearch{ margin-top:10px; clear:both}
+.hearderSearch input{ float:left; margin-right:5px;height:24px; line-height:24px; padding:0 6px;  -webkit-border-radius: 3px;
+border-radius: 3px; border:none;}
+.banner{ background:url(../images/index_09.jpg) no-repeat center top; width:auto; height:280px; overflow:hidden; }
+
+#nav{ background:url(../images/index_11.jpg) repeat-y center #001f64; height:43px;}
+.navks{ height:43px; line-height:43px; width:1000px;}
+.navks ul{ width:1000px;}
+.navks ul li{ float:left; width:110px; text-align:center; display:block; position:relative;}
+.navks ul li a{ color:#FFF; font-size:14px; font-weight:bolder }
+.navks ul li ul {display: none;}
+.navks ul li:hover ul {display:block; position:absolute; top:43px; left:0; width:110px;}
+.navks ul li:hover ul li a {display:block; background:#012F7A; height:26px;line-height:28px;color:#fff;font-size:13px; border-bottom:5px;}
+.navks ul li:hover ul li a:hover {color:#F00;}
+
+.dibu { padding-top:20px; padding-bottom:30px;}
+.dibu a{ color:#0f5da9; font-size:12px; font-weight:bold;}
+.dibu p{ text-align:center; line-height:24px; margin-top:10px;}
+
+
+

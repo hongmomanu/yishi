@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function checkForm(obj)
+{
+	if(obj.Title.value=="")
+	{
+		alert("请输入门诊名称！");
+		obj.Title.focus();
+		return false;
+	}
+	obj.submit();
+}
+</script>
+</head>
+
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+
+
+<div class="right_add2"><p>当前页：新增门诊</p></div>
+<div class="all_table2">
+
+<form name="form1" method="post" action="{:U('System/roomedit')}">
+<table width="100%">
+
+<tr>
+<td width="9%" height="34" align="right">门诊:</td>
+<td align="left"><input name="name" type="text" class="Input_W675" id="Title" size="50" value="{$data.name}">&nbsp;<span style="color:red" id="chk">*</span></td>
+</tr>
+
+<tr>
+<td height="25" align="right"><input name="action" type="hidden" id="CompanyID" value="edit"><input type="hidden" name="id" value="{$data.id}" /></td>
+<td colspan="5"><input class="Submit" type="button" onClick="checkForm(document.forms['form1'])" value="" name="Submit22"><input class="resetsubmit" value="" name="" type="reset"><input class="returnsubmit" value="" name="" type="button" onClick="window.history.back();"></td>
+</tr>
+
+</table>
+</form>
+</div>
+
+
+
+</div>
+</body>
+</html>

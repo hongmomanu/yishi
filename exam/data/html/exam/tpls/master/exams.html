@@ -1,0 +1,135 @@
+			<ul class="breadcrumb">
+				<li><a href="index.php?exam-master">考试模块</a> <span class="divider">/</span></li>
+				<li class="active">试卷管理</li>
+			</ul>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">试卷管理</a>
+				</li>
+				<li class="dropdown pull-right">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">添加试卷<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li><a href="index.php?exam-master-exams-autopage&page=">随机组卷</a></li>
+						<li><a href="index.php?exam-master-exams-selfpage&page=">手动组卷</a></li>
+					</ul>
+				</li>
+			</ul>
+	        <form action="index.php?exam-master-exams" method="post">
+				<table class="table">
+					<thead>
+		                <tr>
+					        <th colspan="2">搜索</th>
+					        <th></th>
+					        <th></th>
+					        <th></th>
+					        <th></th>
+		                </tr>
+		            </thead>
+					<tr>
+						<td>
+							选择类型：
+						</td>
+						<td>
+							<select name="search[examtype]">
+								<option value="0">不限</option>
+								<option value="1">随机抽题</option>
+								<option value="2">手动抽题</option>
+							</select>
+						</td>
+						<td>
+							选择科目：
+						</td>
+						<td>
+							<select name="search[examsubject]">
+								<option value="0">不限</option>
+														  		<option value="4">临床</option>
+						  								  		<option value="5">临床2</option>
+						  								  		<option value="6">临床3</option>
+						  								  		<option value="7">考核</option>
+						  									</select>
+						</td>
+						<td>
+							<button class="btn btn-primary" type="submit">搜索</button>
+							<input type="hidden" value="1" name="search[argsmodel]" />
+						</td>
+					</tr>
+				</table>
+			</form>
+	        <table class="table table-hover">
+	            <thead>
+	                <tr>
+	                    <th>ID</th>
+				        <th>考试名称</th>
+				        <th>组卷人</th>
+				        <th>组卷类型</th>
+				        <th>组卷时间</th>
+				        <th>考试科目</th>
+				        <th>操作</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+                    			        <tr>
+						<td>
+							7						</td>
+						<td>
+							小试卷						</td>
+						<td>
+							peadmin						</td>
+						<td>
+							随机组卷						</td>
+						<td>
+							2014-09-23						</td>
+						<td>
+							临床						</td>
+						<td>
+							<div class="btn-group">
+	                    		<a class="btn" href="index.php?exam-master-exams-modify&page=&examid=7" title="修改"><em class="icon-edit"></em></a>
+								<a class="btn confirm" href="index.php?exam-master-exams-del&page=&examid=7" title="删除"><em class="icon-remove"></em></a>
+	                    	</div>
+						</td>
+			        </tr>
+			        			        <tr>
+						<td>
+							6						</td>
+						<td>
+							小试卷						</td>
+						<td>
+							peadmin						</td>
+						<td>
+							随机组卷						</td>
+						<td>
+							2014-09-23						</td>
+						<td>
+							临床						</td>
+						<td>
+							<div class="btn-group">
+	                    		<a class="btn" href="index.php?exam-master-exams-modify&page=&examid=6" title="修改"><em class="icon-edit"></em></a>
+								<a class="btn confirm" href="index.php?exam-master-exams-del&page=&examid=6" title="删除"><em class="icon-remove"></em></a>
+	                    	</div>
+						</td>
+			        </tr>
+			        			        <tr>
+						<td>
+							5						</td>
+						<td>
+							22						</td>
+						<td>
+							peadmin						</td>
+						<td>
+							随机组卷						</td>
+						<td>
+							2014-09-10						</td>
+						<td>
+							临床						</td>
+						<td>
+							<div class="btn-group">
+	                    		<a class="btn" href="index.php?exam-master-exams-modify&page=&examid=5" title="修改"><em class="icon-edit"></em></a>
+								<a class="btn confirm" href="index.php?exam-master-exams-del&page=&examid=5" title="删除"><em class="icon-remove"></em></a>
+	                    	</div>
+						</td>
+			        </tr>
+			        	        	</tbody>
+	        </table>
+	        <div class="pagination pagination-right">
+	            <ul></ul>
+	        </div>

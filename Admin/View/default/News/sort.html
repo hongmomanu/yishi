@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function Edit(id)
+{
+	location.href='{:U('Admin/News/editsort')}/id/'+ id;
+}
+function Del(id)
+{
+	if (confirm("确定删除该记录？请慎重操作！"))
+	{
+		location.href='{:U('Admin/News/delsort')}/id/'+ id;
+	}
+}
+</script>
+</head>
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：分类</p></div>
+
+<table class="bomdiv" border="0">
+<tr>
+
+<td nowrap="nowrap"><p>&nbsp;分类名称：</p></td>
+<td nowrap="nowrap"><input name="UserName" type="text" class="Input_W80 bomdivinp" id="UserName" value="" size="10"></td>
+<td nowrap="nowrap"><input class="bomdivcha" type="button" name="Submit" value="增加" onClick="location.href='{:U('Admin/News/addsort')}'"></td>
+</tr>
+</table>
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>编号</td>
+    <td nowrap='nowrap'>分类名称</td>
+    <td nowrap='nowrap'>父类</td>
+	<td nowrap='nowrap'>排序</td>
+	<td nowrap='nowrap'>操作</td>
+  </tr>
+  <volist name="list" id="user">
+<tr>
+<td nowrap='nowrap'>{$user.id}</td>
+<td nowrap='nowrap'>{$user.name}</td>
+<td nowrap='nowrap'>{$user.fid|sortinfo=###,name}</td>
+<td nowrap='nowrap'>{$user.isorder}</td>
+<td nowrap='nowrap'>
+<span style="cursor:pointer;" title="编辑" onclick="Edit({$user.id})">[编辑]</span>
+<span style="cursor:pointer;" title="删除" onclick="Del({$user.id})">[删除]</span>
+</td>
+</tr>
+</volist>
+</table>
+</div>
+<div class="page">
+<div class="page">
+{$page}
+		
+		</div></div>
+</div>
+</body>
+</html>

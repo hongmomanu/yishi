@@ -1,0 +1,62 @@
+﻿sitemuhtml{overflow-x:hidden;}
+body{text-align:center;font-family:"\5B8B\4F53",serif;font-size:12px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0;margin:0;}   
+table,td,tr,th{font-size:12px;}
+div{text-align:left;}
+li{list-style-type:none;}
+table{margin:0 auto;}
+img{vertical-align:top;border:0;}
+ol,ul{list-style:none;}   
+caption,th{text-align:left;}   
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}   
+q:before,q:after{content:'';}   
+abbr,acronym{border:0;}
+address,caption,cite,code,dfn,em,th,var{font-weight:normal;font-style:normal;}   
+a{color:#000000;text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{color:#F00;text-decoration:underline;}
+a:active{color:#ba2636;}
+dl.bitem{width:156px;margin:5px 0 0 0;}
+dl.bitem dt{background:url(../images/menubg.gif);height:29px;line-height:29px;cursor:pointer;color:#6e7590;}
+dl.bitem dt img{float:left;display:inline;margin-left:7px;margin-top:1px;}
+dl.bitem dt b{font-size:14px;}
+dl.bitem dd{padding:3px 3px 3px 3px;background-color:#FFF;border:#B9BDDF 1px solid; border-top:none;}
+.sitemu li{padding:0px 0px 0px 40px;line-height:24px;background:url(../images/arr4.gif) no-repeat 10px 9px;}
+.sitemu li a:hover{ text-decoration:none;}
+.index_lt{float:left;display:inline;margin:5px 5px 0 5px;width:168px;background:#ECECEC;overflow:hidden;padding-bottom:5px;}
+.index_lt table{ float:left; display:inline; margin-left:6px;}
+.tdcolor { color:#fec425; background:url(../images/menubghover.gif) no-repeat; width:159px; height:29px; display:block;}
+.tdcolor2 { color:#F00; text-decoration:none;}
+.bitem1{ width:24px; height:20px;
+background-image: url(../images/bitem1.png)!important;
+background-repeat: no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bitem1.png');
+_background-image: none;float:left; display:inline; margin:5px 7px 0 13px;}
+.bitem2{ width:24px; height:20px;
+background-image: url(../images/bitem2.png)!important;
+background-repeat: no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bitem2.png');
+_background-image: none;float:left; display:inline; margin:5px 7px 0 13px;}
+.bitem3{ width:24px; height:20px;
+background-image: url(../images/bitem3.png)!important;
+background-repeat: no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bitem3.png');
+_background-image: none;float:left; display:inline; margin:5px 7px 0 13px;}
+.bitem4{ width:24px; height:20px;
+background-image: url(../images/bitem4.png)!important;
+background-repeat: no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bitem4.png');
+_background-image: none;float:left; display:inline; margin:5px 7px 0 13px;}
+.bitem5{ width:24px; height:20px;
+background-image: url(../images/bitem5.png)!important;
+background-repeat: no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bitem5.png');
+_background-image: none;float:left; display:inline; margin:5px 7px 0 13px;}
+.bitem6{ width:24px; height:20px;
+background-image: url(../images/bitem6.png)!important;
+background-repeat: no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bitem6.png');
+_background-image: none;float:left; display:inline; margin:5px 7px 0 13px;}
+.Dividing{font-size:0;margin:3px auto; height:1px;background:url(../images/Dividing.jpg) top center no-repeat;}
+.sybodf{border:#CCC 1px dashed;overflow:hidden;background:#FFF;float:left;display:inline;margin-left:10px;padding-bottom:5px;
+-moz-user-select:none;hutia:expression(this.onselectstart=function(){return(false)})

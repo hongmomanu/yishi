@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>医院管理系统</title>
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
+<script language="javascript">
+function Edit(id)
+{
+	location.href='{:U('System/sourceedit')}/id/'+id;
+}
+function Del(id)
+{
+	if (confirm("确定删除该记录？请慎重操作！"))
+	{
+		location.href='{:U('System/sourcedel')}/id/'+ id;
+	}
+}
+</script>
+</head>
+<!-- body style="overflow:scroll;overflow-x:hidden;" -->
+<body>
+<div id="man_zone">
+<div class="right_add"><p>当前页：来源地区</p></div>
+
+<table class="bomdiv" border="0">
+<tr>
+
+<td nowrap="nowrap"><input class="bomdivcha" type="button" name="Submit" value="增加" onClick="location.href='{:U('System/sourceadd')}'"></td>
+</tr>
+</table>
+
+<div class="all_table">
+<table cellspacing="0" cellpadding="0">
+  <tr id="all_table_top">
+    <td nowrap='nowrap'>更新时间</td>
+	<td nowrap='nowrap'>项目</td>
+    <td nowrap='nowrap'>来源地区</td>
+	<td nowrap='nowrap'>操作</td>
+  </tr>
+
+<volist name="list" id="datalist">
+<tr>
+<td nowrap='nowrap'>{$datalist.ptime|date="Y-m-d H:i:s",###}</td>
+<td nowrap='nowrap'>陕西皮肤性病防治所 </td>
+<td nowrap='nowrap'>{$datalist.name}</td>
+<td nowrap='nowrap'><span style="cursor:pointer;" title="编辑" onclick="Edit({$datalist.id})">[编]</span><span style="cursor:pointer;" title="删除" onclick="Del({$datalist.id})">[删]</span></td>
+</tr>
+</volist>
+</table>
+</div>
+<div class="page">
+<div class="page">
+{$page}
+</div></div>
+</div>
+</body>
+</html>
