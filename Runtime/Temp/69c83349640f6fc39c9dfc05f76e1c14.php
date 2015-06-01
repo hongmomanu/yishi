@@ -1,0 +1,3 @@
+<?php
+//000000000000s:506:"SELECT Member.id AS id,Member.uname AS uname,Member.phone AS phone,Member.group1 AS group1,Member.group2 AS group2,Member.group3 AS group3,Member.sex AS sex,Member.status AS status,Member.company AS company,Member.posttime AS posttime,Member.expeirtime AS expeirtime,Auth_group_access.uid AS uid,Auth_group_access.group_id AS group_id FROM ys_member Member  JOIN ys_auth_group_access Auth_group_access ON Auth_group_access.uid=Member.id WHERE ( Member.group1 = '1' ) AND ( Auth_group_access.group_id = 2 ) ";
+?>

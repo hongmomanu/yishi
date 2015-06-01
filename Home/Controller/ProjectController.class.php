@@ -117,7 +117,7 @@ class ProjectController extends CommonController {
 	}
 	function addsonitem(){
 		$dopost = I('post.action')?I('post.action'):'';
-		trace('Name的值',$_FILES);
+		trace('Name的值',$dopost);
 		if($dopost == 'add'){
 
 			$model = D('pxsonitem');

@@ -170,7 +170,10 @@ class MemberController extends CommonController {
 	//发送站内信
 	function sendmessage(){
 		$dopost = I('post.action')?I('post.action'):'';
+
 		if($dopost == 'send'){
+
+		 trace('sendmessage',$dopost);
 				if($_FILES['fujian']['error'] != 4){
 				//上传
 				$upload = new \Think\Upload();// 实例化上传类
@@ -217,6 +220,7 @@ class MemberController extends CommonController {
 			}else{
 				//根据类型获取所有会员数据
 				$model = D('MemberView');
+
 				$map['Member.group1'] = is_login();
 				if($type == 1){
 					$map['Auth_group_access.group_id'] = 2;
@@ -231,16 +235,23 @@ class MemberController extends CommonController {
 				}else{
 					$users = array();
 					foreach($data as $key=>$value){
+
 						array_push($users,$value['id']);
 					}
-					$newuser = implode(',', $$users);
+					$newuser = implode(',', $users);
+
+					trace('data',$newuser);
 					
 						$m['from_uid'] = is_login();
 						$m['title'] = $title;
 						$m['content'] = $content;
 						$m['date'] = time();
 						$m['to_uids'] = $newuser;
+
+
+
 						if(false !== $id = M('message_sender')->add($m)){
+
 							foreach($data as $k=>$v){
 							$n['mid'] = $id;
 							$n['to_uid'] = $v['id'];

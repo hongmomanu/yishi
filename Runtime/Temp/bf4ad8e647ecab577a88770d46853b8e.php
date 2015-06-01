@@ -1,0 +1,3 @@
+<?php
+//000000000000s:554:"SELECT Message_sender.mid AS mid,Message_sender.from_uid AS from_uid,Message_sender.title AS title,Message_sender.from_deleted AS from_deleted,Message_sender.date AS date,Message_receiver.rid AS rid,Message_receiver.mid AS mid,Message_receiver.to_uid AS to_uid,Message_receiver.is_readed AS is_readed,Message_receiver.is_deleted AS is_deleted FROM ys_message_sender Message_sender  JOIN ys_message_receiver Message_receiver ON Message_sender.mid=Message_receiver.mid WHERE ( Message_receiver.to_uid = '1' ) ORDER BY Message_receiver.rid DESC LIMIT 0,15  ";
+?>
