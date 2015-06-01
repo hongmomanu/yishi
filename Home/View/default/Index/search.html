@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>医师协会</title>
-<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<title>医师协会1</title>
+<link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="__PUBLIC__/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             	
@@ -35,7 +35,7 @@
 </div>
 <div id="centent">
 	<div class="ny_con">
-    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+    	<div class="gonggaot"><img src="__PUBLIC__/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
         <div class="blank"></div>
 <div class="ny_L">
         	<div class="ny_Lbox mb10">
@@ -49,7 +49,7 @@
         	
         </div>
         <div class="ny_R right">
-        	<h2><img src="/Public/Home/images/ny_t.jpg" width="7" height="20" />搜索</h2>
+        	<h2><img src="__PUBLIC__/Home/images/ny_t.jpg" width="7" height="20" />搜索</h2>
             <ul class="dongtai">
             <volist name="list" id="article" key='k'>
             	<li <if condition="$k%2 eq 0">style="background:#f1f6fc"</if>><span class="left">· {$article.title}</span><a href="{:U('Index/view',array('id'=>$article['id']))}"><span class="right"><img src="images/li7.gif" width="19" height="17" />{$article.posttime|date='Y-m-d',###}</span></a></li>

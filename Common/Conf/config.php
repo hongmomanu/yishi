@@ -3,9 +3,9 @@ return array(
 /* 数据库设置 */
     'DB_TYPE'               =>  'mysql',     // 数据库类型
     'DB_HOST'               =>  'localhost', // 服务器地址
-    'DB_NAME'               =>  'robin',          // 数据库名
+    'DB_NAME'               =>  'yishi',          // 数据库名
     'DB_USER'               =>  'root',      // 用户名
-    'DB_PWD'                =>  '',          // 密码
+    'DB_PWD'                =>  'root',          // 密码
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  'ys_',    // 数据库表前缀
     'DB_FIELDTYPE_CHECK'    =>  false,       // 是否进行字段类型检查
@@ -45,7 +45,7 @@ return array(
     'URL_PARAMS_BIND_TYPE'  =>  0, // URL变量绑定的类型 0 按变量名绑定 1 按变量顺序绑定
     'URL_404_REDIRECT'      =>  '', // 404 跳转页面 部署模式有效
 	'DEFAULT_THEME'         =>  'default',	// 默认模板主题名称
-	'weburl'				=> 'http://robin.com',
+	'weburl'				=> 'http://192.168.2.100',
     'AUTH_CONFIG'=>array(
             'AUTH_ON' => false, //认证开关
             'AUTH_TYPE' => 1, // 认证方式，1为时时认证；2为登录认证。

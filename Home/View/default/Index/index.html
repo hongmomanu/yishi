@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>医师协会</title>
-<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="/Public/Js/jquery.Xslider.js"></script>
+<title>医师协会1</title>
+<link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.Xslider.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	
-	
+
+
 	// 焦点图片淡隐淡现
 	$("#slider3").Xslider({
 		affect:'fade',
@@ -23,7 +23,7 @@ $(document).ready(function(){
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="__PUBLIC__/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             </ul>
@@ -63,7 +63,7 @@ $(document).ready(function(){
 		</div><!--slider end-->
       </div>
       <div class="con_row1_R left">
-       	  <h2><div class="left">行业动态 <span>Dynamic</span></div><div class="right"><a href="{:U('Index/category',array('sortid'=>'7'))}"><img src="/Public/Home/images/more.png"/></a></div><div class="clear"></div></h2>
+       	  <h2><div class="left">行业动态 <span>Dynamic</span></div><div class="right"><a href="{:U('Index/category',array('sortid'=>'7'))}"><img src="__PUBLIC__/Home/images/more.png"/></a></div><div class="clear"></div></h2>
           <volist name="hydt" id="hydtlists" offset="1" length='1'>
           <h5><a href="{:U('Index/article',array('id'=>$hydtlist['id']))}">{$hydtlist.title}</a></h5>
           </volist>
@@ -74,7 +74,7 @@ $(document).ready(function(){
                 </ul>
       </div>
       <div class="box huiyuantd right" style="overflow:hidde">
-        	<h3><img src="/Public/Home/images/ico_06.jpg" class="abs left" />会员通道</h3>
+        	<h3><img src="__PUBLIC__/Home/images/ico_06.jpg" class="abs left" />会员通道</h3>
 <dl class="denglu">
 <php>if(!is_login()){</php>
 <form action="{:U('Public/login')}" method="post">
@@ -93,15 +93,15 @@ $(document).ready(function(){
      <dd><label><a href="{:U('Public/logout')}">退出登录</a></label></dd>
      <php>}</php>
             </dl>
-        
+
         </div>
-         <div style="margin-top:10px;margin-right:2px" class="right"><img src="/Public/Home/ban_img.png" width="267" /></div>
+         <div style="margin-top:10px;margin-right:2px" class="right"><img src="__PUBLIC__/Home/ban_img.png" width="267" /></div>
       <div class="blank"></div>
-      <div class="mb10"><img src="/Public/Home/images/ban_1.jpg" width="1000" height="143" /></div>
+      <div class="mb10"><img src="__PUBLIC__/Home/images/ban_1.jpg" width="1000" height="143" /></div>
       <div class="w_1000">
       <!--1-->
    	  <div class="box w_490 left">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />政策法规<a href="{:U('Index/category',array('sortid'=>'14'))}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />政策法规<a href="{:U('Index/category',array('sortid'=>'14'))}"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul class="list">
             	<volist name="zcfg" id="zcfglist">
             	<li><a href="{:U('Index/article',array('id'=>$zcfglist['id']))}"><span class="left">{$zcfglist.title}...</span><span class="right">[{$zcfglist.posttime|date='Y-m-d',###}]</span></a></li>
@@ -109,10 +109,10 @@ $(document).ready(function(){
             </ul>
         </div>
      <!--1 end-->
-     
+
      <!--2-->
    	  <div class="box w_490 right">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />工作动态<a href="{:U('Index/category',array('sortid'=>'5'))}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />工作动态<a href="{:U('Index/category',array('sortid'=>'5'))}"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul  class="list">
             <volist name="gzdt" id="gzdtlist">
             	<li><a href="{:U('Index/article',array('id'=>$gzdtlist['id']))}"><span class="left">{$gzdtlist.title}...</span><span class="right">[{$gzdtlist.posttime|date='Y-m-d',###}]</span></a></li>
@@ -121,10 +121,10 @@ $(document).ready(function(){
         </div>
      <!--2 end-->
     <div class="blank"></div>
-      <div class="mb10"><img src="/Public/Home/images/ban_2.jpg" width="1000" height="60" /></div>
+      <div class="mb10"><img src="__PUBLIC__/Home/images/ban_2.jpg" width="1000" height="60" /></div>
      <!--1-->
    	  <div class="box w_490 left">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />最新培训<a href="{:U('Project/my')}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />最新培训<a href="{:U('Project/my')}"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul  class="list">
             <volist name="project" id="projectlist">
             	<li><a href="{:U('Project/my')}"><span class="left">{$projectlist.title}...</span><span class="right">[{$projectlist.posttime|date='Y-m-d',###}]</span></a></li>
@@ -132,10 +132,10 @@ $(document).ready(function(){
             </ul>
         </div>
      <!--1 end-->
-     
+
      <!--2-->
    	  <div class="box w_490 right">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />医疗评审<a href="{:U('Index/category',array('sortid'=>'3'))}"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />医疗评审<a href="{:U('Index/category',array('sortid'=>'3'))}"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul  class="list">
             <volist name="ylps" id="ylpslist">
             	<li><a href="{:U('Index/article',array('id'=>$ylpslist['id']))}"><span class="left">{$ylpslist.title}...</span><span class="right">[{$ylpslist.posttime|date='Y-m-d',###}]</span></a></li>

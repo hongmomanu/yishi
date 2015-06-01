@@ -118,7 +118,7 @@ class IndexController extends Controller {
 		$list = $model->where($map)->order('id DESC')->page($pageId,$Rows)->select();
 		//echo $model->getLastsql();
 		$page = pagerank($pageCount,$pageId,$count,$url,$f);
-		dump($list);
+		//dump($list);
 		//模板赋值显示
 		$this->assign('list', $list);
 		$this->assign('page',$page);
