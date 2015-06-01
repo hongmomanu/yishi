@@ -1,7 +1,7 @@
-<link href="/Public/Home/css/styleks.css" type="text/css" rel="stylesheet" />
+<link href="__PUBLIC__/Home/css/styleks.css" type="text/css" rel="stylesheet" />
 <div id="topks">
 	<div class="topks">
-    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="__PUBLIC__/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             	{x2;if:$_user['teacher_subjects']}

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="/Public/media/jquery.js"></script>	
+<script src="__PUBLIC__/media/jquery.js"></script>
 </head>
 <body>
 <select id="fa" onchange="getG(this.value)">

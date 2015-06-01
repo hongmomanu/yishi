@@ -45,8 +45,8 @@ class Pay {
         $pos = strrpos($driver, '\\');
         $pos = $pos === false ? 0 : $pos + 1;
         $apitype = strtolower(substr($driver, $pos));
-        $this->config['notify_url'] = U("Home/Public/notify", array('apitype' => $apitype, 'method' => 'notify'), false, true);
-        $this->config['return_url'] = U("Home/Public/notify", array('apitype' => $apitype, 'method' => 'return'), false, true);
+        $this->config['notify_url'] = U("Home__PUBLIC__/notify", array('apitype' => $apitype, 'method' => 'notify'), false, true);
+        $this->config['return_url'] = U("Home__PUBLIC__/notify", array('apitype' => $apitype, 'method' => 'return'), false, true);
 
         $config = array_merge($this->config, $config);
 

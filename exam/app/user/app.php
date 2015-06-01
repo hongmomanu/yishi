@@ -43,7 +43,7 @@ class app
 
 	public function login()
 	{
-		exit(header("location:/index.php/Public/login"));
+		exit(header("location:/index.php__PUBLIC__/login"));
 		if($this->ev->get('userlogin'))
 		{
 			$tmp = $this->session->getSessionValue();
@@ -193,7 +193,7 @@ class app
 	public function logout()
 	{
 		$this->session->clearSessionUser();
-		header("location:/index.php/Public/logout");
+		header("location:/index.php__PUBLIC__/logout");
 		exit;
 	}
 }

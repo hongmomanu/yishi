@@ -32,6 +32,7 @@ return array(
     'SHOW_ERROR_MSG'        =>  false,    // 显示错误信息
     'TRACE_EXCEPTION'       =>  false,   // TRACE错误信息是否抛异常 针对trace方法 
     'TRACE_MAX_RECORD'      =>  100,    // 每个级别的错误信息 最大记录数
+    'SHOW_PAGE_TRACE' =>true,
  	/* URL设置 */
     'URL_CASE_INSENSITIVE'  =>  false,   // 默认false 表示URL区分大小写 true则表示不区分大小写
     'URL_MODEL'             =>  1,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：

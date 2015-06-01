@@ -117,7 +117,9 @@ class ProjectController extends CommonController {
 	}
 	function addsonitem(){
 		$dopost = I('post.action')?I('post.action'):'';
+		trace('Name的值',$_FILES);
 		if($dopost == 'add'){
+
 			$model = D('pxsonitem');
 			if(I('post.pxtype') == 1){
 				//上传
@@ -164,6 +166,7 @@ class ProjectController extends CommonController {
 				$this->error('数据错误');
 			}
 		}else{
+		trace('Name的值222',$dopost);
 			$pid = I('get.pid');
 			if(!is_numeric($pid) || $pid == 0){
 				$this->error('错误的编号');

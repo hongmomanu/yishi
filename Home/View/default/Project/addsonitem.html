@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>医师协会</title>
-<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="__PUBLIC__/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             	
@@ -32,7 +32,7 @@
 </div>
 <div id="centent">
 	<div class="ny_con">
-    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+    	<div class="gonggaot"><img src="__PUBLIC__/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
         <div class="blank"></div>
 <div class="ny_L">
         	<div class="ny_Lbox mb10">
@@ -64,6 +64,9 @@
 <option value="{$exam.basicid}">{$exam.basic}</option>
 </volist>
 </select><b style="color:#F00">*</b></li>
+
+	<li class="text" id="fileupload" style="display:none"><span>上传文件</span><input type="file" name="images" /><b style="color:#F00">*</b></li>
+	<li class="text" id="times" style="display:none"><span>培训时间</span><input type="text" name="times" value="" />分</li>
 <script>
 function changeon(){
 	var t = document.getElementById("pxtype");
@@ -83,8 +86,7 @@ function changeon(){
 }
 </script>
 <php>}</php>
-<li class="text" id="fileupload" style="display:none"><span>上传文件</span><input type="file" name="images" /><b style="color:#F00">*</b></li>
-<li class="text" id="times" style="display:none"><span>培训时间</span><input type="text" name="times" value="" />分</li>
+
 <li><input type="submit" value="提交" class="submit"><input type="reset" value="重写" class="reset"><div class="clear"></div></li>
 </ul>
 </form>

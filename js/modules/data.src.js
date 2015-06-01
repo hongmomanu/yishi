@@ -47,7 +47,7 @@
  *
  * - googleSpreadsheetWorksheet : String 
  * The Google Spreadsheet worksheet. The available id's can be read from 
- * https://spreadsheets.google.com/feeds/worksheets/{key}/public/basic
+ * https://spreadsheets.google.com/feeds/worksheets/{key}__PUBLIC__/basic
  *
  * - itemDelimiter : String
  * Item or cell delimiter for parsing CSV. Defaults to the tab character "\t" if a tab character
@@ -280,7 +280,7 @@
 				dataType: 'json', 
 				url: 'https://spreadsheets.google.com/feeds/cells/' + 
 				  googleSpreadsheetKey + '/' + (options.googleSpreadsheetWorksheet || 'od6') +
-					  '/public/values?alt=json-in-script&callback=?',
+					  '__PUBLIC__/values?alt=json-in-script&callback=?',
 				error: options.error,
 				success: function (json) {
 					// Prepare the data from the spreadsheat

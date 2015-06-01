@@ -28,8 +28,8 @@
 <script src="app/exam/styles/js/index.js"></script>
 <script src="app/exam/styles/js/lesson_nav.js" type="text/javascript"></script>
 <script src="app/exam/styles/js/plugin.js"></script>
-<script src="files/public/js/jquery.countdown.js"></script>
-<script src="files/public/js/artDialog.js?skin=default"></script>
+<script src="files__PUBLIC__/js/jquery.countdown.js"></script>
+<script src="files__PUBLIC__/js/artDialog.js?skin=default"></script>
 <script type="text/javascript" src="app/core/styles/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="app/core/styles/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="app/core/styles/js/jquery-ui.js"></script>

@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>医师协会</title>
-<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="/Public/Js/jquery.Xslider.js"></script>
+<link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.Xslider.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	
@@ -23,7 +23,7 @@ $(document).ready(function(){
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="__PUBLIC__/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             </ul>
@@ -97,14 +97,14 @@ $(document).ready(function(){
 		</div><!--slider end-->
       </div>
       <div class="con_row1_R left">
-       	  <h2><div class="left">行业动态 <span>Dynamic</span></div><div class="right"><a href="<?php echo U('Index/category',array('sortid'=>'7'));?>"><img src="/Public/Home/images/more.png"/></a></div><div class="clear"></div></h2>
+       	  <h2><div class="left">行业动态 <span>Dynamic</span></div><div class="right"><a href="<?php echo U('Index/category',array('sortid'=>'7'));?>"><img src="__PUBLIC__/Home/images/more.png"/></a></div><div class="clear"></div></h2>
           <?php if(is_array($hydt)): $i = 0; $__LIST__ = array_slice($hydt,1,1,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hydtlists): $mod = ($i % 2 );++$i;?><h5><a href="<?php echo U('Index/article',array('id'=>$hydtlist['id']));?>"><?php echo ($hydtlist["title"]); ?></a></h5><?php endforeach; endif; else: echo "" ;endif; ?>
     <ul>
                 	 <?php if(is_array($hydt)): $i = 0; $__LIST__ = $hydt;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hydtlist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/article',array('id'=>$hydtlist['id']));?>"><span class="left"><?php if($hydtlist['istop'] == 1): ?><span style="color:red"><?php echo ($hydtlist["title"]); ?></span><?php else: echo ($hydtlist["title"]); endif; ?></span><span class="right"><?php echo (date('Y-m-d',$hydtlist["posttime"])); ?></span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
       </div>
       <div class="box huiyuantd right" style="overflow:hidde">
-        	<h3><img src="/Public/Home/images/ico_06.jpg" class="abs left" />会员通道</h3>
+        	<h3><img src="__PUBLIC__/Home/images/ico_06.jpg" class="abs left" />会员通道</h3>
 <dl class="denglu">
 <?php if(!is_login()){ ?>
 <form action="<?php echo U('Public/login');?>" method="post">
@@ -125,13 +125,13 @@ $(document).ready(function(){
             </dl>
         
         </div>
-         <div style="margin-top:10px;margin-right:2px" class="right"><img src="/Public/Home/ban_img.png" width="267" /></div>
+         <div style="margin-top:10px;margin-right:2px" class="right"><img src="__PUBLIC__/Home/ban_img.png" width="267" /></div>
       <div class="blank"></div>
-      <div class="mb10"><img src="/Public/Home/images/ban_1.jpg" width="1000" height="143" /></div>
+      <div class="mb10"><img src="__PUBLIC__/Home/images/ban_1.jpg" width="1000" height="143" /></div>
       <div class="w_1000">
       <!--1-->
    	  <div class="box w_490 left">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />政策法规<a href="<?php echo U('Index/category',array('sortid'=>'14'));?>"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />政策法规<a href="<?php echo U('Index/category',array('sortid'=>'14'));?>"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul class="list">
             	<?php if(is_array($zcfg)): $i = 0; $__LIST__ = $zcfg;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$zcfglist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/article',array('id'=>$zcfglist['id']));?>"><span class="left"><?php echo ($zcfglist["title"]); ?>...</span><span class="right">[<?php echo (date('Y-m-d',$zcfglist["posttime"])); ?>]</span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
@@ -140,17 +140,17 @@ $(document).ready(function(){
      
      <!--2-->
    	  <div class="box w_490 right">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />工作动态<a href="<?php echo U('Index/category',array('sortid'=>'5'));?>"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />工作动态<a href="<?php echo U('Index/category',array('sortid'=>'5'));?>"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul  class="list">
             <?php if(is_array($gzdt)): $i = 0; $__LIST__ = $gzdt;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$gzdtlist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/article',array('id'=>$gzdtlist['id']));?>"><span class="left"><?php echo ($gzdtlist["title"]); ?>...</span><span class="right">[<?php echo (date('Y-m-d',$gzdtlist["posttime"])); ?>]</span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
      <!--2 end-->
     <div class="blank"></div>
-      <div class="mb10"><img src="/Public/Home/images/ban_2.jpg" width="1000" height="60" /></div>
+      <div class="mb10"><img src="__PUBLIC__/Home/images/ban_2.jpg" width="1000" height="60" /></div>
      <!--1-->
    	  <div class="box w_490 left">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />最新培训<a href="<?php echo U('Project/my');?>"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />最新培训<a href="<?php echo U('Project/my');?>"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul  class="list">
             <?php if(is_array($project)): $i = 0; $__LIST__ = $project;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$projectlist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Project/my');?>"><span class="left"><?php echo ($projectlist["title"]); ?>...</span><span class="right">[<?php echo (date('Y-m-d',$projectlist["posttime"])); ?>]</span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
@@ -159,7 +159,7 @@ $(document).ready(function(){
      
      <!--2-->
    	  <div class="box w_490 right">
-        	<h2><img src="/Public/Home/images/ico_01.jpg" class="abs left" />医疗评审<a href="<?php echo U('Index/category',array('sortid'=>'3'));?>"><img src="/Public/Home/images/more.png" class="more right" /></a></h2>
+        	<h2><img src="__PUBLIC__/Home/images/ico_01.jpg" class="abs left" />医疗评审<a href="<?php echo U('Index/category',array('sortid'=>'3'));?>"><img src="__PUBLIC__/Home/images/more.png" class="more right" /></a></h2>
             <ul  class="list">
             <?php if(is_array($ylps)): $i = 0; $__LIST__ = $ylps;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ylpslist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Index/article',array('id'=>$ylpslist['id']));?>"><span class="left"><?php echo ($ylpslist["title"]); ?>...</span><span class="right">[<?php echo (date('Y-m-d',$ylpslist["posttime"])); ?>]</span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>

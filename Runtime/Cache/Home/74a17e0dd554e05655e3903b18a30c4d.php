@@ -3,15 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>医师协会</title>
-<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="/Public/Js/YMDClass.js"></script>
+<link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="__PUBLIC__/Js/YMDClass.js"></script>
 </head>
 
 <body>
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="__PUBLIC__/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             	
@@ -67,7 +67,7 @@
 </div>
 <div id="centent">
 	<div class="ny_con">
-    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
+    	<div class="gonggaot"><img src="__PUBLIC__/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
         <div class="blank"></div>
 <div class="ny_L">
         	<div class="ny_Lbox mb10">

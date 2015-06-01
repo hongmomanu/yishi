@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
-<script type='text/javascript' src='/Public/default/js/ajaxfileupload.js'></script>
-<script type='text/javascript' src='/Public/kindeditor/kindeditor.js'></script>
-<script charset="utf-8" src="/Public/kindeditor/lang/zh_CN.js"></script>
-<script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/right.css" />
+<script type='text/javascript' src='__PUBLIC__/default/js/ajaxfileupload.js'></script>
+<script type='text/javascript' src='__PUBLIC__/kindeditor/kindeditor.js'></script>
+<script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.3.min.js"></script>
 </head>
 
 <!-- body style="overflow:scroll;overflow-x:hidden;" -->
@@ -137,7 +137,7 @@
 function selectCity(){
 	var id = document.getElementById("prov").value;
 	if(id != '' || id != 0){
-		$.post("{:U('Home/Public/cityajax')}",{ids:id},function(e){
+		$.post("{:U('Home__PUBLIC__/cityajax')}",{ids:id},function(e){
 			$("#country").empty().html(e);
 		},'json');
 	}

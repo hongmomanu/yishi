@@ -82,7 +82,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2014-10-16T02:04:12+08:00 ] 127.0.0.1 /index.php/Public/login
+[ 2014-10-16T02:04:12+08:00 ] 127.0.0.1 /index.php__PUBLIC__/login
 INFO: [ app_init ] --START--
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ path_info ] --START--

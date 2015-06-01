@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="/Public/media/jquery.js"></script>	
-<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/media/jquery.js"></script>
+<link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 
