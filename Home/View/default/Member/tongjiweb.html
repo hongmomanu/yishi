@@ -34,14 +34,16 @@ $(function () {
             }
         },
         xAxis: {
-        	categories: [{$times}]
+            type: 'datetime',
+        	categories: [{$timearr}]
         },
         yAxis: {
             opposite: true
         },
         series: [{
+
             name: '访问数',
-            data: [{$newchar}]
+            data: [{$dataarr}]
         }]
     });
 });

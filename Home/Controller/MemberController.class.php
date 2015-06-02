@@ -1056,15 +1056,7 @@ class MemberController extends CommonController {
     		}
 
     		$this->assign('pxxm',$pxxm);
-    		if(IS_POST){
 
-    			$starttime = I('post.starttime')?I('post.starttime'):0;
-    			$endtime = I('post.$endtime')?I('post.$endtime'):0;
-    			$this->assign('starttime',$starttime);
-    			$this->assign('endtime',$endtime);
-
-    			$this->display();
-    		}else{
     		//当前在线用户
     		$user_online = "count.php"; //保存人数的文件
     		touch($user_online);//如果没有此文件，则创建
@@ -1085,8 +1077,14 @@ class MemberController extends CommonController {
     		$this->assign('countper',count($temp));
 
     			if(session('groupid') >= 1){
-			        $starttime = date("Y-m-d",time()-24*60*60*10);
-    		        $endtime = date("Y-m-d",time());
+
+
+
+					$starttime = I('post.starttime')?I('post.starttime'):date("Y-m-d",time()-24*60*60*10);
+					$endtime = I('post.endtime')?I('post.endtime'):date("Y-m-d",time());
+
+
+
 
                     //进行原生的SQL查询
                     $str=" where time >= unix_timestamp('" . $starttime . "') and time <=unix_timestamp('". $endtime ."')  GROUP BY date( from_unixtime( time ) )";
@@ -1101,17 +1099,17 @@ class MemberController extends CommonController {
                     $timearr = array();
                     $dataarr = array();
                     foreach($project as $value){
-                        array_push($timearr,$value['date']);
+                        array_push($timearr,'"' . $value['date'] . '"');
                         array_push($dataarr,$value['num']);
                     }
-                    dump($timearr);
-                    $this->assign('timearr',$timearr);
-                    $this->assign('dataarr',$dataarr);
+                    //dump(implode(',',$timearr));
+                    $this->assign('timearr',implode(',',$timearr));
+                    $this->assign('dataarr',implode(',',$dataarr));
     				$this->display();
     			}else{
     				$this->error('无权限');
     			}
-    		}
+
     	}
 	function tongji2(){
 		if(IS_GET){
