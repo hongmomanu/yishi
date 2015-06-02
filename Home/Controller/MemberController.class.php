@@ -252,7 +252,10 @@ class MemberController extends CommonController {
 
 						if(false !== $id = M('message_sender')->add($m)){
 
+
+
 							foreach($data as $k=>$v){
+							trace('data1111ss',$newuser);
 							$n['mid'] = $id;
 							$n['to_uid'] = $v['id'];
 							M('message_receiver')->add($n);

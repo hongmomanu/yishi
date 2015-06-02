@@ -82,7 +82,7 @@ function Export(){
   </tr>
   <volist name="list" id="user">
 <tr>
-<td nowrap='nowrap'>{$user.uid|user.username|getUserInfo=###,truename}</td>
+<td nowrap='nowrap'>{$user.uid|getUserInfo=###,truename}</td>
 <td nowrap='nowrap'>{$user.score}</td>
 <td nowrap='nowrap'><if condition="$user['isveri'] eq 1">{$user.pid}</if>未获得证书</td>
 <td nowrap='nowrap'>{$user.pid|pxstatus=###}</td>
