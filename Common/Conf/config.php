@@ -68,9 +68,9 @@ return array(
 						// 收款账号邮箱
 						'email' => '97294505@qq.com',
 						// 加密key，开通支付宝账户后给予
-						'key' => '',
-						// 合作者ID，支付宝有该配置，开通易宝账户后给予
-						'partner' => ''
+						'key' => '1212',
+						// 合作者ID，支12付宝有该配置，开通易宝账户后给予
+						'partner' => '2121212'
 				),
 				'palpay' => array(
 						'business' => 'zyj@qq.com'

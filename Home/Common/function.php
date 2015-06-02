@@ -689,14 +689,14 @@ function getUserInfo($id,$type){
 	return $result;
 }
 //返回信息
-function mytask($id,$ismoney){
+function mytask($id,$ismoney,$money){
 	$data = D('mytask')->getNewsByid($id);
 	if($data){
 		$result = '<span style="cursor:pointer;" title="编辑" onclick="View('.$id.')">[开始]</span>';
 		
 		
 	}else{
-		$result = '<span style="cursor:pointer;" title="编辑" onclick="Views('.$id. ','.$ismoney. ')">[报名]</span>';
+		$result = '<span style="cursor:pointer;" title="编辑" onclick="Views('.$id. ','.$ismoney. ','.$money. ')">[报名]</span>';
 	}
 	return $result;
 }

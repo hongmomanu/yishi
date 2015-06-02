@@ -120,7 +120,13 @@ function Export(){
 <dd><a href="<?php echo U('Project/add');?>">·发布培训</a></dd>
 </dl>
 <a href="<?php echo U('Member/sendmessage');?>"><li>发布站内信</li></a>
-<a href="<?php echo U('Member/tongji');?>"><li>统计</li></a>
+<a  onClick='showHide("items2_4_0")' ><li>统计</li></a>
+
+<dl id="items2_4_0">
+<dd><a href="<?php echo U('Member/tongji');?>">.会员统计</a></dd>
+<dd><a href="<?php echo U('Member/tongjiweb');?>">·站点统计</a></dd>
+</dl>
+
 <a href="<?php echo U('Index/exam');?>"><li>考试管理</li></a>
 <a onClick='showHide("items2_5")'><li>网站信息管理</li></a>
 <dl id="items2_5" <?php if(CONTROLLER_NAME == 'News'){ }else{ ?>style="display:none;"<?php } ?>>

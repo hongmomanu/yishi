@@ -5,13 +5,23 @@
 <title>医师协会</title>
 <link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
 <script>
-function Views(id,ismoney)
+function Views(id,ismoney,money)
 {
-	alert(ismoney);
-	if (confirm("确定参加培训！"))
+	alert(money);
+	if(ismoney==1){
+		location.href='{:U('Pay/index')}/money/'+ money;
+	}else{
+		if (confirm("确定参加培训！"))
+		{
+			location.href='{:U('Project/addtask')}/id/'+ id;
+		}
+
+	}
+
+	/*if (confirm("确定参加培训！"))
 	{
 		location.href='{:U('Project/addtask')}/id/'+ id;
-	}
+	}*/
 }
 function View(link){
 	location.href= '{:U('Project/taskcategory')}/id/'+ link;
@@ -100,7 +110,7 @@ function getcode(id){
 <td nowrap='nowrap'><if condition="$user['name'] eq NULL">无证书<else />{$user.name}</if></td>
 <td nowrap='nowrap'><if condition="$user['examlink'] eq NULL">不需要考核<else />需要考核</if></td>
 <td nowrap='nowrap'>
-{:mytask($user['id'] ,$user['ismoney'] )}
+{:mytask($user['id'] ,$user['ismoney'],$user['money'])}
 
 </td>
 </tr>

@@ -5,12 +5,23 @@
 <title>医师协会</title>
 <link href="/phpapp/yishi/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
 <script>
-function Views(id)
+function Views(id,ismoney,money)
 {
-	if (confirm("确定参加培训！"))
+	alert(money);
+	if(ismoney==1){
+		location.href='<?php echo U('Pay/index');?>/money/'+ money;
+	}else{
+		if (confirm("确定参加培训！"))
+		{
+			location.href='<?php echo U('Project/addtask');?>/id/'+ id;
+		}
+
+	}
+
+	/*if (confirm("确定参加培训！"))
 	{
 		location.href='<?php echo U('Project/addtask');?>/id/'+ id;
-	}
+	}*/
 }
 function View(link){
 	location.href= '<?php echo U('Project/taskcategory');?>/id/'+ link;
@@ -127,7 +138,13 @@ function getcode(id){
 <dd><a href="<?php echo U('Project/add');?>">·发布培训</a></dd>
 </dl>
 <a href="<?php echo U('Member/sendmessage');?>"><li>发布站内信</li></a>
-<a href="<?php echo U('Member/tongji');?>"><li>统计</li></a>
+<a  onClick='showHide("items2_4_0")' ><li>统计</li></a>
+
+<dl id="items2_4_0">
+<dd><a href="<?php echo U('Member/tongji');?>">.会员统计</a></dd>
+<dd><a href="<?php echo U('Member/tongjiweb');?>">·站点统计</a></dd>
+</dl>
+
 <a href="<?php echo U('Index/exam');?>"><li>考试管理</li></a>
 <a onClick='showHide("items2_5")'><li>网站信息管理</li></a>
 <dl id="items2_5" <?php if(CONTROLLER_NAME == 'News'){ }else{ ?>style="display:none;"<?php } ?>>
@@ -227,7 +244,8 @@ function showHide(id){
 <td nowrap='nowrap'><?php if($user['name'] == NULL): ?>无证书<?php else: echo ($user["name"]); endif; ?></td>
 <td nowrap='nowrap'><?php if($user['examlink'] == NULL): ?>不需要考核<?php else: ?>需要考核<?php endif; ?></td>
 <td nowrap='nowrap'>
-<?php echo (mytask($user["id"])); ?>
+<?php echo mytask($user['id'] ,$user['ismoney'],$user['money']);?>
+
 </td>
 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>

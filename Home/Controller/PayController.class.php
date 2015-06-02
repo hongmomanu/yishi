@@ -21,6 +21,7 @@ class PayController extends Controller {
 			echo $pay->buildRequestForm($vo);
 		} else {
 			//在此之前goods1的业务订单已经生成，状态为等待支付
+            $this->assign('money',I('get.money'));
 			$this->display();
 		}
 	}
