@@ -210,7 +210,7 @@ function showHide(id){
 	<td nowrap='nowrap'>操作</td>
   </tr>
   <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?><tr>
-<td nowrap='nowrap'><?php echo (getuserinfo(user.username($user["uid"]),truename)); ?></td>
+<td nowrap='nowrap'><?php echo (getuserinfo($user["uid"],truename)); ?></td>
 <td nowrap='nowrap'><?php echo ($user["score"]); ?></td>
 <td nowrap='nowrap'><?php if($user['isveri'] == 1): echo ($user["pid"]); endif; ?>未获得证书</td>
 <td nowrap='nowrap'><?php echo (pxstatus($user["pid"])); ?></td>

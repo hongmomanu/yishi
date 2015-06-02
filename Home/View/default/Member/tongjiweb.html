@@ -8,7 +8,7 @@
 <script src="__ROOT__/js/highcharts.js"></script>
 <script src="__ROOT__/js/highcharts-3d.js"></script>
 <script src="__ROOT__/js/modules/exporting.js"></script>
-<php>if(IS_POST){</php>
+
 <script type="text/javascript">
 $(function () {
     $('#container').highcharts({
@@ -34,57 +34,19 @@ $(function () {
             }
         },
         xAxis: {
-        	categories: ['参与人数','合格人数','合格率']
+        	categories: [{$times}]
         },
         yAxis: {
             opposite: true
         },
         series: [{
-            name: '人数',
-            data: [{$count1},{$count2},{$count3}]
-        }]
-    });
-});
-		</script>
-<php>}else{</php>
-<script type="text/javascript">
-$(function () {
-    $('#container').highcharts({
-        chart: {
-            type: 'column',
-            margin: 75,
-            options3d: {
-				enabled: true,
-                alpha: 10,
-                beta: 25,
-                depth: 70
-            }
-        },
-        title: {
-            text: '人员统计'
-        },
-        subtitle: {
-            text: ''
-        },
-        plotOptions: {
-            column: {
-                depth: 25
-            }
-        },
-        xAxis: {
-        	categories: ['分会','团体','个人','男','女','专科','本科','研究生','其他','临床','口腔','公共卫生','中医','执业医师','执业助理医生']
-        },
-        yAxis: {
-            opposite: true
-        },
-        series: [{
-            name: '人数',
+            name: '访问数',
             data: [{$newchar}]
         }]
     });
 });
 		</script>
-<php>}</php>
+
 </head>
 
 <body>
@@ -131,7 +93,7 @@ $(function () {
         	<div  class="neirong">
         	<div style="padding: 35px 0 35px 70px;">
         	<form action="" method="post">
-                开始时间<input size="15" type="text" name="starttime" value="{$starttime}" />-结束时间<input type="text" size="15" name="endtime" value="{endtime}" />
+                开始时间<input size="15" type="text" name="starttime" value="{$starttime}" />-结束时间<input type="text" size="15" name="endtime" value="{$endtime}" />
                 <input type="submit" value="查询" />
             </form>
 </div>

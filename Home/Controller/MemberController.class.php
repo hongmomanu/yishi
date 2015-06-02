@@ -1045,6 +1045,74 @@ class MemberController extends CommonController {
 			}
 		}
 	}
+
+	function tongjiweb(){
+    		//获取培训项目
+    		if(session('groupid') == 1){
+    			$pxxm = M('project')->select();
+    		}else{
+    			$map['uid'] = is_login();
+    			$pxxm = M('project')->where($map)->select();
+    		}
+
+    		$this->assign('pxxm',$pxxm);
+    		if(IS_POST){
+
+    			$starttime = I('post.starttime')?I('post.starttime'):0;
+    			$endtime = I('post.$endtime')?I('post.$endtime'):0;
+    			$this->assign('starttime',$starttime);
+    			$this->assign('endtime',$endtime);
+
+    			$this->display();
+    		}else{
+    		//当前在线用户
+    		$user_online = "count.php"; //保存人数的文件
+    		touch($user_online);//如果没有此文件，则创建
+    		$timeout = 30;//30秒内没动作者,认为掉线
+    		$user_arr = file_get_contents($user_online);
+    		$user_arr = explode('#',rtrim($user_arr,'#'));
+    		$temp = array();
+    		foreach($user_arr as $value){
+    			$user = explode(",",trim($value));
+    			if (($user[0] != getenv('REMOTE_ADDR')) && ($user[1] > time())) {//如果不是本用户IP并时间没有超时则放入到数组中
+    				array_push($temp,$user[0].",".$user[1]);
+    			}
+    		}
+    		array_push($temp,getenv('REMOTE_ADDR').",".(time() + ($timeout)).'#'); //保存本用户的信息
+    		$user_arr = implode("#",$temp);
+
+
+    		$this->assign('countper',count($temp));
+
+    			if(session('groupid') >= 1){
+			        $starttime = date("Y-m-d",time()-24*60*60*10);
+    		        $endtime = date("Y-m-d",time());
+
+                    //进行原生的SQL查询
+                    $str=" where time >= unix_timestamp('" . $starttime . "') and time <=unix_timestamp('". $endtime ."')  GROUP BY date( from_unixtime( time ) )";
+
+
+					$project = M('loginlog')->query('select date( from_unixtime( time ) ) AS date, count( * ) AS num from __TABLE__'  .  $str);
+
+
+    		        $this->assign('starttime',$starttime);
+                    $this->assign('endtime',$endtime);
+
+                    $timearr = array();
+                    $dataarr = array();
+                    foreach($project as $value){
+                        array_push($timearr,$value['date']);
+                        array_push($dataarr,$value['num']);
+                    }
+                    dump($timearr);
+                    $this->assign('timearr',$timearr);
+                    $this->assign('dataarr',$dataarr);
+    				$this->display();
+    			}else{
+    				$this->error('无权限');
+    			}
+    		}
+    	}
 	function tongji2(){
 		if(IS_GET){
 			$sex = I('get.sex')?I('get.sex'):'';
