@@ -5,8 +5,9 @@
 <title>医师协会</title>
 <link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
 <script>
-function Views(id)
+function Views(id,ismoney)
 {
+	alert(ismoney);
 	if (confirm("确定参加培训！"))
 	{
 		location.href='{:U('Project/addtask')}/id/'+ id;
@@ -99,7 +100,8 @@ function getcode(id){
 <td nowrap='nowrap'><if condition="$user['name'] eq NULL">无证书<else />{$user.name}</if></td>
 <td nowrap='nowrap'><if condition="$user['examlink'] eq NULL">不需要考核<else />需要考核</if></td>
 <td nowrap='nowrap'>
-{$user.id|mytask=###}
+{:mytask($user['id'] ,$user['ismoney'] )}
+
 </td>
 </tr>
 </volist>
