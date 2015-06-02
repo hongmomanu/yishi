@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医师协会</title>
+<link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/media/jquery.js"></script>
+<script src="__ROOT__/js/highcharts.js"></script>
+<script src="__ROOT__/js/highcharts-3d.js"></script>
+<script src="__ROOT__/js/modules/exporting.js"></script>
+<php>if(IS_POST){</php>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column',
+            margin: 75,
+            options3d: {
+				enabled: true,
+                alpha: 10,
+                beta: 25,
+                depth: 70
+            }
+        },
+        title: {
+            text: '站点统计'
+        },
+        subtitle: {
+            text: ''
+        },
+        plotOptions: {
+            column: {
+                depth: 25
+            }
+        },
+        xAxis: {
+        	categories: ['参与人数','合格人数','合格率']
+        },
+        yAxis: {
+            opposite: true
+        },
+        series: [{
+            name: '人数',
+            data: [{$count1},{$count2},{$count3}]
+        }]
+    });
+});
+		</script>
+<php>}else{</php>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column',
+            margin: 75,
+            options3d: {
+				enabled: true,
+                alpha: 10,
+                beta: 25,
+                depth: 70
+            }
+        },
+        title: {
+            text: '人员统计'
+        },
+        subtitle: {
+            text: ''
+        },
+        plotOptions: {
+            column: {
+                depth: 25
+            }
+        },
+        xAxis: {
+        	categories: ['分会','团体','个人','男','女','专科','本科','研究生','其他','临床','口腔','公共卫生','中医','执业医师','执业助理医生']
+        },
+        yAxis: {
+            opposite: true
+        },
+        series: [{
+            name: '人数',
+            data: [{$newchar}]
+        }]
+    });
+});
+		</script>
+<php>}</php>
+</head>
+
+<body>
+<!--top-->
+<div id="top">
+	<div class="top">
+    	<div class="logo left"><img src="__PUBLIC__/Home/images/logo.jpg"  /></div>
+        <div class="jiansuo right">
+        	<ul>
+            	
+            </ul>
+            <div class="hearderSearch">
+            	<include file="Public:search" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--top end-->
+<div class="banner"></div>
+<div id="nav">
+	<div class="nav">
+    <ul>
+        	<include file="Public:menu" />
+      </ul>
+    </div>
+</div>
+<div id="centent">
+	<div class="ny_con">
+    	<div class="gonggaot"><img src="__PUBLIC__/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><php>echo gonggao();</php></div>
+        <div class="blank"></div>
+<div class="ny_L">
+        	<div class="ny_Lbox mb10">
+            	<h3>菜单</h3>
+                <ul>
+                	<include file="Member:menu" />
+                </ul>
+            </div>
+            
+
+        	
+        </div>
+        <div class="ny_R right">
+
+        	<div  class="neirong">
+        	<div style="padding: 35px 0 35px 70px;">
+        	<form action="" method="post">
+                开始时间<input size="15" type="text" name="starttime" value="{$starttime}" />-结束时间<input type="text" size="15" name="endtime" value="{endtime}" />
+                <input type="submit" value="查询" />
+            </form>
+</div>
+<div class="reg" style="padding: 35px 0 35px 70px;">
+
+<div id="container" style="height: 400px"></div>
+</div>
+            </div>
+        </div><div class="clear"></div>
+        <div class="blank"></div>
+        
+  
+  </div>
+    
+</div>
+<include file="Public:Footer" />

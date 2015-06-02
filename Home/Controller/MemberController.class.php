@@ -959,7 +959,10 @@ class MemberController extends CommonController {
 		}
 		array_push($temp,getenv('REMOTE_ADDR').",".(time() + ($timeout)).'#'); //保存本用户的信息
 		$user_arr = implode("#",$temp);
+
+
 		$this->assign('countper',count($temp));
+		//trace('hhh',session('groupid'));
 			if(session('groupid') == 1){
 				
 				
