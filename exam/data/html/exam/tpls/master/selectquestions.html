@@ -3,7 +3,7 @@
 						<tr>
 							<td class="form-inline">
 								录入时间：
-								<input type="text" name="search[stime]" size="9" class="input-small datepicker" data-date="2014-09-10" data-date-format="yyyy-mm-dd" id="stime" value=""/> - <input class="input-small datepicker" data-date="2014-09-10" data-date-format="yyyy-mm-dd" size="9" type="text" name="search[etime]" id="etime" value=""/>
+								<input type="text" name="search[stime]" size="9" class="input-small datepicker" data-date="2015-06-08" data-date-format="yyyy-mm-dd" id="stime" value=""/> - <input class="input-small datepicker" data-date="2015-06-08" data-date-format="yyyy-mm-dd" size="9" type="text" name="search[etime]" id="etime" value=""/>
 								关键字：
 								<input name="search[keyword]" class="input-small" size="8" type="text" value=""/>
 							</td>
@@ -29,20 +29,30 @@
 							<td class="form-inline">
 						  		<select name="search[questionsectionid]" class="combox input-medium" id="sectionselect" target="knowsselect" refUrl="?exam-master-questions-ajax-getknowsbysectionid&sectionid={value}">
 							  		<option value="">选择章节</option>
-							  									  									  		<option value="3">内科</option>
-							  									  		<option value="4">外科</option>
-							  									  		<option value="5">妇科</option>
-							  									  								  		</select>
+							  		
+							  		
+							  		<option value="3">内科</option>
+							  		
+							  		<option value="4">外科</option>
+							  		
+							  		<option value="5">妇科</option>
+							  		
+							  		<option value="6">培训</option>
+							  		
+							  		
+						  		</select>
 						  		<select name="search[questionknowsid]" id="knowsselect" class="input-medium">
 							  		<option value="">选择知识点</option>
-							  								  		</select>
+							  		
+						  		</select>
 								<button class="btn btn-primary" type="submit">检索</button>
 							</td>
 						</tr>
 					</table>
 				</form>
 				<div class="input"></div>
-								<table class="table table-hover">
+				
+				<table class="table table-hover">
 					<thead>
 						<tr>
 					        <th width="50"></th>
@@ -52,7 +62,17 @@
 						</tr>
 					</thead>
 					<tbody>
-											</tbody>
+						
+				        <tr>
+				          <td><input rel="1" type="checkbox" name="ids[]" value="2" onclick="javascript:selectquestions(this,'iselectquestions_1','ialreadyselectnumber_1')"/></td>
+				          <td>单选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="对甲状腺肿瘤性质诊断正确率可达80%以上的检查方法是">对甲状腺肿瘤性质诊断正确率可达80%以上的检查方法是</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        
+					</tbody>
 				</table>
 				<div class="pagination pagination-right">
 	            	<ul></ul>

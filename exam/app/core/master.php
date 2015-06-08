@@ -42,6 +42,7 @@ class app
 
 	public function login()
 	{
+
 		if($this->ev->get('userlogin'))
 		{
 			$args = $this->ev->get('args');
@@ -51,10 +52,13 @@ class app
 			{
 				$this->session->setRandCode(0);
 				$user = $this->user->getUserByUserName($args['username']);
+				print_r($user);
+
 				if($user['userid'])
 				{
 					if($user['userpassword'] == md5($args['userpassword']))
 					{
+
 						$group = $this->user->getGroupById($user['groupid']);
 						if($group['groupmoduleid'] != 1)
 						{
@@ -87,6 +91,7 @@ class app
 					}
 				}
 			}
+
 			$message = array(
 				"statusCode" => 300,
 				"message" => "操作失败，验证码错误！"

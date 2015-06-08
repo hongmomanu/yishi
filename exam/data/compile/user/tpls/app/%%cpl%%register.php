@@ -3,7 +3,7 @@
 <div class="row-fluid top">
 	<div class="container">
 		<div class="span1"><h1><img src="app/user/styles/img/theme/logo.png" /></h1></div>
-		<div class="span6"><h2>模拟考试系统</h2></div>
+		<div class="span6"><h2>考试系统</h2></div>
 		<div class="span5">
 		</div>
 	</div>
@@ -47,7 +47,7 @@
 						</div>
 						<div class="control-group">
 							<div class="controls">
-								<p>点击“立即注册”，即表示您同意并愿意遵守本站用户协议和隐私政策，如果您已有帐号，请在此<a href="index.php?user-app-login">登录</a></p>
+								<p>点击“立即注册”，即表示您同意并愿意遵守本站用户协议和隐私政策，如果您已有帐号，请在此<a href="/index.php/Public/login/">登录</a></p>
 							</div>
 						</div>
 					</div>

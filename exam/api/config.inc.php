@@ -2,8 +2,8 @@
 define('UC_CONNECT', 'mysql');
 define('UC_DBHOST', 'localhost');
 define('UC_DBUSER', 'root');
-define('UC_DBPW', '');
-define('UC_DBNAME', 'robin');
+define('UC_DBPW', 'root');
+define('UC_DBNAME', 'yishi');
 define('UC_DBCHARSET', 'utf8');
 define('UC_DBTABLEPRE', '`yishi`.uc_');
 define('UC_DBCONNECT', '0');
