@@ -111,6 +111,20 @@
 					</div>
 				</div>
 								<div class="control-group">
+					<label class="control-label">问答题：</label>
+					<div class="controls">
+						<span class="info">共&nbsp;</span>
+						<input id="iselectallnumber_7" type="text" class="input-mini" needle="needle" name="args[examsetting][questype][7][number]" value="0" size="2" msg="您必须填写总题数"/>
+						<span class="info">&nbsp;题，每题&nbsp;</span><input class="input-mini" needle="needle" type="text" name="args[examsetting][questype][7][score]" value="0" size="2" msg="您必须填写每题的分值"/>
+						<span class="info">&nbsp;分，描述&nbsp;</span><input class="input-mini" type="text" name="args[examsetting][questype][7][describe]" value="" size="12"/>
+						<span class="info">&nbsp;已选题数：<a id="ialreadyselectnumber_7">0</a>&nbsp;&nbsp;题</span>
+						<span class="info">&nbsp;<a class="selfmodal btn" href="javascript:;" data-target="#modal" url="index.php?exam-master-exams-selected&questionids={iselectquestions_7}&rowsquestionids={iselectrowsquestions_7}" valuefrom="iselectquestions_7|iselectrowsquestions_7">看题</a></span>
+						<span class="info">&nbsp;<a class="selfmodal btn" href="javascript:;" data-target="#modal" url="index.php?exam-master-exams-selectquestions&search[questionsubjectid]={selectedsubjectid}&search[questiontype]=7&questionids={iselectquestions_7}&rowsquestionids={iselectrowsquestions_7}&useframe=1" valuefrom="iselectquestions_7|iselectrowsquestions_7|selectedsubjectid">选题</a></span>
+	  					<input type="hidden" value="" id="iselectquestions_7" name="args[examquestions][7][questions]" />
+	  					<input type="hidden" value="" id="iselectrowsquestions_7" name="args[examquestions][7][rowsquestions]" />
+					</div>
+				</div>
+								<div class="control-group">
 					<div class="controls">
 					  	<button class="btn btn-primary" type="submit">提交</button>
 						<input type="hidden" name="submitsetting" value="1"/>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>医师协会</title>
-<link href="/phpapp/yishi/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
 <script>
 function Edit(id)
 {
@@ -27,7 +27,7 @@ function Additem(){
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/phpapp/yishi/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             	
@@ -83,7 +83,7 @@ function Additem(){
 </div>
 <div id="centent">
 	<div class="ny_con">
-    	<div class="gonggaot"><img src="/phpapp/yishi/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
         <div class="blank"></div>
 <div class="ny_L">
         	<div class="ny_Lbox mb10">

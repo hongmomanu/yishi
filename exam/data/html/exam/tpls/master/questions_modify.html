@@ -51,7 +51,7 @@
 				<div class="control-group">
 					<label class="control-label">知识点：</label>
 				  	<div class="controls">
-				  		<textarea class="input-xxlarge" rows="4" needle="needle" min="1" msg="您最少需要选定一个知识点" name="args[questionknowsid]" id="questionknowsid" readonly>20:培训
+				  		<textarea class="input-xxlarge" rows="4" needle="needle" min="1" msg="您最少需要选定一个知识点" name="args[questionknowsid]" id="questionknowsid" readonly>22:口腔1
 </textarea>
 					</div>
 				</div>
@@ -92,28 +92,40 @@
 					  		
 					  		<option rel="1" value="1" selected>单选题</option>
 					  		
+					  		<option rel="0" value="7">问答题</option>
+					  		
 					  	</select>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">题干：</label>
 				  	<div class="controls">
-					  	<textarea class="ckeditor" name="args[question]" id="question">&lt;p&gt;对甲状腺肿瘤性质诊断正确率可达80%以上的检查方法是&lt;/p&gt;</textarea>
+					  	<textarea class="ckeditor" name="args[question]" id="question">&lt;p&gt;asfasfasf&lt;/p&gt;
+
+&lt;p&gt;adfsdaf&lt;/p&gt;
+
+&lt;p&gt;asdfsadf&lt;/p&gt;
+
+&lt;p&gt;asdfasdfs&lt;/p&gt;</textarea>
 					  	<span class="help-block">需要填空处请以()表示。</span>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">备选项：</label>
 				  	<div class="controls">
-					  	<textarea class="ckeditor" name="args[questionselect]" id="questionselect">&lt;p&gt;A.B超&lt;/p&gt;
+					  	<textarea class="ckeditor" name="args[questionselect]" id="questionselect">&lt;p&gt;sdafsdf&lt;/p&gt;
 
-&lt;p&gt;B.CT&lt;/p&gt;
+&lt;p&gt;sadf&lt;/p&gt;
 
-&lt;p&gt;C.核素扫描&lt;/p&gt;
+&lt;p&gt;sdafsd&lt;/p&gt;
 
-&lt;p&gt;D.磁共振&lt;/p&gt;
+&lt;p&gt;afsd&lt;/p&gt;
 
-&lt;p&gt;E.针吸涂片细胞学检查&lt;/p&gt;</textarea>
+&lt;p&gt;fsd&lt;/p&gt;
+
+&lt;p&gt;f&lt;/p&gt;
+
+&lt;p&gt;sdfsadf&lt;/p&gt;</textarea>
 					  	<span class="help-block">无选择项的请不要填写，如填空题、问答题等主观题。</span>
 					</div>
 				</div>
@@ -123,8 +135,8 @@
 					  	<select name="args[questionselectnumber]" id="questionselectnumber">
 					  		<option value="0">0</option>
 					  		<option value="2">2</option>
-					  		<option value="4">4</option>
-					  		<option value="5" selected>5</option>
+					  		<option value="4" selected>4</option>
+					  		<option value="5">5</option>
 					  		<option value="6">6</option>
 					  	</select>
 					</div>
@@ -133,32 +145,32 @@
 					<label class="control-label">参考答案：</label>
 					<div class="controls">
 						<div id="answerbox_1" class="answerbox">
-						  	<label class="radio inline"><input type="radio" name="targs[questionanswer1]" value="A">A</label>
+						  	<label class="radio inline"><input type="radio" name="targs[questionanswer1]" value="A" checked>A</label>
 						  	<label class="radio inline"><input type="radio" name="targs[questionanswer1]" value="B">B</label>
 						  	<label class="radio inline"><input type="radio" name="targs[questionanswer1]" value="C">C</label>
 						  	<label class="radio inline"><input type="radio" name="targs[questionanswer1]" value="D">D</label>
-						  	<label class="radio inline"><input type="radio" name="targs[questionanswer1]" value="E" checked>E</label>
+						  	<label class="radio inline"><input type="radio" name="targs[questionanswer1]" value="E">E</label>
 						</div>
 						<div id="answerbox_2" class="answerbox" style="display:none;">
-						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer2][]" value="A">A</label>
+						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer2][]" value="A" checked>A</label>
 						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer2][]" value="B">B</label>
 						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer2][]" value="C">C</label>
 						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer2][]" value="D">D</label>
-						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer2][]" value="E" checked>E</label>
+						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer2][]" value="E">E</label>
 						</div>
 						<div id="answerbox_3" class="answerbox" style="display:none;">
-						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer3][]" value="A">A</label>
+						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer3][]" value="A" checked>A</label>
 						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer3][]" value="B">B</label>
 						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer3][]" value="C">C</label>
 						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer3][]" value="D">D</label>
-						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer3][]" value="E" checked>E</label>
+						  	<label class="checkbox inline"><input type="checkbox" name="targs[questionanswer3][]" value="E">E</label>
 						</div>
 						<div id="answerbox_4" class="controls" style="display:none;">
-						  	<label class="radio inline"><input type="radio" name="targs[questionanswer4]" value="A">对</label>
+						  	<label class="radio inline"><input type="radio" name="targs[questionanswer4]" value="A" checked>对</label>
 						  	<label class="radio inline"><input type="radio" name="targs[questionanswer4]" value="B">错</label>
 						</div>
 						<div id="answerbox_0" style="display:none;" class="answerbox">
-					  		<textarea cols="72" rows="7" class="ckeditor" id="questionanswer0" name="targs[questionanswer0]">E</textarea>
+					  		<textarea cols="72" rows="7" class="ckeditor" id="questionanswer0" name="targs[questionanswer0]">A</textarea>
 						</div>
 					</div>
 				</div>
@@ -172,9 +184,9 @@
 					<label class="control-label">难度：</label>
 				  	<div class="controls">
 					  	<select class="combox" name="args[questionlevel]" needle="needle" msg="您必须为要添加的试题设置一个难度">
-					  		<option value="1" selected>易</option>
+					  		<option value="1">易</option>
 					  		<option value="2">中</option>
-					  		<option value="3">难</option>
+					  		<option value="3" selected>难</option>
 					  	</select>
 					</div>
 				</div>
@@ -183,7 +195,7 @@
 					  	<button class="btn btn-primary" type="submit">提交</button>
 					  	<input type="hidden" name="page" value=""/>
 					  	<input type="hidden" name="args[questionparent]" value=""/>
-					  	<input type="hidden" name="questionid" value="2"/>
+					  	<input type="hidden" name="questionid" value="45"/>
 					  	<input type="hidden" name="modifyquestion" value="1"/>
 					  	
 					</div>
