@@ -9,7 +9,7 @@ class editor
 {
 	const version = '3.6.2';
 	const timestamp = 'B8DJ5M3';
-	public $basePath = 'files__PUBLIC__/ckeditor/';
+	public $basePath = 'files/public/ckeditor/';
 	public $config = array();
 	public $initialized = false;
 	public $returnOutput = true;
@@ -21,7 +21,7 @@ class editor
 		if ($basePath) {
 			$this->basePath = $basePath;
 		}
-		$this->basePath = 'files__PUBLIC__/ckeditor/';
+		$this->basePath = 'files/public/ckeditor/';
 	}
 
 	//生成ckeditor编辑器

@@ -13,10 +13,10 @@ define('WP','http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['SCRIPT_NAME']).'
 else
 define('WP','http://'.$_SERVER['SERVER_NAME']);
 
-define('DB','robin');//MYSQL数据库名
+define('DB','yishi');//MYSQL数据库名
 define('DH','localhost');//MYSQL主机名，不用改
 define('DU','root');//MYSQL数据库用户名
-define('DP','');//MYSQL数据库用户密码
+define('DP','root');//MYSQL数据库用户密码
 define('DTH','ys_');//系统表前缀，不用改
 
 ?>

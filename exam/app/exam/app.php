@@ -1601,7 +1601,7 @@ class app
 				//echo $sessionvars['examsessionscore'];
 				//print_r($_COOKIE['PHPSESSID']);
 				//print_r($sessionvars);
-				$url = 'http://'.$_SERVER['HTTP_HOST'].'/index.php__PUBLIC__/score/sc1/'.$sessionvars['examsessionsetting']['examsetting']['passscore'].'/sc2/'.$sessionvars['examsessionscore'].'/sid/'.$_COOKIE['PHPSESSID'].'/bid/'.$sessionvars['examsessionbasic'];
+				$url = 'http://'.$_SERVER['HTTP_HOST'].'/index.php/Public/score/sc1/'.$sessionvars['examsessionsetting']['examsetting']['passscore'].'/sc2/'.$sessionvars['examsessionscore'].'/sid/'.$_COOKIE['PHPSESSID'].'/bid/'.$sessionvars['examsessionbasic'];
 		echo	file_get_contents($url);
 				$this->tpl->assign('allright',$allright);
 				$this->tpl->assign('allnumber',$allnumber);

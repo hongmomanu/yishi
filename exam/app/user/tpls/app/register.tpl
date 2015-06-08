@@ -47,7 +47,7 @@
 						</div>
 						<div class="control-group">
 							<div class="controls">
-								<p>点击“立即注册”，即表示您同意并愿意遵守本站用户协议和隐私政策，如果您已有帐号，请在此<a href="/index.php__PUBLIC__/login/">登录</a></p>
+								<p>点击“立即注册”，即表示您同意并愿意遵守本站用户协议和隐私政策，如果您已有帐号，请在此<a href="/index.php/Public/login/">登录</a></p>
 							</div>
 						</div>
 					</div>

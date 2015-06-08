@@ -330,7 +330,7 @@ class files
     	for($i = 0;$i<4;$i++)
     	{
 	    	$text_color = imagecolorallocate($image, rand(128,255), rand(128,255), rand(128,255));
-			imagettftext($image,14,intval(rand(0,60)),10+$i*$par,23+rand(3,8), $text_color,'files__PUBLIC__/font/Symbola.ttf',$randCode[$i]);
+			imagettftext($image,14,intval(rand(0,60)),10+$i*$par,23+rand(3,8), $text_color,'files/public/font/Symbola.ttf',$randCode[$i]);
     	}
     	for($i=0;$i<250;$i++)
 		{
