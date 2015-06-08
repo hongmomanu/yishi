@@ -233,6 +233,14 @@ class basic_exam
 		return $this->db->affectedRows();
 	}
 
+	public function delBasicByBath($id)
+	{
+		$data = array('basic',"basicid in ({$id})");
+		$sql = $this->sql->makeDelete($data);
+		$this->db->exec($sql);
+		return $this->db->affectedRows();
+	}
+
 	//获取题型列表
 	//参数：查询条件数组
 	//返回值：题型列表数组

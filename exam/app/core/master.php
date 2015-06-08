@@ -48,11 +48,14 @@ class app
 			$args = $this->ev->get('args');
 			$randcode = strtoupper($this->ev->get('randcode'));
 			$_user = $this->session->getSessionValue();
+			//print_r($randcode);
+			//print_r(($randcode == $_user['sessionrandcode']));
 			if($randcode && $randcode == $_user['sessionrandcode'])
 			{
+
 				$this->session->setRandCode(0);
 				$user = $this->user->getUserByUserName($args['username']);
-				print_r($user);
+
 
 				if($user['userid'])
 				{

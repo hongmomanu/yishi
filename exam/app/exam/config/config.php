@@ -10,7 +10,7 @@ define('PN',10);
 define('TIME',time());
 define('WP','http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['SCRIPT_NAME']));
 
-define('DB','core');
+define('DB','yishi');
 define('DH','localhost');
 define('DU','root');
 define('DP','root');

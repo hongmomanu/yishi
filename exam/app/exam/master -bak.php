@@ -543,6 +543,20 @@ class app
 			exit(json_encode($message));
 			break;
 
+			//删除考试设置信息
+			case 'batbasicdel':
+			$page = $this->ev->get('page');
+			$basicid = $this->ev->get('basicid');
+			$this->basic->delBasic($basicid);
+			$message = array(
+				'statusCode' => 200,
+				"message" => "操作成功",
+				"callbackType" => "forward",
+			    "forwardUrl" => "index.php?exam-master-basic&page={$page}{$u}"
+			);
+			exit(json_encode($message));
+			break;
+
 			case 'modifybasic':
 			$page = $this->ev->get('page');
 			if($this->ev->get('modifybasic'))

@@ -529,6 +529,23 @@ class app
 			exit(json_encode($message));
 			break;
 
+			case 'batbasicdel':
+			$page = $this->ev->get('page');
+			$basicid = $this->ev->get('delids');
+
+			$basicidstr=implode(',',array_keys($basicid));
+			//print_r($basicidstr);
+			//$this->basic->delBasic($basicid);
+			$this->basic->delBasicByBath($basicidstr);
+			$message = array(
+				'statusCode' => 200,
+				"message" => "操作成功",
+				"callbackType" => "forward",
+				"forwardUrl" => "index.php?exam-master-basic&page={$page}{$u}"
+			);
+			exit(json_encode($message));
+			break;
+
 			//删除考试设置信息
 			case 'batdelbasic':
 			$page = $this->ev->get('page');

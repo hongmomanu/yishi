@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<link rel="stylesheet" type="text/css" href="/phpapp/yishi/Public/Css/nav.css" />
+<link rel="stylesheet" type="text/css" href="/Public/Css/nav.css" />
 </head>
 
 <body style="overflow-x:hidden;">
@@ -61,6 +61,6 @@
 <div class="cler"></div>
 </div>
 <script language='javascript'>var curopenItem = '1';</script>
-<script language="javascript" type="text/javascript" src="/phpapp/yishi/Public/Js/menu.js"></script>
+<script language="javascript" type="text/javascript" src="/Public/Js/menu.js"></script>
 </body>
 </html>

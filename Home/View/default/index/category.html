@@ -4,9 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>医师协会</title>
 <link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
-<script>
-
-</script>
 </head>
 
 <body>
@@ -19,7 +16,7 @@
             	
             </ul>
             <div class="hearderSearch">
-            	<include file="Public:search" />
+            		<include file="Public:search" />
             </div>
         </div>
     </div>
@@ -28,8 +25,8 @@
 <div class="banner"></div>
 <div id="nav">
 	<div class="nav">
-      <ul>
-        	<include file="Public:menu" />
+    <ul>
+        <include file="Public:menu" />
       </ul>
     </div>
 </div>
@@ -39,9 +36,9 @@
         <div class="blank"></div>
 <div class="ny_L">
         	<div class="ny_Lbox mb10">
-            	<h3>菜单</h3>
+            	<h3>快速导航</h3>
                 <ul>
-                	<include file="Member:menu" />
+                	<include file="Public:leftmenu" />
                 </ul>
             </div>
             
@@ -49,29 +46,30 @@
         	
         </div>
         <div class="ny_R right">
-
-        	<div  class="neirong">
-
-				<form method="post">
-					type: <select name="paytype"><option value="alipay">支付宝</option>
-					<option value="unionpay">银联</option>
-					<option value="tenpay">财付通</option>
-
-				</select>
-					money:<input type="text" name="money" size="10" value="{$money}"/>
-
-                <input type="submit" /> <input type="button" onclick="history.back();" value="return"/>
-				</form>
-
-</div>
+        	<h2><img src="__PUBLIC__/Home/images/ny_t.jpg" width="7" height="20" />{$name}</h2>
+            <ul class="dongtai">
+            <volist name="list" id="article" key='k'>
+            	<li <if condition="$k%2 eq 0">style="background:#f1f6fc"</if>><span class="left">·<a href="{:U('Index/article',array('id'=>$article['id']))}"> {$article.title}</a></span><span class="right">{$article.posttime|date='Y-m-d',###}</span></li>
+            </volist>	
+              </ul>
             
+<div style="width: 95%; height: 30px; overflow: hidden; text-align: center; font-weight: bold; margin-bottom:10px; margin-top:10px; font-size:14px;">
+                                          {$page}
+                                            </div>
 
-
-            </div>
         </div><div class="clear"></div>
         <div class="blank"></div>
         
-  
+        <div class="yqlj">
+     	<h2>友情链接</h2>
+        <ul>
+        <volist name="link" id="linklist">
+        <li><a href="{$linklist.link}" target="_blank">{$linklist.title}</a></li>
+        </volist>
+        
+        </ul>
+     </div>
+     <div class="blank"></div>
   </div>
     
 </div>

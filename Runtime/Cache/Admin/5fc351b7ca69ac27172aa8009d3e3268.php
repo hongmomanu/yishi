@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<link rel="stylesheet" type="text/css" href="/phpapp/yishi__PUBLIC__/Css/login.css" />
+<link rel="stylesheet" type="text/css" href="/Public/Css/login.css" />
 <script type="text/javascript">
 if (top != window)
 {
@@ -30,7 +30,7 @@ function chkForm(obj){
 <body>
 <div class="loginall">
 <div class="loginpn">
-<div class="loginlogo"><img src="/phpapp/yishi__PUBLIC__/Images/loginlogo.jpg" alt=""></div>
+<div class="loginlogo"><img src="/Public/Images/loginlogo.jpg" alt=""></div>
 <div class="logindl">
 <form onSubmit="return chkForm(this);" id="form1" name="form1" method="post" action="<?php echo U('Public/login');?>">
 <div class="logindls"><span>用户名：</span><input type="text" autocomplete="off" name="username" id="UserName" class="adminname"></div>

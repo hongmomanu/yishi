@@ -378,7 +378,7 @@ class ProjectController extends CommonController {
 			M('mytask')->add($f);
 		}
 		if($data['pxtype'] == 2){
-			Header("Location:".C('weburl').'/exam/index.php?exam-app-index-setCurrentBasic&basicid='.$data['examid']);
+			Header("Location:".C('weburl').'exam/index.php?exam-app-index-setCurrentBasic&basicid='.$data['examid']);
 		}else{
 			$this->assign('data',$data);
 			$this->display();

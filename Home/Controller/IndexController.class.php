@@ -37,7 +37,7 @@ class IndexController extends Controller {
 		$gzdt = D('Article')->getNewsList(5,9);
 		$this->assign('gzdt',$gzdt);
 		//最新培训
-		$project = M('project')->limit(9)->select();
+		$project = M('project')->order('posttime desc')->limit(9)->select();
 		$this->assign('project',$project);
 		//医疗评审
 		$ylps = D('Article')->getNewsList(3,9);

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<link rel="stylesheet" type="text/css" href="/phpapp/yishi/Public/Css/right.css" />
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
 <script><!--
 function checkForm(obj)
 {
