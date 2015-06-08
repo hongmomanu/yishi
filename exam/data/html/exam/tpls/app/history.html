@@ -28,7 +28,8 @@
     	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
-            								<li><a href="index.php?user-app-center">个人中心</a></li>
+            	
+							<li><a href="index.php?user-app-center">个人中心</a></li>
 							<li><a href="index.php?user-app-logout">退出</a></li>
             </ul>
             
@@ -40,15 +41,38 @@
 <div id="nav">
 	<div class="navks">
     <ul>
-        	 <li><a href="/">首页</a></li>
-        	<li><a href="/index.php/Index/about/">协会介绍</a></li>
-        	<li><a href="/index.php/Index/category/sortid/4">规章制度</a></li>
-        	<li><a href="/index.php/Index/category/sortid/5">工作动态</a></li>
-        	<li><a href="/index.php/Index/category/sortid/1">行业动态</a></li>
-        	<li><a href="/index.php/Member/index">会员管理</a></li>
-        	<li><a href="index.php">医学考试</a></li>
-        	<li><a href="/index.php/Index/category/sortid/7">公告管理</a></li>
-        	<li><a href="/index.php/Index/category/sortid/6">下载专区</a></li>
+        	<li><a href="/index.php/Index/index">首页</a></li>
+        	<li><a  href="javascript(void)">协会文件</a>
+            	<ul style="z-index:1000">
+                    <li><a href="/index.php/Index/about">协会简介	</a></li>
+                    <li><a href="/index.php/Index/alonepage/id/2">协会领导</a></li>
+                    <li><a href="/index.php/Index/alonepage/id/3"> 组织机构</a></li>
+            	</ul>
+            </li> 	
+        	<li><a href="/index.php/Index/category/sortid/14">政策法规</a></li>
+        	<li><a  href="{:U('Member/index')}">会员管理</a>
+             <ul style="z-index:1000">
+                    <li><a href="/index.php/Index/category/sortid/15">会费标准 </a></li>
+                    <li><a href="/index.php/Index/category/sortid/16">会员管理办法</a></li>
+                    <li><a href="/index.php/Member/index}">会员中心</a></li>
+            	</ul>
+            </li>
+            
+        	<li><a  href="/index.php/Index/category/sortid/3">医疗评审</a>
+           
+            <ul style="z-index:1000">
+                    <li><a href="/index.php/Index/category/sortid/17">医疗机构校验</a></li>
+                    <li><a href="/index.php/Index/category/sortid/18">医疗机构评审</a></li>
+                    <li><a href="/index.php/Index/category/sortid/19">医疗设备评审</a></li>
+                    <li><a href="/index.php/Index/category/sortid/20">医疗技术评审</a></li>
+            	</ul>
+            
+                </li>
+        	<li><a  href="/index.php/Index/exam">考核培训</a>
+             <ul style="z-index:1000">
+                    <li><a href="/index.php/Index/exam">继教培训</a></li>
+            	</ul>
+            </li>
       </ul>
     </div>
 </div>
@@ -61,25 +85,24 @@
 						<span class="icon-home"></span> <a href="index.php">考场选择</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="index.php?exam-app-basics">小试卷</a> <span class="divider">/</span>
+						<a href="index.php?exam-app-basics">临床</a> <span class="divider">/</span>
 					</li>
 					<li class="active">
 						考试记录
 					</li>
 				</ul>
 				<ul class="nav nav-tabs">
-					<li>
+					<li class="active">
 						<a href="index.php?exam-app-history">强化训练</a>
 					</li>
 					<li>
 						<a href="index.php?exam-app-history&ehtype=1">模拟考试</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="index.php?exam-app-history&ehtype=2">正式考试</a>
 					</li>
 				</ul>
-								<p>您一共完成了<b class="text-warning">1</b>次考试， 平均分为：<b class="text-warning">0</b>分 继续努力吧！</p>
-				<p><b class="text-warning">注意：</b>正式考试的重做试卷将作为模拟考试记录！</p>
+								<p><span class="text-warning">提示：</span>我的错题中的强化训练最多记录最新20条信息。</p>
 								<table class="table table-bordered table-hover">
 					<tr class="info">
 						<td>答题记录</td>
@@ -92,20 +115,7 @@
 						<td>重做试卷</td>
 						<td>删除记录</td>
 					</tr>
-										<tr>
-						<td>小试卷</td>
-						<td>2014-09-24</td>
-						<td>60分钟</td>
-                        <td><b class="red">0.00</b></td>
-						<td><b class="red">0</b></td>
-						<td><a href="index.php?exam-app-record-wrongs&ehid=14">查看错题</a></td>
-						<td><a href="index.php?exam-app-history-view&ehid=14">试题解析</a></td>
-						<td><a class="ajax" href="index.php?exam-app-history-redo&ehid=14">重做试卷</a></td>
-						<td>
-														-
-													</td>
-					</tr>
-								</table>
+									</table>
 	            			</div>
 		</div>
 	</div>
