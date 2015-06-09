@@ -7,7 +7,7 @@
 <script>
 function Edit(id)
 {
-	location.href='{:U('Project/editsonitem')}/id/'+ id;
+	location.href='{:U('Project/editsonitem')}/id/'+ id+"?pid={$id}";
 }
 
 function Del(id)
@@ -86,7 +86,8 @@ function Additem(){
 <td nowrap='nowrap'>{$user.id}</td>
 <td nowrap='nowrap'>{$user.title}</td>
 <td nowrap='nowrap'>{$user.posttime|date='Y-m-d H:i:s',###}</td>
-<td nowrap='nowrap'><if condition="$user['type'] eq NULL">考试<else />{$user.type}</if></td>
+<!--<td nowrap='nowrap'><if condition="$user['type'] eq NULL">考试<else />{$user.type}</if></td>-->
+<td nowrap='nowrap'><if condition="$user['pxtype'] eq 2">考试<else />{$user.type}</if></td>
 <td nowrap='nowrap'>
 <span style="cursor:pointer;" title="编辑" onclick="Edit({$user.id})">[编辑]</span>
 <span style="cursor:pointer;" title="删除" onclick="Del({$user.id})">[删除]</span>

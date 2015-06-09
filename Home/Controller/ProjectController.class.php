@@ -233,8 +233,58 @@ class ProjectController extends CommonController {
 			}else{
 				$this->error('数据错误');
 			}
+		}else if($dopost == 'editsave'){
+			$model = D('pxsonitem');
+			if(I('post.pxtype') == 1){
+				//上传
+				$upload = new \Think\Upload();// 实例化上传类
+				$upload->maxSize   =     514572800000000 ;// 设置附件上传大小
+				$upload->exts      =     array('zip','pdf');// 设置附件上传类型
+				$upload->savePath  =      './'; // 设置附件上传目录    // 上传单个文件
+				$upload->saveName = array('uniqid','');
+				$upload->autoSub  = true;
+				$upload->subName  = array('date','Ymd');
+				$info = $upload->uploadOne($_FILES['images']);
+				if(!$info) {// 上传错误提示错误信息
+					$this->error($upload->getError());
+				}
+
+			}
+			if(false !== $data = $model->create()){
+				if(I('post.pxtype') == 1){
+					$data['type'] = $info['ext'];
+					if($info['ext'] == 'zip'){
+						$filepath = '/kejian/'.time();
+						makeDir('.'.$filepath);
+						import("@.ORG.PclZip");
+						$zipfile =  '/Uploads'.str_replace('.', '', $info['savepath']).$info['savename'];
+						$archive = new \PclZip(dirname(dirname(dirname(__FILE__))).$zipfile);
+						$list = $archive->extract(PCLZIP_OPT_PATH, '.'.$filepath);
+						if ($list == 0) {
+							$this->error($archive->errorInfo(true));
+						}
+						$data['filename'] = 'player.html';
+						$data['filepath'] = $filepath.'/';
+					}else{
+						$data['filename'] = $info['savename'];
+						$data['filepath'] = '/Uploads'.str_replace('.', '', $info['savepath']);
+					}
+				}
+				$pid= I('get.pid');;
+				$data['id']=$data["pid"];
+				unset($data["pid"]);
+				if(false !== $model->save($data)){
+					$this->success('保存成功',U('Project/sonitem',array('sid'=>$pid)));
+				}else{
+					$this->error('保存失败');
+				}
+			}else{
+				$this->error('数据错误');
+			}
 		}else{
+			trace("dopost",$dopost);
 			$pid = I('get.id');
+			trace("pid",$pid);
 			if(!is_numeric($pid) || $pid == 0){
 				$this->error('错误的编号');
 			}
@@ -378,7 +428,7 @@ class ProjectController extends CommonController {
 			M('mytask')->add($f);
 		}
 		if($data['pxtype'] == 2){
-			Header("Location:".C('weburl').'exam/index.php?exam-app-index-setCurrentBasic&basicid='.$data['examid']);
+			Header("Location:".C('weburl').'/exam/index.php?exam-app-index-setCurrentBasic&basicid='.$data['examid']);
 		}else{
 			$this->assign('data',$data);
 			$this->display();

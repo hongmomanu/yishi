@@ -7,7 +7,7 @@
 <script>
 function Edit(id)
 {
-	location.href='<?php echo U('Project/editsonitem');?>/id/'+ id;
+	location.href='<?php echo U('Project/editsonitem');?>/id/'+ id+"?pid=<?php echo ($id); ?>";
 }
 
 function Del(id)
@@ -220,7 +220,8 @@ function showHide(id){
 <td nowrap='nowrap'><?php echo ($user["id"]); ?></td>
 <td nowrap='nowrap'><?php echo ($user["title"]); ?></td>
 <td nowrap='nowrap'><?php echo (date('Y-m-d H:i:s',$user["posttime"])); ?></td>
-<td nowrap='nowrap'><?php if($user['type'] == NULL): ?>考试<?php else: echo ($user["type"]); endif; ?></td>
+<!--<td nowrap='nowrap'><?php if($user['type'] == NULL): ?>考试<?php else: echo ($user["type"]); endif; ?></td>-->
+<td nowrap='nowrap'><?php if($user['pxtype'] == 2): ?>考试<?php else: echo ($user["type"]); endif; ?></td>
 <td nowrap='nowrap'>
 <span style="cursor:pointer;" title="编辑" onclick="Edit(<?php echo ($user["id"]); ?>)">[编辑]</span>
 <span style="cursor:pointer;" title="删除" onclick="Del(<?php echo ($user["id"]); ?>)">[删除]</span>

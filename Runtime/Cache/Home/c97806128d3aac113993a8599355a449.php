@@ -3,19 +3,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>医师协会</title>
-<link href="/phpapp/yishi/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
-<script src="/phpapp/yishi/Public/media/jquery.js"></script>
-	<script src="/phpapp/yishi/Public/media/mediaelement-and-player.min.js"></script>
-	<link rel="stylesheet" href="/phpapp/yishi/Public/media/mediaelementplayer.min.css" />
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
+<script src="/Public/media/jquery.js"></script>
+	<script src="/Public/media/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="/Public/media/mediaelementplayer.min.css" />
         
-        <link rel="stylesheet" href="/phpapp/yishi/Public/media/mejs-skins.css" />
+        <link rel="stylesheet" href="/Public/media/mejs-skins.css" />
 </head>
 
 <body>
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/phpapp/yishi/Public/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             	
@@ -71,7 +71,7 @@
 </div>
 <div id="centent">
 	<div class="ny_con">
-    	<div class="gonggaot"><img src="/phpapp/yishi/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
         <div class="blank"></div>
 <div class="ny_L">
         	<div class="ny_Lbox mb10">
@@ -110,7 +110,13 @@
 <dd><a href="<?php echo U('Project/add');?>">·发布培训</a></dd>
 </dl>
 <a href="<?php echo U('Member/sendmessage');?>"><li>发布站内信</li></a>
-<a href="<?php echo U('Member/tongji');?>"><li>统计</li></a>
+<a  onClick='showHide("items2_4_0")' ><li>统计</li></a>
+
+<dl id="items2_4_0">
+<dd><a href="<?php echo U('Member/tongji');?>">.会员统计</a></dd>
+<dd><a href="<?php echo U('Member/tongjiweb');?>">·站点统计</a></dd>
+</dl>
+
 <a href="<?php echo U('Index/exam');?>"><li>考试管理</li></a>
 <a onClick='showHide("items2_5")'><li>网站信息管理</li></a>
 <dl id="items2_5" <?php if(CONTROLLER_NAME == 'News'){ }else{ ?>style="display:none;"<?php } ?>>
@@ -185,8 +191,8 @@ function showHide(id){
         	<?php if($data['type'] == 'zip' || $data['type'] == 'pdf'){ ?>
         	<iframe src="<?php echo ($data["filepath"]); echo ($data["filename"]); ?>" width="689px" height="474px"></iframe>
         	<?php }else{ ?>
-        	<video width="640" height="460" src="/phpapp/yishi<?php echo ($data["filepath"]); echo ($data["filename"]); ?>" type="video/mp4"
-	id="player1" poster="/phpapp/yishi/Public/media/echo-hereweare.jpg"
+        	<video width="640" height="460" src="<?php echo ($data["filepath"]); echo ($data["filename"]); ?>" type="video/mp4"
+	id="player1" poster="/Public/media/echo-hereweare.jpg"
 	controls="controls" preload="none"></video>
 	<?php } ?>
             </div>
