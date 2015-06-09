@@ -8,7 +8,7 @@
 <form method="post" action="" enctype="multipart/form-data">
 <input  type="file" name="file_stu" />
 <input type="submit"  value="导入" />
-<a href="/phpapp/yishi/Public/user.xls">下载模板</a>
+<a href="/Public/user.xls">下载模板</a>
 </form>
 </body>
 </html>

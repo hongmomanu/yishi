@@ -42,6 +42,7 @@ function Search(){
   <tr id="all_table_top">
     <td nowrap='nowrap'>id</td>
     <td nowrap='nowrap'>昵称</td>
+    <td nowrap='nowrap'>真實姓名</td>
     <td nowrap='nowrap'>账号类型</td>
 	<td nowrap='nowrap'>联系电话</td>
 	<td nowrap='nowrap'>邮件</td>
@@ -54,6 +55,7 @@ function Search(){
   <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?><tr>
 <td nowrap='nowrap'><?php echo ($user["id"]); ?></td>
 <td nowrap='nowrap'><?php echo ($user["uname"]); ?></td>
+<td nowrap='nowrap'><?php echo ($user["truename"]); ?></td>
 <td nowrap='nowrap'><?php echo (usertype($user["id"])); ?></td>
 <td nowrap='nowrap'><?php echo ($user["phone"]); ?> </td>
 <td nowrap='nowrap'><?php echo ($user["email"]); ?></td>

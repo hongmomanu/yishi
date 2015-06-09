@@ -36,8 +36,8 @@ class MemberController extends CommonController {
 				$condition['id'] = session('uid');
 				unset($data['pwd']);
 				if(false !== $model->where($condition)->save($data)){
-					echo $model->getLastsql();
-					die();
+					//echo $model->getLastsql();
+					//die();
 					$this->success('用户信息修改成功');
 				}else{
 					$this->error($model->getError());
@@ -48,6 +48,7 @@ class MemberController extends CommonController {
 		}else{
 			$info = D('Member')->getUserInfobyid(session('uid'));
 			$this->assign('info',$info);
+			//trace("groupid",session('groupid'));
 			if(session('groupid') == '4'){
 			$this->display();
 			}else{
