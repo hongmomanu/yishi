@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>医师协会1</title>
-<link href="/phpapp/yishi__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
+<link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
 <!--top-->
 <div id="top">
 	<div class="top">
-    	<div class="logo left"><img src="/phpapp/yishi__PUBLIC__/Home/images/logo.jpg"  /></div>
+    	<div class="logo left"><img src="/Public/Home/images/logo.jpg"  /></div>
         <div class="jiansuo right">
         	<ul>
             	
@@ -66,7 +66,7 @@
 </div>
 <div id="centent">
 	<div class="ny_con">
-    	<div class="gonggaot"><img src="/phpapp/yishi__PUBLIC__/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
+    	<div class="gonggaot"><img src="/Public/Home/images/laba.jpg" width="20" height="39" class="left mr10" /><?php echo gonggao(); ?></div>
         <div class="blank"></div>
 <div class="ny_L">
         	<div class="ny_Lbox mb10">
@@ -95,7 +95,7 @@
         	
         </div>
         <div class="ny_R right">
-        	<h2><img src="/phpapp/yishi__PUBLIC__/Home/images/ny_t.jpg" width="7" height="20" />搜索</h2>
+        	<h2><img src="/Public/Home/images/ny_t.jpg" width="7" height="20" />搜索</h2>
             <ul class="dongtai">
             <?php if(is_array($list)): $k = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($k % 2 );++$k;?><li <?php if($k%2 == 0): ?>style="background:#f1f6fc"<?php endif; ?>><span class="left">· <?php echo ($article["title"]); ?></span><a href="<?php echo U('Index/view',array('id'=>$article['id']));?>"><span class="right"><img src="images/li7.gif" width="19" height="17" /><?php echo (date('Y-m-d',$article["posttime"])); ?></span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>	
               </ul>

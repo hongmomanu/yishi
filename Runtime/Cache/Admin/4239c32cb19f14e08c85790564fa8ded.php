@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <title>医院管理系统</title>
-<link rel="stylesheet" type="text/css" href="/phpapp/yishi/Public/Css/right.css" />
+<link rel="stylesheet" type="text/css" href="/Public/Css/right.css" />
 <script language="javascript">
 function LogDel()
 {

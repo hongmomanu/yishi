@@ -49,7 +49,8 @@
         	<div  class="neirong">
             	<ul class="dongtai">
             	<volist name="list" id="msg">       
-                <li><span class="left">来自{$msg.from_uid|getUserInfo=###,truename}<a href="{:U('Member/messageview',array('mid'=>$msg['mid'],'type'=>'inputbox'))}">· {$msg.title}</a></span><span class="right">[{$msg.date|date='Y-m-d H:i:s',###}]</span></li>
+                <!--<li><span class="left">来自{$msg.from_uid|getUserInfo=###,truename}<a href="{:U('Member/messageview',array('mid'=>$msg['mid'],'type'=>'inputbox'))}">· {$msg.title}</a></span><span class="right">[{$msg.date|date='Y-m-d H:i:s',###}]</span></li>-->
+                <li><span class="left">来自{$msg.from_uid|getUserInfo=###,"uname"}<a href="{:U('Member/messageview',array('mid'=>$msg['mid'],'type'=>'inputbox'))}">· {$msg.title}</a></span><span class="right">[{$msg.date|date='Y-m-d H:i:s',###}]</span></li>
             	</volist>
             </ul>
             

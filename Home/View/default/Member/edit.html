@@ -51,10 +51,10 @@
             	 <div class="reg" style="padding: 35px 0 35px 70px;">
 <form action="" method="post">
 <ul>
-<li class="text"><span>用户名</span><input name="uname" type="text" value="{$info.uname}" disabled/><b style="color:#F00">*</b></li>
+<li class="text"><span>用户名</span><input name="uname" type="text" value="{$info.uname}" READONLY/><b style="color:#F00">*</b></li>
 <li class="text"><span>姓名</span><input id=" " name="truename" type="text" value="{$info.truename}" /><b style="color:#F00">*</b></li>
 <li class="radio"><span>性别</span><input type="radio" name="sex" value="1" {$info.sex|retrunCheck=###,1}/>&emsp;男&emsp;&emsp;&emsp;<input type="radio"  name="sex" value="2" {$info.sex|retrunCheck=###,2}/>&emsp;女</li>
-<li class="text"><span>手机</span><input id=" " name="phone" type="text" value="{$info.phone}" disabled/><b style="color:#F00">*</b></li>
+<li class="text"><span>手机</span><input id=" " name="phone" type="text" value="{$info.phone}" /><b style="color:#F00">*</b></li>
 <li class="text"><span>邮箱</span><input name="email" type="text" value="{$info.email}"/></li>
 <li class="text"><span>通信地址</span><input name="address" type="text" value="{$info.address}"/></li>
 <li class="text"><span>单位名称</span><input name="company" type="text" value="{$info.company}"/></li>

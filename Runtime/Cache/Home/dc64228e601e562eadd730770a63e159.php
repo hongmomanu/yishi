@@ -183,7 +183,8 @@ function showHide(id){
         <div class="ny_R right">
         	<div  class="neirong">
             	<ul class="dongtai">
-            	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$msg): $mod = ($i % 2 );++$i;?><li><span class="left">来自<?php echo (getuserinfo($msg["from_uid"],truename)); ?><a href="<?php echo U('Member/messageview',array('mid'=>$msg['mid'],'type'=>'inputbox'));?>">· <?php echo ($msg["title"]); ?></a></span><span class="right">[<?php echo (date('Y-m-d H:i:s',$msg["date"])); ?>]</span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$msg): $mod = ($i % 2 );++$i;?><!--<li><span class="left">来自<?php echo (getuserinfo($msg["from_uid"],truename)); ?><a href="<?php echo U('Member/messageview',array('mid'=>$msg['mid'],'type'=>'inputbox'));?>">· <?php echo ($msg["title"]); ?></a></span><span class="right">[<?php echo (date('Y-m-d H:i:s',$msg["date"])); ?>]</span></li>-->
+                <li><span class="left">来自<?php echo (getuserinfo($msg["from_uid"],"uname")); ?><a href="<?php echo U('Member/messageview',array('mid'=>$msg['mid'],'type'=>'inputbox'));?>">· <?php echo ($msg["title"]); ?></a></span><span class="right">[<?php echo (date('Y-m-d H:i:s',$msg["date"])); ?>]</span></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
             
 <div style="width: 95%; height: 30px; overflow: hidden; text-align: center; font-weight: bold; margin-bottom:10px; margin-top:10px; font-size:14px;">
