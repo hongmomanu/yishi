@@ -250,7 +250,7 @@ class question_exam
 						}
 					}
 				}
-				while($t)
+				/*while($t)
 				{
 					$qrs = $this->getRandQuestionRowsList(array("quest2knows.qkknowsid IN ({$knowsids})","questionrows.qrlevel = '{$nkey}'","questionrows.qrtype = '{$key}'","questionrows.qrnumber <= '{$t}'"));
 					if(count($qrs))
@@ -262,7 +262,7 @@ class question_exam
 					}
 					else
 					break;
-				}
+				}*/
 			}
 		}
 		return array('question'=>$question,'questionrow'=>$questionrow,'setting'=>$exam);
