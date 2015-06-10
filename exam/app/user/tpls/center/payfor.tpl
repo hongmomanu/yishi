@@ -32,9 +32,10 @@
 								<td>{x2;$orderstatus[v:order['orderstatus']]}</td>
 								<td>
 									<div class="btn-group">
-										<a class="btn" href="index.php?user-center-payfor-orderdetail&ordersn={x2;v:order['ordersn']}" title="详细"><em class="icon-th-list"></em></a>
+										<!--<a class="btn" href="index.php?user-center-payfor-orderdetail&ordersn={x2;v:order['ordersn']}" title="详细"><em class="icon-th-list"></em></a>-->
+										<a class="btn" href="/index.php/Pay/orderindex/ordersn/{x2;v:order['ordersn']}" title="详细"><em class="icon-th-list"></em></a>
 										{x2;if:v:order['orderstatus'] == 1}
-										<a class="btn" href="index.php?user-center-payfor-orderdetail&ordersn={x2;v:order['ordersn']}" title="支付"><em class="icon-shopping-cart"></em></a>
+										<a class="btn" href="/index.php/Pay/orderindex/ordersn/{x2;v:order['ordersn']}" title="支付"><em class="icon-shopping-cart"></em></a>
 										<a class="btn ajax" href="index.php?user-center-payfor-remove&ordersn={x2;v:order['ordersn']}" title="撤单"><em class="icon-remove"></em></a>
 										{x2;endif}
 									</div>

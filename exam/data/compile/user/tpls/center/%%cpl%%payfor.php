@@ -34,9 +34,10 @@
 								<td><?php echo $this->tpl_var['orderstatus'][$order['orderstatus']]; ?></td>
 								<td>
 									<div class="btn-group">
-										<a class="btn" href="index.php?user-center-payfor-orderdetail&ordersn=<?php echo $order['ordersn']; ?>" title="详细"><em class="icon-th-list"></em></a>
+										<!--<a class="btn" href="index.php?user-center-payfor-orderdetail&ordersn=<?php echo $order['ordersn']; ?>" title="详细"><em class="icon-th-list"></em></a>-->
+										<a class="btn" href="/index.php/Pay/orderindex/ordersn/<?php echo $order['ordersn']; ?>" title="详细"><em class="icon-th-list"></em></a>
 										<?php if($order['orderstatus'] == 1){ ?>
-										<a class="btn" href="index.php?user-center-payfor-orderdetail&ordersn=<?php echo $order['ordersn']; ?>" title="支付"><em class="icon-shopping-cart"></em></a>
+										<a class="btn" href="/index.php/Pay/orderindex/ordersn/<?php echo $order['ordersn']; ?>" title="支付"><em class="icon-shopping-cart"></em></a>
 										<a class="btn ajax" href="index.php?user-center-payfor-remove&ordersn=<?php echo $order['ordersn']; ?>" title="撤单"><em class="icon-remove"></em></a>
 										<?php } ?>
 									</div>

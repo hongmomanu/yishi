@@ -48,6 +48,13 @@ class IndexController extends Controller {
 		$this->assign('link',$link);
 		$about = M('alonepage')->find(1);
 		$this->assign('about',$about);
+
+		//幻灯片
+		$flash = D('flash')->flashCache();
+
+		trace("flash",$flash);
+
+		$this->assign('flash',$flash);
 		$this->display();
 	}
 	function category(){
@@ -83,8 +90,7 @@ class IndexController extends Controller {
 	function article(){
 		$id = I('get.id');
 		$condition['id'] = $id;
-		if(session('groupid') != 1){
-			$condition['status'] = 1;
+		if(session('groupid') != 1){			$condition['status'] = 1;
 		}
 		$data = M('article')->where($condition)->find();
 		if(!$data){

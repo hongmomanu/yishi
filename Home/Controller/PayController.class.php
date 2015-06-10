@@ -25,6 +25,33 @@ class PayController extends Controller {
 			$this->display();
 		}
 	}
+
+	public function orderindex() {
+		if (IS_POST) {
+			//页面上通过表单选择在线支付类型，支付宝为alipay 财付通为tenpay
+			$paytype = I('post.paytype');
+			$order_no=I('post.ordersn');
+			$title=I('post.ordertitle');
+			$money=I('post.orderprice');
+			$pay = new \Think\Pay($paytype, C('payment.' . $paytype));
+			//$order_no = $pay->createOrderNo();
+			$vo = new \Think\Pay\PayVo();
+			$vo->setBody("商品描述")
+			->setFee($money) //支付金额
+			->setOrderNo($order_no)
+			->setTitle($title)
+			->setCallback("Home/Index/pay")
+			->setUrl(U("Home/User/order"))
+			->setParam(array('order_id' => "goods1业务订单号"));
+			echo $pay->buildRequestForm($vo);
+		} else {
+			//在此之前goods1的业务订单已经生成，状态为等待支付
+			$ordersn= I('get.ordersn');
+			$order = M('orders')->find($ordersn);
+            $this->assign('order',$order);
+			$this->display();
+		}
+	}
 	
 	/**
 	 * 订单支付成功

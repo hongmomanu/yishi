@@ -99,7 +99,18 @@ function Sonitem(id){
 <dd><a href="<?php echo U('Member/inputbox');?>">收件箱</a></dd>
 </dl>
 <!-- <a href="<?php echo U('Member/collect');?>"><li>我的收藏</li></a> -->
+
+
+
+
 <?php if(session('groupid') == 1){ ?>
+
+<a onClick='showHide("items2_0")'><li>幻灯片管理</li></a>
+<dl id='items2_0' <?php if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'flash' || ACTION_NAME == 'flashadd' || ACTION_NAME == 'flashedit')){ }else{ ?>style="display:none;"<?php } ?>>
+<dd><a href="<?php echo U('Member/flash');?>">·管理</a></dd>
+<dd><a href="<?php echo U('Member/flashadd');?>">·新增</a></dd>
+</dl>
+
 <a onClick='showHide("items2_1")'><li>分会账号管理</li></a>
 <dl id='items2_1' <?php if($_GET['type'] == 2){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('Member/users',array('type'=>'2'));?>">·管理</a></dd>
@@ -119,22 +130,22 @@ function Sonitem(id){
 <dd><a href="<?php echo U('Member/adduser',array('type'=>'4'));?>">·新增</a></dd>
 <dd><a href="<?php echo U('Member/fadduser');?>">·批量新增</a></dd>
 </dl>
-<a onClick='showHide("items2_4")'><li>培训管理</li></a>
+	<a onClick='showHide("items2_4")'><li>培训管理</li></a>
 <dl id="items2_4" <?php if(CONTROLLER_NAME == 'Project'){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('Project/index');?>">·培训项目</a></dd>
 <dd><a href="<?php echo U('Project/add');?>">·发布培训</a></dd>
 </dl>
 <a href="<?php echo U('Member/sendmessage');?>"><li>发布站内信</li></a>
-<a  onClick='showHide("items2_4_0")' ><li>统计</li></a>
+<a  onClick='showHide("items2_5")' ><li>统计</li></a>
 
-<dl id="items2_4_0">
+<dl id="items2_5" <?php if(CONTROLLER_NAME == 'Project'){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('Member/tongji');?>">.会员统计</a></dd>
 <dd><a href="<?php echo U('Member/tongjiweb');?>">·站点统计</a></dd>
 </dl>
 
 <a href="<?php echo U('Index/exam');?>"><li>考试管理</li></a>
-<a onClick='showHide("items2_5")'><li>网站信息管理</li></a>
-<dl id="items2_5" <?php if(CONTROLLER_NAME == 'News'){ }else{ ?>style="display:none;"<?php } ?>>
+<a onClick='showHide("items2_6")'><li>网站信息管理</li></a>
+<dl id="items2_6" <?php if(CONTROLLER_NAME == 'News'){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('News/index');?>">·信息列表</a></dd>
 <dd><a href="<?php echo U('News/newsadd');?>">·新增信息</a></dd>
 </dl>
@@ -145,8 +156,8 @@ function Sonitem(id){
 <dd><a href="<?php echo U('Member/articlestatus');?>">·公告审核</a></dd>
 </dl>
 <?php }else if(session('groupid') == 2){ ?>
-<a onClick='showHide("items2_3")'><li>账号管理</li></a>
-<dl id="items2_3" <?php if($_GET['type'] == 4){ }else{ ?>style="display:none;"<?php } ?>>
+<a onClick='showHide("items2_8")'><li>账号管理</li></a>
+<dl id="items2_8" <?php if($_GET['type'] == 4){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('Member/users',array('type'=>'4'));?>">·管理</a></dd>
 <dd><a href="<?php echo U('Member/adduser',array('type'=>'4'));?>">·新增</a></dd>
 <dd><a href="<?php echo U('Member/fadduser');?>">·批量新增</a></dd>
@@ -155,22 +166,22 @@ function Sonitem(id){
 <a href="<?php echo U('Member/sendmessage');?>"><li>发布站内信</li></a>
 <a href="<?php echo U('Member/tongji');?>"><li>统计</li></a>
 <a href="<?php echo U('Index/exam');?>"><li>考试管理</li></a>
-<a onClick='showHide("items2_7")'><li>公告管理</li></a>
-<dl id="items2_7" <?php if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'article' || ACTION_NAME == 'articleadd')){ }else{ ?>style="display:none;"<?php } ?>>
+<a onClick='showHide("items2_9")'><li>公告管理</li></a>
+<dl id="items2_9" <?php if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'article' || ACTION_NAME == 'articleadd')){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('Member/article');?>">·管理</a></dd>
 <dd><a href="<?php echo U('Member/articleadd');?>">·新增公告</a></dd>
 </dl>
 <?php }else if(session('groupid') == 3){ ?>
-<a onClick='showHide("items2_3")'><li>个人账号管理</li></a>
-<dl id="items2_3" <?php if($_GET['type'] == 4){ }else{ ?>style="display:none;"<?php } ?>>
+<a onClick='showHide("items2_10")'><li>个人账号管理</li></a>
+<dl id="items2_10" <?php if($_GET['type'] == 4){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('Member/users',array('type'=>'4'));?>">·管理</a></dd>
 <dd><a href="<?php echo U('Member/adduser',array('type'=>'4'));?>">·新增</a></dd>
 <dd><a href="<?php echo U('Member/fadduser');?>">·批量新增</a></dd>
 </dl>
 <a href="<?php echo U('Member/tongji');?>"><li>统计</li></a>
 <a href="<?php echo U('Index/exam');?>"><li>考试管理</li></a>
-<a onClick='showHide("items2_7")'><li>公告管理</li></a>
-<dl id="items2_7" <?php if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'article' || ACTION_NAME == 'articleadd')){ }else{ ?>style="display:none;"<?php } ?>>
+<a onClick='showHide("items2_11")'><li>公告管理</li></a>
+<dl id="items2_11" <?php if(CONTROLLER_NAME == 'Member' && (ACTION_NAME == 'article' || ACTION_NAME == 'articleadd')){ }else{ ?>style="display:none;"<?php } ?>>
 <dd><a href="<?php echo U('Member/article');?>">·管理</a></dd>
 <dd><a href="<?php echo U('Member/articleadd');?>">·新增公告</a></dd>
 </dl>

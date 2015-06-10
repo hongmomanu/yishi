@@ -50,7 +50,7 @@
 				<table class="table">
 					<thead>
 					<tr>
-						<th colspan="8">我的考场</th>
+						<th colspan="8">图片预览</th>
 					</tr>
 					</thead>
 					<tr>
@@ -58,7 +58,7 @@
 							考场ID：
 						</td>
 						<td>
-							20
+							21
 						</td>
 						<td>
 							科目：
@@ -91,6 +91,8 @@
 				    <div class="controls" style="text-indent:10px;">
 				    	
 				    	<label class="checkbox inline"><input type="checkbox" value="19" name="args[basicknows][3][19]" checked/>知识点1</label>
+				    	
+				    	<label class="checkbox inline"><input type="checkbox" value="23" name="args[basicknows][3][23]" checked/>中医</label>
 				    	
 				    </div>
 				</div>
@@ -135,7 +137,7 @@
 				<div class="control-group">
 					<label for="basicexam_self" class="control-label">绑定正式考试试卷：</label>
 					<div class="controls">
-						<textarea id="basicexam_self" name="args[basicexam][self]" needle="needle" msg="您必须填写至少一个试卷">10</textarea>
+						<textarea id="basicexam_self" name="args[basicexam][self]" needle="needle" msg="您必须填写至少一个试卷">14</textarea>
 						<span class="help-block">请在试卷管理处查看试卷ID，将数字ID填写在这里，多个请用英文逗号（,）隔开。留空或填0时将无法进行该项考试。</span>
 					</div>
 				</div>
@@ -143,7 +145,7 @@
 				<div class="control-group">
 					<label class="control-label">正式考试开启时间：</label>
 					<div class="controls">
-						<input name="args[basicexam][opentime][start]" type="text" value="2015-06-08 11:25:00" needle="needle" msg="您必须输入一个开启时间起点" /> - <input name="args[basicexam][opentime][end]" type="text" value="2015-06-08 17:25:00" needle="needle" msg="您必须输入一个开启时间终点" />
+						<input name="args[basicexam][opentime][start]" type="text" value="2015-05-01 08:00:00" needle="needle" msg="您必须输入一个开启时间起点" /> - <input name="args[basicexam][opentime][end]" type="text" value="2015-07-01 08:00:00" needle="needle" msg="您必须输入一个开启时间终点" />
 						<span class="help-block">开始结束时间均需填写，格式为2014-05-01 08:00:00，不限制开启时间请任意一项填写0</span>
 					</div>
 				</div>
@@ -171,7 +173,7 @@
 						<button class="btn btn-primary" type="submit">提交</button>
 						<input type="hidden" name="page" value=""/>
 						<input type="hidden" name="setexamrange" value="1"/>
-						<input type="hidden" name="basicid" value="20"/>
+						<input type="hidden" name="basicid" value="21"/>
 						
 					</div>
 				</div>

@@ -80,6 +80,13 @@
 <dd><a href="<?php echo U('Member/inputbox');?>">收件箱</a></dd>
 </dl>
 <!-- <a href="<?php echo U('Member/collect');?>"><li>我的收藏</li></a> -->
+
+<a onClick='showHide("items3_2")'><li>幻灯片管理</li></a>
+<dl id='items3_2' >
+	<dd><a href="/index.php/Member/flash">·管理</a></dd>
+	<dd><a href="/index.php/Member/flashadd">·新增</a></dd>
+</dl>
+
 <?php if(session('groupid') == 1){ ?>
 <a onClick='showHide("items2_1")'><li>分会账号管理</li></a>
 <dl id='items2_1' <?php if($_GET['type'] == 2){ }else{ ?>style="display:none;"<?php } ?>>

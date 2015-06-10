@@ -6,6 +6,7 @@
 <link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="/Public/Js/jquery.Xslider.js"></script>
+    <script type="text/javascript" src="/Public/Js/showdialog.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 
@@ -80,20 +81,12 @@ $(document).ready(function(){
 <div class="con_row_2 w_1000">
   	  <div class="con_hd left">
        	  <div id="slider3" class="slider">
-			<div class="conbox">
-				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070717182621191.jpg"></a></div>
-				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070717142355292.jpg"></a></div>
-				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070716292198261.jpg"></a></div>
-				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20147/2014070716213331177.jpg"></a></div>
-				<div><a href="#" title=""><img width="347" height="300" alt="" src="http://www.nxyxh.net/uploadfile/pro/20146/2014062512224568135.jpg"></a></div>
-			</div>
-			<div class="switcher">
-				<a href="#" class="cur">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-			</div>
+              <div class="conbox">
+                  <?php if(is_array($flash)): $i = 0; $__LIST__ = $flash;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$flashlist): $mod = ($i % 2 );++$i;?><div><a href="<?php echo ($flashlist["link"]); ?>" title="<?php echo ($flashlist["title"]); ?>"><img width="347" height="300" alt="" src="<?php echo ($flashlist["image"]); ?>"></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+              </div>
+              <div class="switcher">
+                  <?php for($i=1;$i<=count($flash);$i++){ if($i == 1){ echo '<a href="'.$flash[$i]['link'].'" class="cur">'.$i.'</a>'; }else{ echo '<a href="'.$flash[$i]['link'].'">'.$i.'</a>'; } } ?>
+              </div>
 		</div><!--slider end-->
       </div>
       <div class="con_row1_R left">

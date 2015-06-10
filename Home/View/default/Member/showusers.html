@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="__PUBLIC__/media/jquery.js"></script>
+<script src="__PUBLIC__/media/jquery.js"></script>	
 <link href="__PUBLIC__/Home/css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -16,14 +16,16 @@ function addv(id){
 		//选中
 		$.post("{:U('Member/mailuser')}",{action:'add',uid:id},function(e){
 			//alert('已选中');
+			location.reload();
 		},'json');
 	}else{
 		//取消
 		$.post("{:U('Member/mailuser')}",{action:'nadd',uid:id},function(e){
-			//alert('已取消');
+			//alert('已取消'+id);
+			location.reload();
 		},'json');
 	}
-	location.reload();
+
 }
 </script>
 <div>

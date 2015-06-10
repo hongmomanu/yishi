@@ -5,6 +5,7 @@
 <title>医师协会</title>
 <link href="/Public/Home/css/style.css" type="text/css" rel="stylesheet" />
 <script src="/Public/media/jquery.js"></script>
+	<script type="text/javascript" src="/Public/Js/showdialog.js"></script>
 </head>
 
 <body>
@@ -219,6 +220,7 @@ function fchange(id){
 	}
 }
 function showmodal(){
+
 	 var ret = window.showModalDialog("<?php echo U('Member/selectuser');?>",null,"dialogWidth:800px;dialogHeight:500px;help:no;status:no");
 	// if(ret == ''){
 	//	 alert('未选择用户');

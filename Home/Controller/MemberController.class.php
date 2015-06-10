@@ -171,10 +171,11 @@ class MemberController extends CommonController {
 	//发送站内信
 	function sendmessage(){
 		$dopost = I('post.action')?I('post.action'):'';
+		//trace('sendmessage',$dopost);
 
 		if($dopost == 'send'){
 
-		 trace('sendmessage',$dopost);
+
 				if($_FILES['fujian']['error'] != 4){
 				//上传
 				$upload = new \Think\Upload();// 实例化上传类
@@ -1377,9 +1378,11 @@ class MemberController extends CommonController {
 	}
 	//用户处理
 	function mailuser(){
+
 		if(IS_AJAX){
 			$action = I('post.action')?I('post.action'):'';
 			$id = I('post.uid');
+
 			if($action == 'add'){
 					$mailuser = session('mailuser');
 					if(empty($mailuser)){
@@ -1395,6 +1398,7 @@ class MemberController extends CommonController {
 					}
 					$this->ajaxReturn(1,'json');
 			}else{
+
 				$mailuser = session('mailuser');
 				if(!empty($mailuser)){
 					$suser = explode(',', $mailuser);
@@ -1403,6 +1407,7 @@ class MemberController extends CommonController {
 							unset($suser[$k]);
 						}
 					}
+					session('mailuser',null);
 					session('mailuser',implode(',', $suser));
 					$this->ajaxReturn(1,'json');
 				}	
@@ -1410,6 +1415,120 @@ class MemberController extends CommonController {
 		}
 		
 	}
+
+
+	function flash(){
+		if(session('groupid') != 1){
+			$this->error("无权操作");
+		}
+		$this->_list('flash');
+		$this->display();
+	}
+	function flashadd(){
+		if(session('groupid') != 1){
+			$this->error("无权操作");
+		}
+		$action = I('post.action')?I('post.action'):'';
+		if($action == 'add'){
+			$model = D('flash');
+			if(false !== $data = $model->create()){
+				//有文件上传
+				$upload = new \Think\Upload();
+				// 实例化上传类
+				$upload->maxSize   =     3145728 ;// 设置附件上传大小
+				$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+				$upload->savePath  =      '/Public/'; // 设置附件上传目录    // 上传文件
+				$info   =   $upload->upload($_FILES);
+				if(!$info) {// 上传错误提示错误信息
+					$this->error($upload->getError());
+				}else{// 上传成功
+					//dump($info);
+					$data['image'] = '/Uploads'.str_replace('.','',$info['image']['savepath']). $info['image']['savename'];
+					$data['title']=I('post.title');
+					$data['link']=I('post.link');
+
+				}
+				if(false !== $model->add($data)){
+					$model->rebuild();
+
+					$this->success('添加成功');
+				}else{
+					$this->error('添加失败');
+				}
+			}else{
+				$this->error('数据有误');
+			}
+		}else{
+			$this->display();
+		}
+	}
+	function flashedit(){
+		if(session('groupid') != 1){
+			$this->error("无权操作");
+		}
+		$action = I('post.action')?I('post.action'):'';
+		if($action == 'edit'){
+			$model = D('flash');
+			if(false !== $data = $model->create()){
+				if($_FILES['image']['error'] == 0){
+					//有文件上传
+					$upload = new \Think\Upload();
+					// 实例化上传类
+					$upload->maxSize   =     3145728 ;// 设置附件上传大小
+					$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+					$upload->savePath  =      '/Public/'; // 设置附件上传目录    // 上传文件
+					$info   =   $upload->upload($_FILES);
+					if(!$info) {// 上传错误提示错误信息
+						$this->error($upload->getError());
+					}else{// 上传成功
+						//dump($info);
+						$data['image'] = '/Uploads'.str_replace('.','',$info['image']['savepath']). $info['image']['savename'];
+						$data['title']=I('post.title');
+						$data['link']=I('post.link');
+					}
+				}
+				$condition['id'] = $data['id'];
+				if(false !== $model->where($condition)->save($data)){
+					$model->rebuild();
+					$this->success('修改成功');
+				}else{
+					$this->error('修改失败');
+				}
+			}else{
+				$this->error("数据有误");
+			}
+		}else{
+			$id = I('get.id');
+			if(is_numeric($id)){
+
+				$flash = M('flash')->find($id);
+				if($flash){
+					$this->assign('flash',$flash);
+					$this->display();
+				}else{
+					$this->error('数据不存在');
+				}
+
+			}else{
+				$this->error('错误的id');
+			}
+		}
+
+	}
+	function flashdel(){
+		if(session('groupid') != 1){
+			$this->error("无权操作");
+		}
+		$id = I('get.id');
+		if(false !== M('flash')->delete($id)){
+			D('flash')->rebuild();
+			$this->success("删除成功");
+		}else{
+			$this->error("删除失败");
+		}
+	}
+
+
 	
 	
 }

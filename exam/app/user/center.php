@@ -108,7 +108,8 @@ class app
 					'statusCode' => 200,
 					"message" => "订单创建成功",
 				    "callbackType" => 'forward',
-				    "forwardUrl" => "index.php?user-center-payfor-orderdetail&ordersn=".$args['ordersn']
+				    //"forwardUrl" => "index.php?user-center-payfor-orderdetail&ordersn=".$args['ordersn']
+				    "forwardUrl" => "/index.php/Pay/orderindex/ordersn/".$args['ordersn']
 				);
 				exit(json_encode($message));
 			}
