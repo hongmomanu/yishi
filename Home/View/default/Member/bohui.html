@@ -22,7 +22,10 @@ $(document).ready(function(){
 			}else{
 				window.returnValue='驳回失败';
 			}
+			window.opener.location.reload();
 			window.close();
+
+
 		},'json');
 	});
 });
