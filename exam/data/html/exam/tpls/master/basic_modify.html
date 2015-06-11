@@ -46,7 +46,7 @@
 				<div class="control-group">
 					<label for="basic" class="control-label">考场名称</label>
 					<div class="controls">
-						<input id="basic" name="args[basic]" type="text" value="图片预览" needle="needle" msg="您必须输入考场名称" />
+						<input id="basic" name="args[basic]" type="text" value="临床" needle="needle" msg="您必须输入考场名称" />
 					</div>
 				</div>
 				<div class="control-group">
@@ -56,7 +56,7 @@
 							<div class="thumbnail">
 								<a href="javascript:;" class="second label""><em class="uploadbutton" id="catimg" exectype="thumb"></em></a>
 								<div class="first" id="catimg_percent"></div>
-								<div class="boot"><img src="files/attach/images/content/20150610/14339174438301.jpg" id="catimg_view"/><input type="hidden" name="args[basicthumb]" value="files/attach/images/content/20150610/14339174438301.jpg" id="catimg_value"/></div>
+								<div class="boot"><img src="app/core/styles/images/noimage.gif" id="catimg_view"/><input type="hidden" name="args[basicthumb]" value="" id="catimg_value"/></div>
 							</div>
 						</div>
 					</div>
@@ -131,14 +131,14 @@
 				<div class="control-group">
 					<label for="basicprice" class="control-label">价格设置</label>
 					<div class="controls">
-						<textarea class="input-xlarge" rows="4" name="args[basicprice]" id="basicprice">10</textarea>
+						<textarea class="input-xlarge" rows="4" name="args[basicprice]" id="basicprice">1:10</textarea>
 					  	<span class="help-block">请按照“时长:开通所需积分”格式填写，每行一个，时长以天为单位，免费考场此设置无效。</span>
 					</div>
 				</div>
 				<div class="control-group">
 					<div class="controls">
 						<button class="btn btn-primary" type="submit">提交</button>
-						<input type="hidden" name="basicid" value="21"/>
+						<input type="hidden" name="basicid" value="10"/>
 						<input type="hidden" name="page" value=""/>
 						<input type="hidden" name="modifybasic" value="1"/>
 											</div>
