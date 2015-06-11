@@ -401,6 +401,7 @@ function check_verify($code, $id = 1){
  */
 function is_login(){
     $user = session('auid');
+
     if (empty($user)) {
         return false;
     } else {

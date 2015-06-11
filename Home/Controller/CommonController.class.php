@@ -8,12 +8,16 @@ namespace Home\Controller;
 
 use Think\Controller;
 class CommonController extends Controller {
+    public static $haslogin="12122";
 	public function _initialize(){
 		header('Content-Type:text/html;charset=utf-8');
+        //S(session('uname'),1,600);
+
 		if(!is_login()){
 			$this->error('请先登录',U('Public/login'));
 		}
 	}
+
 	/**
       +----------------------------------------------------------
      * 根据表单生成查询条件

@@ -45,9 +45,20 @@ class PublicController extends Controller{
 				$this->error('您已登录，请勿重复登录',U('Member/index'));
 			}
 		} */
+
+
 		$action = I('post.action')?I('post.action'):'';
 		if($action && $action == 'logindo'){
 			$user = I('post.uname');
+
+			$uname=S($user);
+
+			if(!empty($uname)){
+				$this->error('您已登录，请勿重复登录',U('Member/index'));
+
+			}
+
+
 			$pass = I('post.pwd');
 			$result = D('Member')->login($user,$pass);
 			switch ($result){
@@ -69,9 +80,11 @@ class PublicController extends Controller{
 				$sc = 'xiaoquan@xablackcat.com';
 				$userid = $examlogin['userid'];
 				$username = $examlogin['username'];
+				$usercach[$userid]=1;
+				S(session('uname'),"121",600);
+				//S("name","2222222222222222");
 				$email =  $examlogin['useremail'];
 				$ts = time();
-				trace("12121","wwww");
 				$url = C('weburl').'/exam/index.php?exam-api-login&userid='.$userid.'&username='.$username.'&useremail='.$email.'&ts='.$ts.'&sign='.md5($userid.$username.$email.$sc.$ts);
 				header("location:".$url);
 				$this->success('登陆成功',$url);
@@ -82,6 +95,7 @@ class PublicController extends Controller{
 	}
 	//退出
 	function logout(){
+		S(session('uname'),NULL);
 		session('user',NULL);
 		session('uid',NULL);
 		session('uname',NULL);

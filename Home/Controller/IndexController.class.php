@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
 	public function _initialize(){
+
 		header('Content-Type:text/html;charset=utf-8');
 		$user_online = "count.php"; //保存人数的文件
 		touch($user_online);//如果没有此文件，则创建

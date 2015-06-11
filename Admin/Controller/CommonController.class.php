@@ -13,6 +13,7 @@ use Think\Controller;
 class CommonController extends Controller {
 	public function _initialize(){
 		header('Content-Type:text/html;charset=utf-8');
+
 		 //检查登陆
 		 if(!is_login()){
 			$this->error('您还没有登录，请先登陆',U('Public/login'));
