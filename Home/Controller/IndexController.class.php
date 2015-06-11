@@ -52,7 +52,6 @@ class IndexController extends Controller {
 		//幻灯片
 		$flash = D('flash')->flashCache();
 
-		trace("flash",$flash);
 
 		$this->assign('flash',$flash);
 		$this->display();

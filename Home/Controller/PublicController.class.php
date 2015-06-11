@@ -71,6 +71,7 @@ class PublicController extends Controller{
 				$username = $examlogin['username'];
 				$email =  $examlogin['useremail'];
 				$ts = time();
+				trace("12121","wwww");
 				$url = C('weburl').'/exam/index.php?exam-api-login&userid='.$userid.'&username='.$username.'&useremail='.$email.'&ts='.$ts.'&sign='.md5($userid.$username.$email.$sc.$ts);
 				header("location:".$url);
 				$this->success('登陆成功',$url);
