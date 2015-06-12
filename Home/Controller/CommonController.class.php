@@ -36,7 +36,7 @@ class CommonController extends Controller {
       +----------------------------------------------------------
      */
     protected function _list($model, $map = array(), $sortBy = '', $asc = false,$Rows=15) {
-        //排序字段 默认为主键名
+        //排序字段 默认为主键名少年
         if (isset($_REQUEST['_order'])) {
             $order = $_REQUEST['_order'];
         } else {
